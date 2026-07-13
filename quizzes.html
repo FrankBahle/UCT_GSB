@@ -2,94 +2,916 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Provisional scenario-based executive AI decision simulation for the UCT GSB programme.">
-    <title>Applied Simulation | UCT Graduate School of Business</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-    <link href="assets/css/style.css" rel="stylesheet">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Scenario-based executive AI decision simulation with AI-generated scoring and feedback for the UCT GSB programme."
+    >
+
+    <title>
+        Executive AI Simulation | UCT Graduate School of Business
+    </title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+    >
+
+    <link
+        href="assets/css/style.css"
+        rel="stylesheet"
+    >
+
+    <link
+        href="assets/css/simulation.css"
+        rel="stylesheet"
+    >
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-light gsb-navbar sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html" aria-label="UCT Graduate School of Business home">
-                <img src="assets/images/UCT_Logo.png" alt="UCT Graduate School of Business" class="gsb-logo">
+            <a
+                class="navbar-brand"
+                href="index.html"
+                aria-label="UCT Graduate School of Business home"
+            >
+                <img
+                    src="assets/images/UCT_Logo.png"
+                    alt="UCT Graduate School of Business"
+                    class="gsb-logo"
+                >
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+
+            <div
+                class="collapse navbar-collapse"
+                id="navbarNav"
+            >
                 <ul class="navbar-nav ms-auto align-items-lg-center">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="day-1.html">Day 1</a></li>
-                    <li class="nav-item"><a class="nav-link" href="day-2.html">Day 2</a></li>
-                    <li class="nav-item"><a class="nav-link" href="day-3.html">Day 3</a></li>
-                    <li class="nav-item"><a class="nav-link" href="delegates.html">Delegates</a></li>
-                    <li class="nav-item"><a class="nav-link" href="slides.html">Slides</a></li>
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="quizzes.html">Simulation</a></li>
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="index.html"
+                        >
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="day-1.html"
+                        >
+                            Day 1
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="day-2.html"
+                        >
+                            Day 2
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="day-3.html"
+                        >
+                            Day 3
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="delegates.html"
+                        >
+                            Delegates
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="slides.html"
+                        >
+                            Slides
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link active"
+                            aria-current="page"
+                            href="quizzes.html"
+                        >
+                            Simulation
+                        </a>
+                    </li>
+
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Resources</a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="resourcesDropdown">
-                            <li><a class="dropdown-item" href="assessments.html">Assessments</a></li>
-                            <li><a class="dropdown-item" href="case-studies.html">Case Studies</a></li>
-                            <li><a class="dropdown-item" href="implementation.html">Implementation Guide</a></li>
-                            <li><a class="dropdown-item" href="Digital_Human.html">Welcome Avatar</a></li>
-                            <li><a class="dropdown-item" href="contact.html">Programme Support</a></li>
+                        <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            id="resourcesDropdown"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                        >
+                            Resources
+                        </a>
+
+                        <ul
+                            class="dropdown-menu dropdown-menu-end"
+                            aria-labelledby="resourcesDropdown"
+                        >
+                            <li>
+                                <a
+                                    class="dropdown-item"
+                                    href="assessments.html"
+                                >
+                                    Assessments
+                                </a>
+                            </li>
+
+                            <li>
+                                <a
+                                    class="dropdown-item"
+                                    href="case-studies.html"
+                                >
+                                    Case Studies
+                                </a>
+                            </li>
+
+                            <li>
+                                <a
+                                    class="dropdown-item"
+                                    href="implementation.html"
+                                >
+                                    Implementation Guide
+                                </a>
+                            </li>
+
+                            <li>
+                                <a
+                                    class="dropdown-item"
+                                    href="Digital_Human.html"
+                                >
+                                    Welcome Avatar
+                                </a>
+                            </li>
+
+                            <li>
+                                <a
+                                    class="dropdown-item"
+                                    href="contact.html"
+                                >
+                                    Programme Support
+                                </a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
             </div>
         </div>
-    </nav><main>
-    <section class="page-hero">
-        <div class="container">
-            <div class="page-meta"><span class="meta-chip">Simulation</span><span>Draft scenario</span></div>
-            <span class="eyebrow">Applied Learning</span>
-            <h1>Executive AI Decision Simulation</h1>
-            <p>Apply strategic, ethical and implementation judgement to a realistic organisational AI adoption scenario.</p>
-        </div>
-    </section>
-    <section class="section section-soft"><div class="container"><div class="simulation-shell"><div class="draft-banner"><i class="bi bi-info-circle"></i><span>This simulation is a functional placeholder inspired by the requested scenario-based activity. Replace the scenario, options and scoring when Professor's approved version is supplied.</span></div><article class="scenario-card"><span class="eyebrow">The Scenario</span><h2>Choosing a responsible first AI pilot</h2><p>A diversified organisation is experiencing slower service response times, fragmented operational data and pressure to modernise. Leadership wants a visible AI initiative within six months, but employees are concerned about job impact, data use and accountability. Your task is to select the decisions that create the strongest foundation for a responsible pilot.</p></article><article class="simulation-question" data-question="1"><h3>1. What should the leadership team do first?</h3><button class="simulation-option" type="button" data-score="0">Purchase a popular AI platform immediately</button><button class="simulation-option" type="button" data-score="2">Define the business problem, affected users and measurable outcome</button><button class="simulation-option" type="button" data-score="0">Ask the technology team to automate every process</button><button class="simulation-option" type="button" data-score="1">Wait until competitors publish their full approach</button></article><article class="simulation-question" data-question="2"><h3>2. The relevant data is fragmented across departments. What is the strongest next step?</h3><button class="simulation-option" type="button" data-score="0">Combine all data without reviewing access rights</button><button class="simulation-option" type="button" data-score="2">Complete a focused data-readiness, quality and privacy assessment</button><button class="simulation-option" type="button" data-score="0">Ignore data limitations and proceed with a demonstration</button><button class="simulation-option" type="button" data-score="1">Use only publicly available data even if it does not fit the problem</button></article><article class="simulation-question" data-question="3"><h3>3. Which pilot approach is most appropriate?</h3><button class="simulation-option" type="button" data-score="2">A narrow, high-value use case with clear boundaries and human oversight</button><button class="simulation-option" type="button" data-score="0">A company-wide deployment covering every department</button><button class="simulation-option" type="button" data-score="0">A pilot selected only because the technology is impressive</button><button class="simulation-option" type="button" data-score="0">A hidden pilot that excludes operational users</button></article><article class="simulation-question" data-question="4"><h3>4. Who should own governance for the pilot?</h3><button class="simulation-option" type="button" data-score="0">The software vendor alone</button><button class="simulation-option" type="button" data-score="2">A cross-functional owner supported by business, technology, risk and legal expertise</button><button class="simulation-option" type="button" data-score="0">A junior developer with no decision authority</button><button class="simulation-option" type="button" data-score="0">No one until the pilot is complete</button></article><article class="simulation-question" data-question="5"><h3>5. What evidence should guide a decision to scale?</h3><button class="simulation-option" type="button" data-score="0">A successful demonstration at one meeting</button><button class="simulation-option" type="button" data-score="2">Performance, user adoption, risk monitoring, cost and measurable business value</button><button class="simulation-option" type="button" data-score="0">The number of AI features included</button><button class="simulation-option" type="button" data-score="0">Whether the solution is receiving media attention</button></article><div class="d-flex flex-wrap gap-2"><button id="calculateSimulation" class="btn btn-gsb-primary" type="button">View Result</button><button id="resetSimulation" class="btn btn-outline-secondary" type="button">Reset Simulation</button></div><div id="simulationResult" class="simulation-result" aria-live="polite"></div></div></div></section>
+    </nav>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <div class="page-meta">
+                    <span class="meta-chip">
+                        Applied Simulation
+                    </span>
+
+                    <span>
+                        DeepSeek-supported executive feedback
+                    </span>
+                </div>
+
+                <span class="eyebrow">
+                    Applied Executive Learning
+                </span>
+
+                <h1>
+                    Executive AI Decision Simulation
+                </h1>
+
+                <p>
+                    Work through realistic AI transformation decisions,
+                    explain your leadership approach and receive structured
+                    AI-generated scoring and developmental feedback.
+                </p>
+            </div>
+        </section>
+
+        <section class="section section-white">
+            <div class="container">
+                <div class="section-heading text-center">
+                    <span class="eyebrow eyebrow-dark">
+                        Simulation Journey
+                    </span>
+
+                    <h2>
+                        Move from strategic readiness to responsible scaling
+                    </h2>
+
+                    <span
+                        class="heading-line"
+                        aria-hidden="true"
+                    ></span>
+
+                    <p>
+                        The simulation mirrors the programme journey across
+                        strategic alignment, pilot design, governance,
+                        implementation and organisational leadership.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <article class="simulation-feature-card">
+                            <div class="simulation-feature-icon">
+                                <i
+                                    class="bi bi-diagram-3"
+                                    aria-hidden="true"
+                                ></i>
+                            </div>
+
+                            <h3>
+                                Three scenarios
+                            </h3>
+
+                            <p>
+                                Complete Foundation, Applied and Strategic
+                                executive decision challenges.
+                            </p>
+                        </article>
+                    </div>
+
+                    <div class="col-md-4">
+                        <article class="simulation-feature-card">
+                            <div class="simulation-feature-icon">
+                                <i
+                                    class="bi bi-stars"
+                                    aria-hidden="true"
+                                ></i>
+                            </div>
+
+                            <h3>
+                                AI evaluation
+                            </h3>
+
+                            <p>
+                                DeepSeek evaluates the quality of your
+                                decisions and written executive rationale.
+                            </p>
+                        </article>
+                    </div>
+
+                    <div class="col-md-4">
+                        <article class="simulation-feature-card">
+                            <div class="simulation-feature-icon">
+                                <i
+                                    class="bi bi-bar-chart"
+                                    aria-hidden="true"
+                                ></i>
+                            </div>
+
+                            <h3>
+                                Developmental feedback
+                            </h3>
+
+                            <p>
+                                Receive dimension scores, strengths,
+                                improvement priorities and a recommended action.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-soft">
+            <div class="container">
+                <div
+                    id="simulationApp"
+                    class="executive-simulation"
+                >
+                    <div class="simulation-notice">
+                        <i
+                            class="bi bi-shield-check"
+                            aria-hidden="true"
+                        ></i>
+
+                        <div>
+                            <strong>
+                                Responsible use notice
+                            </strong>
+
+                            <p>
+                                Your selected decisions and written rationale
+                                will be sent securely through a Netlify Function
+                                to DeepSeek for scoring. Do not enter confidential,
+                                personal, commercially sensitive or regulated
+                                information.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        id="apiStatus"
+                        class="simulation-api-status"
+                        role="status"
+                        aria-live="polite"
+                    >
+                        <span
+                            id="apiStatusDot"
+                            class="simulation-status-dot checking"
+                            aria-hidden="true"
+                        ></span>
+
+                        <span id="apiStatusText">
+                            Checking AI scoring service...
+                        </span>
+                    </div>
+
+                    <div class="simulation-progress-card">
+                        <div class="simulation-progress-top">
+                            <div>
+                                <span class="simulation-small-label">
+                                    Overall progress
+                                </span>
+
+                                <strong id="progressText">
+                                    0 of 3 scenarios completed
+                                </strong>
+                            </div>
+
+                            <span id="progressPercentage">
+                                0%
+                            </span>
+                        </div>
+
+                        <div
+                            class="simulation-progress-track"
+                            aria-hidden="true"
+                        >
+                            <span
+                                id="simulationProgressBar"
+                                class="simulation-progress-fill"
+                            ></span>
+                        </div>
+                    </div>
+
+                    <nav
+                        id="scenarioNavigation"
+                        class="simulation-level-navigation"
+                        aria-label="Simulation scenarios"
+                    ></nav>
+
+                    <section
+                        id="scenarioPanel"
+                        class="simulation-scenario-panel"
+                        aria-labelledby="scenarioTitle"
+                    >
+                        <div class="simulation-scenario-heading">
+                            <div>
+                                <span
+                                    id="scenarioLevel"
+                                    class="simulation-level-badge"
+                                ></span>
+
+                                <span id="scenarioDuration"></span>
+                            </div>
+
+                            <h2 id="scenarioTitle"></h2>
+
+                            <p id="scenarioSummary"></p>
+                        </div>
+
+                        <div class="row g-4">
+                            <div class="col-lg-4">
+                                <article class="simulation-context-card">
+                                    <span class="simulation-card-label">
+                                        Your role
+                                    </span>
+
+                                    <h3>
+                                        Executive responsibility
+                                    </h3>
+
+                                    <p id="scenarioRole"></p>
+                                </article>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <article class="simulation-context-card">
+                                    <span class="simulation-card-label">
+                                        Objective
+                                    </span>
+
+                                    <h3>
+                                        Leadership outcome
+                                    </h3>
+
+                                    <p id="scenarioObjective"></p>
+                                </article>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <article class="simulation-context-card">
+                                    <span class="simulation-card-label">
+                                        Constraints
+                                    </span>
+
+                                    <h3>
+                                        What you must consider
+                                    </h3>
+
+                                    <ul
+                                        id="scenarioConstraints"
+                                        class="simulation-constraint-list"
+                                    ></ul>
+                                </article>
+                            </div>
+                        </div>
+
+                        <form
+                            id="simulationForm"
+                            class="simulation-form"
+                            novalidate
+                        >
+                            <div id="decisionGroups"></div>
+
+                            <section class="simulation-rationale-card">
+                                <div class="simulation-question-header">
+                                    <span class="simulation-question-number">
+                                        04
+                                    </span>
+
+                                    <div>
+                                        <span class="simulation-small-label">
+                                            Executive rationale
+                                        </span>
+
+                                        <h3>
+                                            Explain and defend your approach
+                                        </h3>
+                                    </div>
+                                </div>
+
+                                <label
+                                    for="executiveRationale"
+                                    class="form-label"
+                                >
+                                    In 40–250 words, explain why your selected
+                                    decisions provide a responsible and realistic
+                                    way forward. Address value, stakeholders,
+                                    governance, implementation and evidence.
+                                </label>
+
+                                <textarea
+                                    id="executiveRationale"
+                                    class="form-control simulation-rationale-input"
+                                    rows="8"
+                                    maxlength="1800"
+                                    aria-describedby="rationaleHelp rationaleWordCount"
+                                    required
+                                ></textarea>
+
+                                <div class="simulation-rationale-meta">
+                                    <small id="rationaleHelp">
+                                        Do not include confidential or personal
+                                        information.
+                                    </small>
+
+                                    <small id="rationaleWordCount">
+                                        0 / 250 words
+                                    </small>
+                                </div>
+
+                                <div
+                                    id="rationaleError"
+                                    class="simulation-field-error"
+                                    role="alert"
+                                ></div>
+                            </section>
+
+                            <div class="simulation-consent-card">
+                                <div class="form-check">
+                                    <input
+                                        id="aiConsent"
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        required
+                                    >
+
+                                    <label
+                                        class="form-check-label"
+                                        for="aiConsent"
+                                    >
+                                        I understand that my simulation response
+                                        will be sent to an external AI service for
+                                        scoring, and I confirm that I have not
+                                        included confidential or personal data.
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div
+                                id="simulationStatus"
+                                class="simulation-message"
+                                role="status"
+                                aria-live="polite"
+                            ></div>
+
+                            <div class="simulation-actions">
+                                <button
+                                    id="submitSimulation"
+                                    class="btn btn-gsb-primary btn-lg"
+                                    type="submit"
+                                >
+                                    <span class="simulation-submit-label">
+                                        <i
+                                            class="bi bi-stars"
+                                            aria-hidden="true"
+                                        ></i>
+
+                                        Submit for AI Evaluation
+                                    </span>
+
+                                    <span
+                                        class="simulation-submit-loading"
+                                        hidden
+                                    >
+                                        <span
+                                            class="spinner-border spinner-border-sm"
+                                            aria-hidden="true"
+                                        ></span>
+
+                                        Evaluating response...
+                                    </span>
+                                </button>
+
+                                <button
+                                    id="resetSimulation"
+                                    class="btn btn-outline-secondary btn-lg"
+                                    type="button"
+                                >
+                                    Reset Scenario
+                                </button>
+                            </div>
+                        </form>
+                    </section>
+
+                    <section
+                        id="simulationResult"
+                        class="simulation-result-panel"
+                        aria-labelledby="resultHeading"
+                        hidden
+                    >
+                        <div class="simulation-result-header">
+                            <div
+                                id="scoreRing"
+                                class="simulation-score-ring"
+                                aria-label="Overall simulation score"
+                            >
+                                <div>
+                                    <strong id="overallScore">
+                                        0
+                                    </strong>
+
+                                    <span>
+                                        /100
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="simulation-result-intro">
+                                <span class="simulation-small-label">
+                                    AI-generated evaluation
+                                </span>
+
+                                <h2 id="resultHeading">
+                                    Executive Simulation Result
+                                </h2>
+
+                                <span
+                                    id="performanceBand"
+                                    class="simulation-performance-band"
+                                ></span>
+
+                                <p id="executiveSummary"></p>
+
+                                <small id="attemptSummary"></small>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="simulation-result-section-title">
+                                Score breakdown
+                            </h3>
+
+                            <div
+                                id="dimensionScores"
+                                class="simulation-dimension-grid"
+                            ></div>
+                        </div>
+
+                        <div class="row g-4 simulation-feedback-grid">
+                            <div class="col-lg-6">
+                                <article class="simulation-feedback-card positive">
+                                    <div class="simulation-feedback-heading">
+                                        <i
+                                            class="bi bi-check-circle"
+                                            aria-hidden="true"
+                                        ></i>
+
+                                        <h3>
+                                            Strengths
+                                        </h3>
+                                    </div>
+
+                                    <ul id="strengthsList"></ul>
+                                </article>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <article class="simulation-feedback-card improvement">
+                                    <div class="simulation-feedback-heading">
+                                        <i
+                                            class="bi bi-arrow-up-circle"
+                                            aria-hidden="true"
+                                        ></i>
+
+                                        <h3>
+                                            Development priorities
+                                        </h3>
+                                    </div>
+
+                                    <ul id="improvementsList"></ul>
+                                </article>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <article class="simulation-feedback-card">
+                                    <span class="simulation-card-label">
+                                        Likely consequence
+                                    </span>
+
+                                    <h3>
+                                        What your approach could produce
+                                    </h3>
+
+                                    <p id="likelyConsequence"></p>
+                                </article>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <article class="simulation-feedback-card">
+                                    <span class="simulation-card-label">
+                                        Recommended next action
+                                    </span>
+
+                                    <h3>
+                                        Strengthen the decision
+                                    </h3>
+
+                                    <p id="recommendedAction"></p>
+                                </article>
+                            </div>
+                        </div>
+
+                        <article class="simulation-reflection-card">
+                            <span class="simulation-card-label">
+                                Executive reflection
+                            </span>
+
+                            <h3>
+                                Consider this before moving forward
+                            </h3>
+
+                            <p id="followUpQuestion"></p>
+                        </article>
+
+                        <p class="simulation-ai-disclaimer">
+                            This feedback is AI-generated and is intended for
+                            executive learning and reflection. It should not be
+                            treated as legal, regulatory, employment, investment
+                            or professional advice.
+                        </p>
+
+                        <div class="simulation-result-actions no-print">
+                            <button
+                                id="retryScenario"
+                                class="btn btn-gsb-primary"
+                                type="button"
+                            >
+                                Retry This Scenario
+                            </button>
+
+                            <button
+                                id="nextScenario"
+                                class="btn btn-outline-secondary"
+                                type="button"
+                            >
+                                Continue to Next Scenario
+                            </button>
+
+                            <button
+                                id="printResult"
+                                class="btn btn-outline-secondary"
+                                type="button"
+                            >
+                                <i
+                                    class="bi bi-printer"
+                                    aria-hidden="true"
+                                ></i>
+
+                                Print Result
+                            </button>
+                        </div>
+                    </section>
+
+                    <section class="simulation-history-section">
+                        <div class="simulation-history-heading">
+                            <div>
+                                <span class="simulation-small-label">
+                                    Saved in this browser
+                                </span>
+
+                                <h2>
+                                    Simulation progress
+                                </h2>
+                            </div>
+
+                            <button
+                                id="clearProgress"
+                                class="btn btn-sm btn-outline-secondary"
+                                type="button"
+                            >
+                                Clear Progress
+                            </button>
+                        </div>
+
+                        <div
+                            id="simulationHistory"
+                            class="row g-4"
+                        ></div>
+                    </section>
+                </div>
+            </div>
+        </section>
     </main>
+
     <footer class="gsb-footer">
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-4">
-                    <img src="assets/images/UCT_Logo.png" alt="UCT Graduate School of Business" class="footer-logo">
-                    <p class="footer-intro">A customised executive learning platform supporting applied artificial intelligence, responsible innovation and organisational transformation.</p>
+                    <img
+                        src="assets/images/UCT_Logo.png"
+                        alt="UCT Graduate School of Business"
+                        class="footer-logo"
+                    >
+
+                    <p class="footer-intro">
+                        A customised executive learning platform supporting
+                        applied artificial intelligence, responsible innovation
+                        and organisational transformation.
+                    </p>
                 </div>
+
                 <div class="col-sm-6 col-lg-2">
-                    <h2>Programme</h2>
+                    <h2>
+                        Programme
+                    </h2>
+
                     <ul>
-                        <li><a href="day-1.html">Day 1</a></li>
-                        <li><a href="day-2.html">Day 2</a></li>
-                        <li><a href="day-3.html">Day 3</a></li>
-                        <li><a href="delegates.html">Delegates</a></li>
+                        <li>
+                            <a href="day-1.html">
+                                Day 1
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="day-2.html">
+                                Day 2
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="day-3.html">
+                                Day 3
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="delegates.html">
+                                Delegates
+                            </a>
+                        </li>
                     </ul>
                 </div>
+
                 <div class="col-sm-6 col-lg-3">
-                    <h2>Learning Resources</h2>
+                    <h2>
+                        Learning Resources
+                    </h2>
+
                     <ul>
-                        <li><a href="slides.html">Downloadable Slides</a></li>
-                        <li><a href="quizzes.html">Applied Simulation</a></li>
-                        <li><a href="assessments.html">Assessments</a></li>
-                        <li><a href="implementation.html">Implementation Guide</a></li>
+                        <li>
+                            <a href="slides.html">
+                                Downloadable Slides
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="quizzes.html">
+                                Applied Simulation
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="assessments.html">
+                                Assessments
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="implementation.html">
+                                Implementation Guide
+                            </a>
+                        </li>
                     </ul>
                 </div>
+
                 <div class="col-lg-3">
-                    <h2>Programme Support</h2>
-                    <p class="footer-copy">Final contact, venue and programme-support information will be added after approval.</p>
-                    <a href="contact.html" class="footer-contact-link">Contact programme support <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                    <h2>
+                        Programme Support
+                    </h2>
+
+                    <p class="footer-copy">
+                        Final contact, venue and programme-support information
+                        will be added after approval.
+                    </p>
+
+                    <a
+                        href="contact.html"
+                        class="footer-contact-link"
+                    >
+                        Contact programme support
+
+                        <i
+                            class="bi bi-arrow-right"
+                            aria-hidden="true"
+                        ></i>
+                    </a>
                 </div>
             </div>
+
             <div class="footer-bottom">
-                <p>&copy; 2026 UCT Graduate School of Business. Programme platform content subject to approval.</p>
-                <p>Executive Education Learning Platform</p>
+                <p>
+                    &copy; 2026 UCT Graduate School of Business.
+                    Programme platform content subject to approval.
+                </p>
+
+                <p>
+                    Executive Education Learning Platform
+                </p>
             </div>
         </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
     <script src="assets/js/script.js"></script>
-    
+
+    <script src="assets/js/simulation.js"></script>
 </body>
 </html>
