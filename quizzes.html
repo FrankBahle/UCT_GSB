@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Provisional scenario-based executive AI decision simulation for the UCT GSB programme.">
+    <title>Applied Simulation | UCT Graduate School of Business</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light gsb-navbar sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html" aria-label="UCT Graduate School of Business home">
+                <img src="assets/images/UCT_Logo.png" alt="UCT Graduate School of Business" class="gsb-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="day-1.html">Day 1</a></li>
+                    <li class="nav-item"><a class="nav-link" href="day-2.html">Day 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="day-3.html">Day 3</a></li>
+                    <li class="nav-item"><a class="nav-link" href="delegates.html">Delegates</a></li>
+                    <li class="nav-item"><a class="nav-link" href="slides.html">Slides</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="quizzes.html">Simulation</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Resources</a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="resourcesDropdown">
+                            <li><a class="dropdown-item" href="assessments.html">Assessments</a></li>
+                            <li><a class="dropdown-item" href="case-studies.html">Case Studies</a></li>
+                            <li><a class="dropdown-item" href="implementation.html">Implementation Guide</a></li>
+                            <li><a class="dropdown-item" href="Digital_Human.html">Welcome Avatar</a></li>
+                            <li><a class="dropdown-item" href="contact.html">Programme Support</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav><main>
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-meta"><span class="meta-chip">Simulation</span><span>Draft scenario</span></div>
+            <span class="eyebrow">Applied Learning</span>
+            <h1>Executive AI Decision Simulation</h1>
+            <p>Apply strategic, ethical and implementation judgement to a realistic organisational AI adoption scenario.</p>
+        </div>
+    </section>
+    <section class="section section-soft"><div class="container"><div class="simulation-shell"><div class="draft-banner"><i class="bi bi-info-circle"></i><span>This simulation is a functional placeholder inspired by the requested scenario-based activity. Replace the scenario, options and scoring when Professor's approved version is supplied.</span></div><article class="scenario-card"><span class="eyebrow">The Scenario</span><h2>Choosing a responsible first AI pilot</h2><p>A diversified organisation is experiencing slower service response times, fragmented operational data and pressure to modernise. Leadership wants a visible AI initiative within six months, but employees are concerned about job impact, data use and accountability. Your task is to select the decisions that create the strongest foundation for a responsible pilot.</p></article><article class="simulation-question" data-question="1"><h3>1. What should the leadership team do first?</h3><button class="simulation-option" type="button" data-score="0">Purchase a popular AI platform immediately</button><button class="simulation-option" type="button" data-score="2">Define the business problem, affected users and measurable outcome</button><button class="simulation-option" type="button" data-score="0">Ask the technology team to automate every process</button><button class="simulation-option" type="button" data-score="1">Wait until competitors publish their full approach</button></article><article class="simulation-question" data-question="2"><h3>2. The relevant data is fragmented across departments. What is the strongest next step?</h3><button class="simulation-option" type="button" data-score="0">Combine all data without reviewing access rights</button><button class="simulation-option" type="button" data-score="2">Complete a focused data-readiness, quality and privacy assessment</button><button class="simulation-option" type="button" data-score="0">Ignore data limitations and proceed with a demonstration</button><button class="simulation-option" type="button" data-score="1">Use only publicly available data even if it does not fit the problem</button></article><article class="simulation-question" data-question="3"><h3>3. Which pilot approach is most appropriate?</h3><button class="simulation-option" type="button" data-score="2">A narrow, high-value use case with clear boundaries and human oversight</button><button class="simulation-option" type="button" data-score="0">A company-wide deployment covering every department</button><button class="simulation-option" type="button" data-score="0">A pilot selected only because the technology is impressive</button><button class="simulation-option" type="button" data-score="0">A hidden pilot that excludes operational users</button></article><article class="simulation-question" data-question="4"><h3>4. Who should own governance for the pilot?</h3><button class="simulation-option" type="button" data-score="0">The software vendor alone</button><button class="simulation-option" type="button" data-score="2">A cross-functional owner supported by business, technology, risk and legal expertise</button><button class="simulation-option" type="button" data-score="0">A junior developer with no decision authority</button><button class="simulation-option" type="button" data-score="0">No one until the pilot is complete</button></article><article class="simulation-question" data-question="5"><h3>5. What evidence should guide a decision to scale?</h3><button class="simulation-option" type="button" data-score="0">A successful demonstration at one meeting</button><button class="simulation-option" type="button" data-score="2">Performance, user adoption, risk monitoring, cost and measurable business value</button><button class="simulation-option" type="button" data-score="0">The number of AI features included</button><button class="simulation-option" type="button" data-score="0">Whether the solution is receiving media attention</button></article><div class="d-flex flex-wrap gap-2"><button id="calculateSimulation" class="btn btn-gsb-primary" type="button">View Result</button><button id="resetSimulation" class="btn btn-outline-secondary" type="button">Reset Simulation</button></div><div id="simulationResult" class="simulation-result" aria-live="polite"></div></div></div></section>
+    </main>
+    <footer class="gsb-footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <img src="assets/images/UCT_Logo.png" alt="UCT Graduate School of Business" class="footer-logo">
+                    <p class="footer-intro">A customised executive learning platform supporting applied artificial intelligence, responsible innovation and organisational transformation.</p>
+                </div>
+                <div class="col-sm-6 col-lg-2">
+                    <h2>Programme</h2>
+                    <ul>
+                        <li><a href="day-1.html">Day 1</a></li>
+                        <li><a href="day-2.html">Day 2</a></li>
+                        <li><a href="day-3.html">Day 3</a></li>
+                        <li><a href="delegates.html">Delegates</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <h2>Learning Resources</h2>
+                    <ul>
+                        <li><a href="slides.html">Downloadable Slides</a></li>
+                        <li><a href="quizzes.html">Applied Simulation</a></li>
+                        <li><a href="assessments.html">Assessments</a></li>
+                        <li><a href="implementation.html">Implementation Guide</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h2>Programme Support</h2>
+                    <p class="footer-copy">Final contact, venue and programme-support information will be added after approval.</p>
+                    <a href="contact.html" class="footer-contact-link">Contact programme support <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 UCT Graduate School of Business. Programme platform content subject to approval.</p>
+                <p>Executive Education Learning Platform</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    
+</body>
+</html>
