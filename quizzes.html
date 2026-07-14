@@ -10,7 +10,7 @@
 
     <meta
         name="description"
-        content="Day-based quizzes and the TNM Malawi AI Reality Puzzle Challenge for the UCT GSB programme."
+        content="Day 1 and Day 2 interactive AI learning games for the UCT GSB AI Leadership in Action programme."
     >
 
     <title>
@@ -33,7 +33,7 @@
     >
 
     <link
-        href="assets/css/day-one-puzzle-game.css"
+        href="assets/css/quiz-games.css"
         rel="stylesheet"
     >
 </head>
@@ -134,6 +134,15 @@
                         </a>
                     </li>
 
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="practical-ai-use.html"
+                        >
+                            Practical AI Use
+                        </a>
+                    </li>
+
                     <li class="nav-item dropdown">
                         <a
                             class="nav-link dropdown-toggle"
@@ -206,7 +215,7 @@
             <div class="container">
                 <div class="page-meta">
                     <span class="meta-chip">
-                        Programme Quizzes
+                        Programme Games
                     </span>
 
                     <span>
@@ -215,7 +224,7 @@
                 </div>
 
                 <span class="eyebrow">
-                    Applied Learning
+                    AI Leadership in Action
                 </span>
 
                 <h1>
@@ -223,15 +232,15 @@
                 </h1>
 
                 <p>
-                    Complete the knowledge challenge for each programme day.
-                    Day 1 is currently available. Day 2 and Day 3 quizzes
-                    will be added when their approved questions are supplied.
+                    Complete interactive learning challenges for each
+                    programme day. Day 1 and Day 2 are available.
+                    The Day 3 activity is upcoming.
                 </p>
             </div>
         </section>
 
         <section
-            id="quiz-days"
+            id="quiz-centre"
             class="section section-white"
         >
             <div class="container">
@@ -241,7 +250,7 @@
                     </span>
 
                     <h2>
-                        Choose your quiz
+                        Choose your learning game
                     </h2>
 
                     <span
@@ -250,25 +259,25 @@
                     ></span>
 
                     <p>
-                        Each programme day has its own quiz and learning
-                        progress.
+                        Each challenge tests a different part of the
+                        programme learning journey.
                     </p>
                 </div>
 
                 <div class="row g-4">
                     <div class="col-lg-4">
-                        <article class="quiz-day-card available">
-                            <div class="quiz-day-card-top">
-                                <span class="quiz-day-number">
+                        <article class="quiz-hub-card">
+                            <div class="quiz-hub-card-top">
+                                <span class="quiz-hub-number">
                                     01
                                 </span>
 
-                                <span class="quiz-status available">
+                                <span class="quiz-hub-status available">
                                     Available
                                 </span>
                             </div>
 
-                            <div class="quiz-day-icon">
+                            <div class="quiz-hub-icon">
                                 <i
                                     class="bi bi-puzzle"
                                     aria-hidden="true"
@@ -279,19 +288,19 @@
                                 Day 1 Quiz
                             </h2>
 
-                            <p class="quiz-day-subtitle">
+                            <strong class="quiz-hub-subtitle">
                                 TNM Malawi AI Reality Puzzle Challenge
-                            </p>
+                            </strong>
 
                             <p>
-                                Test your understanding of what AI is,
-                                where it creates value and how it should
-                                be governed responsibly.
+                                Distinguish AI from automation, identify
+                                valuable use cases and apply responsible
+                                governance judgement.
                             </p>
 
-                            <div class="quiz-day-stat-grid">
+                            <div class="quiz-hub-stats">
                                 <div>
-                                    <strong id="dayOneQuestionCount">
+                                    <strong id="day1CardQuestions">
                                         15
                                     </strong>
 
@@ -301,7 +310,7 @@
                                 </div>
 
                                 <div>
-                                    <strong id="dayOneMaximumPoints">
+                                    <strong id="day1CardScore">
                                         75
                                     </strong>
 
@@ -322,85 +331,121 @@
                             </div>
 
                             <button
-                                id="openDayOneQuiz"
+                                id="openDay1Game"
                                 class="btn btn-gsb-primary btn-lg w-100"
                                 type="button"
                                 disabled
                             >
-                                <i
-                                    class="bi bi-play-circle"
-                                    aria-hidden="true"
-                                ></i>
-
                                 Start Day 1 Quiz
                             </button>
 
                             <p
-                                id="dayOneLoadStatus"
+                                id="day1LoadStatus"
                                 class="quiz-load-status"
                                 role="status"
                             >
-                                Loading quiz questions...
+                                Loading Day 1 questions...
                             </p>
                         </article>
                     </div>
 
                     <div class="col-lg-4">
-                        <article class="quiz-day-card upcoming">
-                            <div class="quiz-day-card-top">
-                                <span class="quiz-day-number">
+                        <article class="quiz-hub-card">
+                            <div class="quiz-hub-card-top">
+                                <span class="quiz-hub-number">
                                     02
                                 </span>
 
-                                <span class="quiz-status upcoming">
-                                    Upcoming
+                                <span class="quiz-hub-status available">
+                                    Available
                                 </span>
                             </div>
 
-                            <div class="quiz-day-icon">
+                            <div class="quiz-hub-icon">
                                 <i
-                                    class="bi bi-tools"
+                                    class="bi bi-diagram-3"
                                     aria-hidden="true"
                                 ></i>
                             </div>
 
                             <h2>
-                                Day 2 Quiz
+                                Day 2 Game
                             </h2>
 
-                            <p class="quiz-day-subtitle">
-                                Co-Creation, Prototyping and Business Value
-                            </p>
+                            <strong class="quiz-hub-subtitle">
+                                TNM AI Solution Match
+                            </strong>
 
                             <p>
-                                The Day 2 quiz will be added when the
-                                approved questions and scoring information
-                                are supplied.
+                                Match ten TNM pain points with the best
+                                AI solution, data requirements, governance
+                                controls and success measures.
                             </p>
 
+                            <div class="quiz-hub-stats">
+                                <div>
+                                    <strong id="day2CardScenarios">
+                                        10
+                                    </strong>
+
+                                    <span>
+                                        Scenarios
+                                    </span>
+                                </div>
+
+                                <div>
+                                    <strong id="day2CardScore">
+                                        100
+                                    </strong>
+
+                                    <span>
+                                        Points
+                                    </span>
+                                </div>
+
+                                <div>
+                                    <strong>
+                                        10
+                                    </strong>
+
+                                    <span>
+                                        Per round
+                                    </span>
+                                </div>
+                            </div>
+
                             <button
-                                class="btn btn-outline-secondary btn-lg w-100"
+                                id="openDay2Game"
+                                class="btn btn-gsb-primary btn-lg w-100"
                                 type="button"
                                 disabled
                             >
-                                Quiz Upcoming
+                                Start Day 2 Game
                             </button>
+
+                            <p
+                                id="day2LoadStatus"
+                                class="quiz-load-status"
+                                role="status"
+                            >
+                                Loading Day 2 scenarios...
+                            </p>
                         </article>
                     </div>
 
                     <div class="col-lg-4">
-                        <article class="quiz-day-card upcoming">
-                            <div class="quiz-day-card-top">
-                                <span class="quiz-day-number">
+                        <article class="quiz-hub-card upcoming">
+                            <div class="quiz-hub-card-top">
+                                <span class="quiz-hub-number">
                                     03
                                 </span>
 
-                                <span class="quiz-status upcoming">
+                                <span class="quiz-hub-status upcoming">
                                     Upcoming
                                 </span>
                             </div>
 
-                            <div class="quiz-day-icon">
+                            <div class="quiz-hub-icon">
                                 <i
                                     class="bi bi-shield-check"
                                     aria-hidden="true"
@@ -408,25 +453,26 @@
                             </div>
 
                             <h2>
-                                Day 3 Quiz
+                                Day 3 Game
                             </h2>
 
-                            <p class="quiz-day-subtitle">
-                                Responsible AI, Governance and Implementation
-                            </p>
+                            <strong class="quiz-hub-subtitle">
+                                Governance and Implementation
+                            </strong>
 
                             <p>
-                                The Day 3 quiz will be added when the
-                                approved questions and scoring information
-                                are supplied.
+                                The Day 3 activity will be connected after
+                                its approved questions and scoring rules
+                                have been supplied.
                             </p>
 
                             <button
-                                class="btn btn-outline-secondary btn-lg w-100"
+                                class="btn btn-outline-secondary btn-lg
+                                       w-100 mt-auto"
                                 type="button"
                                 disabled
                             >
-                                Quiz Upcoming
+                                Game Upcoming
                             </button>
                         </article>
                     </div>
@@ -435,498 +481,41 @@
         </section>
 
         <section
-            id="dayOneGameSection"
-            class="section section-soft"
+            id="day1GameSection"
+            class="section section-soft game-section"
             hidden
         >
             <div class="container">
-                <div class="day-one-game-shell">
-                    <div
-                        id="gameError"
-                        class="game-message game-message-error"
-                        role="alert"
-                        hidden
-                    ></div>
-
-                    <section
-                        id="gameWelcome"
-                        class="game-welcome-card"
-                    >
-                        <div class="game-welcome-icon">
-                            <i
-                                class="bi bi-puzzle-fill"
-                                aria-hidden="true"
-                            ></i>
-                        </div>
-
-                        <span class="game-eyebrow">
-                            Day 1 Knowledge Challenge
-                        </span>
-
-                        <h2 id="gameTitle">
-                            TNM Malawi AI Reality Puzzle Challenge
-                        </h2>
-
-                        <p id="gameTheme">
-                            Understanding what AI is, where it creates value
-                            and how it should be governed.
-                        </p>
-
-                        <div class="game-welcome-stat-grid">
-                            <article>
-                                <strong id="welcomeQuestionCount">
-                                    15
-                                </strong>
-
-                                <span>
-                                    Scored questions
-                                </span>
-                            </article>
-
-                            <article>
-                                <strong id="welcomeMaximumScore">
-                                    75
-                                </strong>
-
-                                <span>
-                                    Maximum points
-                                </span>
-                            </article>
-
-                            <article>
-                                <strong>
-                                    1
-                                </strong>
-
-                                <span>
-                                    Question at a time
-                                </span>
-                            </article>
-                        </div>
-
-                        <div class="game-instructions">
-                            <h3>
-                                How it works
-                            </h3>
-
-                            <ul>
-                                <li>
-                                    Questions are displayed one at a time.
-                                </li>
-
-                                <li>
-                                    Select one answer and submit it.
-                                </li>
-
-                                <li>
-                                    Correct answers immediately add the
-                                    points specified in the JSON file.
-                                </li>
-
-                                <li>
-                                    Every scored question can award points
-                                    only once per attempt.
-                                </li>
-
-                                <li>
-                                    Review the explanation before moving
-                                    to the next question.
-                                </li>
-
-                                <li>
-                                    The final bonus question is unscored.
-                                </li>
-                            </ul>
-                        </div>
-
-                        <button
-                            id="startGameButton"
-                            class="btn btn-gsb-primary btn-lg"
-                            type="button"
-                        >
-                            Begin Day 1 Challenge
-
-                            <i
-                                class="bi bi-arrow-right"
-                                aria-hidden="true"
-                            ></i>
-                        </button>
-                    </section>
-
-                    <section
-                        id="gamePlayArea"
-                        hidden
-                    >
-                        <div class="game-scorebar">
-                            <div>
-                                <span>
-                                    Current Score
-                                </span>
-
-                                <strong>
-                                    <span id="liveScore">
-                                        0
-                                    </span>
-
-                                    /
-
-                                    <span id="liveMaximumScore">
-                                        75
-                                    </span>
-                                </strong>
-                            </div>
-
-                            <div class="game-progress-copy">
-                                <span id="questionCounter">
-                                    Question 1 of 15
-                                </span>
-
-                                <strong id="progressPercentage">
-                                    0%
-                                </strong>
-                            </div>
-                        </div>
-
-                        <div
-                            class="game-progress-track"
-                            aria-hidden="true"
-                        >
-                            <span
-                                id="gameProgressBar"
-                                class="game-progress-fill"
-                            ></span>
-                        </div>
-
-                        <article class="game-question-card">
-                            <div class="game-question-meta">
-                                <div>
-                                    <span
-                                        id="levelBadge"
-                                        class="game-level-badge"
-                                    >
-                                        Level 1
-                                    </span>
-
-                                    <span
-                                        id="difficultyBadge"
-                                        class="game-difficulty-badge"
-                                    >
-                                        Easy
-                                    </span>
-                                </div>
-
-                                <span id="questionPoints">
-                                    5 points
-                                </span>
-                            </div>
-
-                            <div class="game-level-context">
-                                <strong id="levelName"></strong>
-
-                                <p id="levelFocus"></p>
-                            </div>
-
-                            <h2 id="puzzleTitle"></h2>
-
-                            <div class="game-scenario">
-                                <span>
-                                    Scenario
-                                </span>
-
-                                <p id="puzzleScenario"></p>
-                            </div>
-
-                            <fieldset class="game-question-fieldset">
-                                <legend id="puzzleQuestion"></legend>
-
-                                <div
-                                    id="puzzleOptions"
-                                    class="game-option-list"
-                                ></div>
-                            </fieldset>
-
-                            <div
-                                id="answerValidation"
-                                class="game-message"
-                                role="alert"
-                                aria-live="polite"
-                            ></div>
-
-                            <section
-                                id="answerFeedback"
-                                class="game-feedback"
-                                hidden
-                            >
-                                <div
-                                    id="feedbackStatus"
-                                    class="game-feedback-status"
-                                ></div>
-
-                                <article class="game-feedback-block">
-                                    <h3>
-                                        Correct Answer
-                                    </h3>
-
-                                    <p id="correctAnswerText"></p>
-                                </article>
-
-                                <article class="game-feedback-block">
-                                    <h3>
-                                        Explanation
-                                    </h3>
-
-                                    <p id="explanationText"></p>
-                                </article>
-
-                                <article
-                                    class="game-feedback-block teaching"
-                                >
-                                    <h3>
-                                        Key Learning
-                                    </h3>
-
-                                    <p id="teachingPointText"></p>
-                                </article>
-
-                                <article
-                                    id="funAddOnSection"
-                                    class="game-feedback-block fun"
-                                >
-                                    <h3>
-                                        <i
-                                            class="bi bi-emoji-smile"
-                                            aria-hidden="true"
-                                        ></i>
-
-                                        Fun Note
-                                    </h3>
-
-                                    <p id="funAddOnText"></p>
-                                </article>
-                            </section>
-
-                            <div class="game-question-actions">
-                                <button
-                                    id="submitAnswerButton"
-                                    class="btn btn-gsb-primary btn-lg"
-                                    type="button"
-                                    disabled
-                                >
-                                    Submit Answer
-                                </button>
-
-                                <button
-                                    id="nextQuestionButton"
-                                    class="btn btn-gsb-primary btn-lg"
-                                    type="button"
-                                    hidden
-                                >
-                                    Next Question
-
-                                    <i
-                                        class="bi bi-arrow-right"
-                                        aria-hidden="true"
-                                    ></i>
-                                </button>
-                            </div>
-                        </article>
-                    </section>
-
-                    <section
-                        id="gameResults"
-                        class="game-results-card"
-                        hidden
-                    >
-                        <div
-                            id="resultMedal"
-                            class="game-result-medal"
-                        >
-                            🏅
-                        </div>
-
-                        <span class="game-eyebrow">
-                            Day 1 Quiz Complete
-                        </span>
-
-                        <h2>
-                            Your Final Score
-                        </h2>
-
-                        <div class="game-final-score">
-                            <strong id="finalScore">
-                                0
-                            </strong>
-
-                            <span>
-                                /
-
-                                <span id="finalMaximumScore">
-                                    75
-                                </span>
-                            </span>
-                        </div>
-
-                        <span
-                            id="resultBand"
-                            class="game-result-band"
-                        ></span>
-
-                        <p id="resultSummary"></p>
-
-                        <div class="game-result-stat-grid">
-                            <article>
-                                <strong id="correctAnswerCount">
-                                    0
-                                </strong>
-
-                                <span>
-                                    Correct answers
-                                </span>
-                            </article>
-
-                            <article>
-                                <strong id="incorrectAnswerCount">
-                                    0
-                                </strong>
-
-                                <span>
-                                    Incorrect answers
-                                </span>
-                            </article>
-
-                            <article>
-                                <strong id="finalPercentage">
-                                    0%
-                                </strong>
-
-                                <span>
-                                    Final percentage
-                                </span>
-                            </article>
-
-                            <article>
-                                <strong id="bestScore">
-                                    0/75
-                                </strong>
-
-                                <span>
-                                    Best browser score
-                                </span>
-                            </article>
-                        </div>
-
-                        <div class="game-level-results">
-                            <h3>
-                                Performance by Level
-                            </h3>
-
-                            <div
-                                id="levelResultsGrid"
-                                class="row g-4"
-                            ></div>
-                        </div>
-
-                        <div class="game-score-guide">
-                            <h3>
-                                Score Guide
-                            </h3>
-
-                            <div class="row g-3">
-                                <div class="col-md-3">
-                                    <article>
-                                        <strong>
-                                            🧭 AI Explorer
-                                        </strong>
-
-                                        <span>
-                                            0–24 points
-                                        </span>
-                                    </article>
-                                </div>
-
-                                <div class="col-md-3">
-                                    <article>
-                                        <strong>
-                                            🥉 Bronze
-                                        </strong>
-
-                                        <span>
-                                            25–49 points
-                                        </span>
-                                    </article>
-                                </div>
-
-                                <div class="col-md-3">
-                                    <article>
-                                        <strong>
-                                            🥈 Silver
-                                        </strong>
-
-                                        <span>
-                                            50–74 points
-                                        </span>
-                                    </article>
-                                </div>
-
-                                <div class="col-md-3">
-                                    <article>
-                                        <strong>
-                                            🥇 Gold
-                                        </strong>
-
-                                        <span>
-                                            75 points
-                                        </span>
-                                    </article>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="d-flex flex-wrap justify-content-center gap-3">
-                            <button
-                                id="restartGameButton"
-                                class="btn btn-gsb-primary btn-lg"
-                                type="button"
-                            >
-                                <i
-                                    class="bi bi-arrow-clockwise"
-                                    aria-hidden="true"
-                                ></i>
-
-                                Attempt Day 1 Quiz Again
-                            </button>
-
-                            <a
-                                href="day-2.html"
-                                class="btn btn-outline-secondary btn-lg"
-                            >
-                                Continue to Day 2
-
-                                <i
-                                    class="bi bi-arrow-right"
-                                    aria-hidden="true"
-                                ></i>
-                            </a>
-                        </div>
-                    </section>
-                </div>
+                <div
+                    id="day1GameMount"
+                    class="game-mount"
+                ></div>
+            </div>
+        </section>
+
+        <section
+            id="day2GameSection"
+            class="section section-soft game-section"
+            hidden
+        >
+            <div class="container">
+                <div
+                    id="day2GameMount"
+                    class="game-mount"
+                ></div>
             </div>
         </section>
 
         <div
-            id="scorePopup"
-            class="game-score-popup"
+            id="gameScoreToast"
+            class="game-score-toast"
             role="status"
             aria-live="assertive"
             hidden
         >
-            <strong id="scorePopupHeading">
-                +5 Points
-            </strong>
+            <strong id="gameScoreToastHeading"></strong>
 
-            <span id="scorePopupTotal">
-                Total: 5 / 75
-            </span>
+            <span id="gameScoreToastCopy"></span>
         </div>
     </main>
 
@@ -993,19 +582,19 @@
 
                         <li>
                             <a href="quizzes.html">
-                                Applied Simulation
+                                Programme Quizzes
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="practical-ai-use.html">
+                                Practical AI Use
                             </a>
                         </li>
 
                         <li>
                             <a href="assessments.html">
                                 Assessments
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="implementation.html">
-                                Implementation Guide
                             </a>
                         </li>
                     </ul>
@@ -1052,6 +641,6 @@
 
     <script src="assets/js/script.js"></script>
 
-    <script src="assets/js/day-one-puzzle-game.js"></script>
+    <script src="assets/js/quiz-games.js"></script>
 </body>
 </html>
