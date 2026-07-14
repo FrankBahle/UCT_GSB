@@ -10,7 +10,7 @@
 
     <meta
         name="description"
-        content="Scenario-based executive AI decision simulation with AI-generated scoring and feedback for the UCT GSB programme."
+        content="Scenario-based executive AI decision simulation with DeepSeek scoring and feedback for the UCT GSB programme."
     >
 
     <title>
@@ -210,7 +210,7 @@
                     </span>
 
                     <span>
-                        DeepSeek-supported executive feedback
+                        DeepSeek-supported multiple-choice evaluation
                     </span>
                 </div>
 
@@ -224,8 +224,8 @@
 
                 <p>
                     Work through realistic AI transformation decisions,
-                    explain your leadership approach and receive structured
-                    AI-generated scoring and developmental feedback.
+                    select the strongest executive actions and receive
+                    structured AI-generated scoring and feedback.
                 </p>
             </div>
         </section>
@@ -247,9 +247,9 @@
                     ></span>
 
                     <p>
-                        The simulation mirrors the programme journey across
-                        strategic alignment, pilot design, governance,
-                        implementation and organisational leadership.
+                        Complete three multiple-choice scenarios covering
+                        strategic alignment, pilot design, responsible AI,
+                        governance, implementation and organisational change.
                     </p>
                 </div>
 
@@ -258,18 +258,18 @@
                         <article class="simulation-feature-card">
                             <div class="simulation-feature-icon">
                                 <i
-                                    class="bi bi-diagram-3"
+                                    class="bi bi-ui-checks"
                                     aria-hidden="true"
                                 ></i>
                             </div>
 
                             <h3>
-                                Three scenarios
+                                Multiple choice only
                             </h3>
 
                             <p>
-                                Complete Foundation, Applied and Strategic
-                                executive decision challenges.
+                                Select one executive action for each decision.
+                                No written response is required.
                             </p>
                         </article>
                     </div>
@@ -284,12 +284,12 @@
                             </div>
 
                             <h3>
-                                AI evaluation
+                                DeepSeek evaluation
                             </h3>
 
                             <p>
-                                DeepSeek evaluates the quality of your
-                                decisions and written executive rationale.
+                                Your selected actions are evaluated securely
+                                through a server-side Netlify Function.
                             </p>
                         </article>
                     </div>
@@ -309,7 +309,7 @@
 
                             <p>
                                 Receive dimension scores, strengths,
-                                improvement priorities and a recommended action.
+                                development priorities and recommended actions.
                             </p>
                         </article>
                     </div>
@@ -331,15 +331,13 @@
 
                         <div>
                             <strong>
-                                Responsible use notice
+                                AI evaluation notice
                             </strong>
 
                             <p>
-                                Your selected decisions and written rationale
-                                will be sent securely through a Netlify Function
-                                to DeepSeek for scoring. Do not enter confidential,
-                                personal, commercially sensitive or regulated
-                                information.
+                                Only your selected multiple-choice answers are
+                                sent securely through a Netlify Function to
+                                DeepSeek for scoring and feedback.
                             </p>
                         </div>
                     </div>
@@ -469,81 +467,6 @@
                         >
                             <div id="decisionGroups"></div>
 
-                            <section class="simulation-rationale-card">
-                                <div class="simulation-question-header">
-                                    <span class="simulation-question-number">
-                                        04
-                                    </span>
-
-                                    <div>
-                                        <span class="simulation-small-label">
-                                            Executive rationale
-                                        </span>
-
-                                        <h3>
-                                            Explain and defend your approach
-                                        </h3>
-                                    </div>
-                                </div>
-
-                                <label
-                                    for="executiveRationale"
-                                    class="form-label"
-                                >
-                                    In 40–250 words, explain why your selected
-                                    decisions provide a responsible and realistic
-                                    way forward. Address value, stakeholders,
-                                    governance, implementation and evidence.
-                                </label>
-
-                                <textarea
-                                    id="executiveRationale"
-                                    class="form-control simulation-rationale-input"
-                                    rows="8"
-                                    maxlength="1800"
-                                    aria-describedby="rationaleHelp rationaleWordCount"
-                                    required
-                                ></textarea>
-
-                                <div class="simulation-rationale-meta">
-                                    <small id="rationaleHelp">
-                                        Do not include confidential or personal
-                                        information.
-                                    </small>
-
-                                    <small id="rationaleWordCount">
-                                        0 / 250 words
-                                    </small>
-                                </div>
-
-                                <div
-                                    id="rationaleError"
-                                    class="simulation-field-error"
-                                    role="alert"
-                                ></div>
-                            </section>
-
-                            <div class="simulation-consent-card">
-                                <div class="form-check">
-                                    <input
-                                        id="aiConsent"
-                                        class="form-check-input"
-                                        type="checkbox"
-                                        required
-                                    >
-
-                                    <label
-                                        class="form-check-label"
-                                        for="aiConsent"
-                                    >
-                                        I understand that my simulation response
-                                        will be sent to an external AI service for
-                                        scoring, and I confirm that I have not
-                                        included confidential or personal data.
-                                    </label>
-                                </div>
-                            </div>
-
                             <div
                                 id="simulationStatus"
                                 class="simulation-message"
@@ -563,7 +486,7 @@
                                             aria-hidden="true"
                                         ></i>
 
-                                        Submit for AI Evaluation
+                                        Submit Answers for AI Evaluation
                                     </span>
 
                                     <span
@@ -575,7 +498,7 @@
                                             aria-hidden="true"
                                         ></span>
 
-                                        Evaluating response...
+                                        Evaluating answers...
                                     </span>
                                 </button>
 
@@ -646,7 +569,9 @@
 
                         <div class="row g-4 simulation-feedback-grid">
                             <div class="col-lg-6">
-                                <article class="simulation-feedback-card positive">
+                                <article
+                                    class="simulation-feedback-card positive"
+                                >
                                     <div class="simulation-feedback-heading">
                                         <i
                                             class="bi bi-check-circle"
@@ -663,7 +588,9 @@
                             </div>
 
                             <div class="col-lg-6">
-                                <article class="simulation-feedback-card improvement">
+                                <article
+                                    class="simulation-feedback-card improvement"
+                                >
                                     <div class="simulation-feedback-heading">
                                         <i
                                             class="bi bi-arrow-up-circle"
@@ -686,7 +613,7 @@
                                     </span>
 
                                     <h3>
-                                        What your approach could produce
+                                        What your selected approach could produce
                                     </h3>
 
                                     <p id="likelyConsequence"></p>
@@ -721,10 +648,10 @@
                         </article>
 
                         <p class="simulation-ai-disclaimer">
-                            This feedback is AI-generated and is intended for
-                            executive learning and reflection. It should not be
-                            treated as legal, regulatory, employment, investment
-                            or professional advice.
+                            This feedback is AI-generated for executive
+                            learning and reflection. It is not legal,
+                            regulatory, employment, investment or
+                            professional advice.
                         </p>
 
                         <div class="simulation-result-actions no-print">
@@ -802,8 +729,8 @@
 
                     <p class="footer-intro">
                         A customised executive learning platform supporting
-                        applied artificial intelligence, responsible innovation
-                        and organisational transformation.
+                        applied artificial intelligence, responsible
+                        innovation and organisational transformation.
                     </p>
                 </div>
 

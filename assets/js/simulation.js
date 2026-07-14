@@ -4,107 +4,141 @@ document.addEventListener("DOMContentLoaded", () => {
     const API_URL = "/api/simulation/evaluate";
 
     const STORAGE_KEY =
-        "uctGsbExecutiveSimulationProgressV1";
+        "uctGsbExecutiveSimulationProgressV2";
 
-    const MIN_RATIONALE_WORDS = 40;
-    const MAX_RATIONALE_WORDS = 250;
     const REQUEST_TIMEOUT_MS = 40000;
 
     const scenarios = [
         {
             id: "readiness",
             level: "Foundation",
-            duration: "10–15 minutes",
-            title: "Strategic Alignment and AI Readiness",
+            duration: "5–10 minutes",
+
+            title:
+                "Strategic Alignment and AI Readiness",
+
             summary:
                 "Your organisation is under pressure to announce an AI initiative. Several departments have proposed ideas, but there is no shared business priority, data-readiness view or agreement about success.",
+
             role:
                 "You are part of the executive steering committee responsible for determining how the organisation should begin its AI journey.",
+
             objective:
                 "Establish a credible foundation for selecting a responsible, measurable and strategically relevant AI opportunity.",
+
             constraints: [
                 "Leadership expects visible progress within six months.",
                 "Data is fragmented across several departments.",
                 "Employees are concerned about job impact and accountability.",
                 "The organisation has limited AI implementation experience."
             ],
+
             decisions: [
                 {
                     id: "priority",
+
                     title:
                         "What should leadership do first?",
+
                     options: [
                         {
                             id: "A",
+
                             text:
                                 "Purchase a widely promoted AI platform and identify possible uses afterwards."
                         },
+
                         {
                             id: "B",
+
                             text:
                                 "Define a priority business problem, affected users, baseline performance and measurable outcomes."
                         },
+
                         {
                             id: "C",
+
                             text:
                                 "Ask the technology team to automate as many existing processes as possible."
                         },
+
                         {
                             id: "D",
+
                             text:
                                 "Wait until competitors disclose their complete AI strategies."
                         }
                     ]
                 },
+
                 {
                     id: "data",
+
                     title:
                         "How should the organisation address fragmented data?",
+
                     options: [
                         {
                             id: "A",
+
                             text:
                                 "Combine all available data immediately without reviewing access rights or ownership."
                         },
+
                         {
                             id: "B",
+
                             text:
                                 "Complete a focused assessment of data quality, relevance, ownership, privacy and access."
                         },
+
                         {
                             id: "C",
+
                             text:
                                 "Proceed with historical data even when its quality and context are uncertain."
                         },
+
                         {
                             id: "D",
+
                             text:
                                 "Treat data readiness as the vendor's responsibility."
                         }
                     ]
                 },
+
                 {
                     id: "leadership",
+
                     title:
                         "What leadership structure should guide the initiative?",
+
                     options: [
                         {
                             id: "A",
+
                             text:
                                 "Allow the technology vendor to own all business and governance decisions."
                         },
+
                         {
                             id: "B",
+
                             text:
                                 "Assign the initiative only to the IT department."
                         },
+
                         {
                             id: "C",
+
                             text:
                                 "Create accountable executive sponsorship supported by business, data, technology, risk, legal and affected employees."
                         },
+
                         {
                             id: "D",
+
                             text:
                                 "Avoid formal ownership until a working prototype is available."
                         }
@@ -112,100 +146,137 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             ]
         },
+
         {
             id: "pilot",
             level: "Applied",
-            duration: "15–20 minutes",
-            title: "Pilot Design and Business Value",
+            duration: "5–10 minutes",
+
+            title:
+                "Pilot Design and Business Value",
+
             summary:
                 "The organisation has selected customer-service response times as a priority. A vendor proposes an AI system that could draft responses and recommend actions, but leaders disagree about scope, autonomy and how value should be measured.",
+
             role:
                 "You are the executive sponsor responsible for turning the opportunity into a controlled and evidence-based pilot.",
+
             objective:
                 "Design a realistic pilot that creates measurable value while maintaining human accountability and organisational learning.",
+
             constraints: [
                 "The pilot must demonstrate useful evidence within twelve weeks.",
                 "Frontline staff currently use inconsistent processes.",
                 "Some customer interactions contain sensitive information.",
                 "The organisation cannot disrupt essential service delivery."
             ],
+
             decisions: [
                 {
                     id: "design",
+
                     title:
                         "Which pilot design is most appropriate?",
+
                     options: [
                         {
                             id: "A",
+
                             text:
                                 "Replace the complete customer-service operation with an autonomous AI system."
                         },
+
                         {
                             id: "B",
+
                             text:
                                 "Test a bounded human-in-the-loop co-pilot in one defined workflow with clear escalation rules."
                         },
+
                         {
                             id: "C",
+
                             text:
                                 "Build a visually impressive demonstration that is not connected to a real workflow."
                         },
+
                         {
                             id: "D",
+
                             text:
                                 "Allow the AI system to make final high-impact customer decisions from the first day."
                         }
                     ]
                 },
+
                 {
                     id: "value",
+
                     title:
                         "How should the pilot's value be evaluated?",
+
                     options: [
                         {
                             id: "A",
+
                             text:
                                 "Count the number of AI features included in the solution."
                         },
+
                         {
                             id: "B",
+
                             text:
                                 "Compare service time, quality, user adoption, cost, customer outcomes and monitored risk against a baseline."
                         },
+
                         {
                             id: "C",
+
                             text:
                                 "Measure success mainly through positive media coverage."
                         },
+
                         {
                             id: "D",
+
                             text:
                                 "Measure speed only, regardless of quality or customer impact."
                         }
                     ]
                 },
+
                 {
                     id: "workforce",
+
                     title:
                         "How should employees be involved?",
+
                     options: [
                         {
                             id: "A",
+
                             text:
                                 "Keep the pilot confidential from employees until the launch."
                         },
+
                         {
                             id: "B",
+
                             text:
                                 "Involve frontline users in design, testing, training, role-impact discussions and escalation planning."
                         },
+
                         {
                             id: "C",
+
                             text:
                                 "Use the pilot primarily to identify roles that can be removed immediately."
                         },
+
                         {
                             id: "D",
+
                             text:
                                 "Allow the vendor to manage all workforce communication."
                         }
@@ -213,100 +284,137 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             ]
         },
+
         {
             id: "scale",
             level: "Strategic",
-            duration: "15–20 minutes",
-            title: "Governance, Scaling and Organisational Change",
+            duration: "5–10 minutes",
+
+            title:
+                "Governance, Scaling and Organisational Change",
+
             summary:
                 "The pilot has improved response times and staff adoption is encouraging. However, performance varies between customer groups, managers want a rapid organisation-wide rollout and governance responsibilities remain unclear.",
+
             role:
                 "You are advising the executive committee on whether and how the solution should move from pilot to scaled implementation.",
+
             objective:
                 "Create a controlled scaling decision that protects value, accountability, fairness and long-term organisational capability.",
+
             constraints: [
                 "The board expects a recommendation within four weeks.",
                 "Performance evidence is positive but not yet consistent.",
                 "Different business units have different levels of readiness.",
                 "The organisation must maintain regulatory and public trust."
             ],
+
             decisions: [
                 {
                     id: "scaling",
+
                     title:
                         "How should the organisation approach scaling?",
+
                     options: [
                         {
                             id: "A",
+
                             text:
                                 "Roll the solution out organisation-wide immediately because the initial demonstration succeeded."
                         },
+
                         {
                             id: "B",
+
                             text:
                                 "Scale in controlled stages after validating evidence, readiness, controls, resources and local operating conditions."
                         },
+
                         {
                             id: "C",
+
                             text:
                                 "Stop all further development because the results are not perfectly consistent."
                         },
+
                         {
                             id: "D",
+
                             text:
                                 "Allow each department to copy the pilot independently without shared standards."
                         }
                     ]
                 },
+
                 {
                     id: "governance",
+
                     title:
                         "What governance model is required?",
+
                     options: [
                         {
                             id: "A",
+
                             text:
                                 "Use the vendor's standard policy as the organisation's complete governance framework."
                         },
+
                         {
                             id: "B",
+
                             text:
                                 "Establish accountable executive oversight, decision rights, risk thresholds, auditability and an incident-response process."
                         },
+
                         {
                             id: "C",
+
                             text:
                                 "Assign governance to a junior developer who maintains the technical system."
                         },
+
                         {
                             id: "D",
+
                             text:
                                 "Remove formal governance once the solution moves beyond the pilot."
                         }
                     ]
                 },
+
                 {
                     id: "monitoring",
+
                     title:
                         "What monitoring should continue after deployment?",
+
                     options: [
                         {
                             id: "A",
+
                             text:
                                 "Complete one final approval review and then stop monitoring."
                         },
+
                         {
                             id: "B",
+
                             text:
                                 "Continuously monitor performance, benefits, fairness, privacy, security, drift, adoption and agreed stop criteria."
                         },
+
                         {
                             id: "C",
+
                             text:
                                 "Investigate the system only after a serious customer complaint."
                         },
+
                         {
                             id: "D",
+
                             text:
                                 "Monitor only whether the project remains within its annual budget."
                         }
@@ -319,23 +427,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const dimensionLabels = {
         strategicAlignment:
             "Strategic alignment",
+
         valueFeasibility:
             "Value and feasibility",
+
         responsibleAI:
             "Responsible AI",
+
         stakeholderLeadership:
             "Stakeholder leadership",
+
         implementationReadiness:
             "Implementation readiness"
     };
 
     const elements = {
-        app:
-            document.getElementById("simulationApp"),
-
-        apiStatus:
-            document.getElementById("apiStatus"),
-
         apiStatusDot:
             document.getElementById("apiStatusDot"),
 
@@ -349,136 +455,200 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById("progressPercentage"),
 
         progressBar:
-            document.getElementById("simulationProgressBar"),
+            document.getElementById(
+                "simulationProgressBar"
+            ),
 
         navigation:
-            document.getElementById("scenarioNavigation"),
+            document.getElementById(
+                "scenarioNavigation"
+            ),
 
         scenarioPanel:
-            document.getElementById("scenarioPanel"),
+            document.getElementById(
+                "scenarioPanel"
+            ),
 
         scenarioLevel:
-            document.getElementById("scenarioLevel"),
+            document.getElementById(
+                "scenarioLevel"
+            ),
 
         scenarioDuration:
-            document.getElementById("scenarioDuration"),
+            document.getElementById(
+                "scenarioDuration"
+            ),
 
         scenarioTitle:
-            document.getElementById("scenarioTitle"),
+            document.getElementById(
+                "scenarioTitle"
+            ),
 
         scenarioSummary:
-            document.getElementById("scenarioSummary"),
+            document.getElementById(
+                "scenarioSummary"
+            ),
 
         scenarioRole:
-            document.getElementById("scenarioRole"),
+            document.getElementById(
+                "scenarioRole"
+            ),
 
         scenarioObjective:
-            document.getElementById("scenarioObjective"),
+            document.getElementById(
+                "scenarioObjective"
+            ),
 
         scenarioConstraints:
-            document.getElementById("scenarioConstraints"),
+            document.getElementById(
+                "scenarioConstraints"
+            ),
 
         form:
-            document.getElementById("simulationForm"),
+            document.getElementById(
+                "simulationForm"
+            ),
 
         decisionGroups:
-            document.getElementById("decisionGroups"),
-
-        rationale:
-            document.getElementById("executiveRationale"),
-
-        rationaleWordCount:
-            document.getElementById("rationaleWordCount"),
-
-        rationaleError:
-            document.getElementById("rationaleError"),
-
-        consent:
-            document.getElementById("aiConsent"),
+            document.getElementById(
+                "decisionGroups"
+            ),
 
         status:
-            document.getElementById("simulationStatus"),
+            document.getElementById(
+                "simulationStatus"
+            ),
 
         submitButton:
-            document.getElementById("submitSimulation"),
+            document.getElementById(
+                "submitSimulation"
+            ),
 
         submitLabel:
-            document.querySelector(".simulation-submit-label"),
+            document.querySelector(
+                ".simulation-submit-label"
+            ),
 
         submitLoading:
-            document.querySelector(".simulation-submit-loading"),
+            document.querySelector(
+                ".simulation-submit-loading"
+            ),
 
         resetButton:
-            document.getElementById("resetSimulation"),
+            document.getElementById(
+                "resetSimulation"
+            ),
 
         result:
-            document.getElementById("simulationResult"),
+            document.getElementById(
+                "simulationResult"
+            ),
 
         scoreRing:
-            document.getElementById("scoreRing"),
+            document.getElementById(
+                "scoreRing"
+            ),
 
         overallScore:
-            document.getElementById("overallScore"),
+            document.getElementById(
+                "overallScore"
+            ),
 
         performanceBand:
-            document.getElementById("performanceBand"),
+            document.getElementById(
+                "performanceBand"
+            ),
 
         executiveSummary:
-            document.getElementById("executiveSummary"),
+            document.getElementById(
+                "executiveSummary"
+            ),
 
         attemptSummary:
-            document.getElementById("attemptSummary"),
+            document.getElementById(
+                "attemptSummary"
+            ),
 
         dimensionScores:
-            document.getElementById("dimensionScores"),
+            document.getElementById(
+                "dimensionScores"
+            ),
 
         strengthsList:
-            document.getElementById("strengthsList"),
+            document.getElementById(
+                "strengthsList"
+            ),
 
         improvementsList:
-            document.getElementById("improvementsList"),
+            document.getElementById(
+                "improvementsList"
+            ),
 
         likelyConsequence:
-            document.getElementById("likelyConsequence"),
+            document.getElementById(
+                "likelyConsequence"
+            ),
 
         recommendedAction:
-            document.getElementById("recommendedAction"),
+            document.getElementById(
+                "recommendedAction"
+            ),
 
         followUpQuestion:
-            document.getElementById("followUpQuestion"),
+            document.getElementById(
+                "followUpQuestion"
+            ),
 
         retryButton:
-            document.getElementById("retryScenario"),
+            document.getElementById(
+                "retryScenario"
+            ),
 
         nextButton:
-            document.getElementById("nextScenario"),
+            document.getElementById(
+                "nextScenario"
+            ),
 
         printButton:
-            document.getElementById("printResult"),
+            document.getElementById(
+                "printResult"
+            ),
 
         history:
-            document.getElementById("simulationHistory"),
+            document.getElementById(
+                "simulationHistory"
+            ),
 
         clearProgressButton:
-            document.getElementById("clearProgress")
+            document.getElementById(
+                "clearProgress"
+            )
     };
 
     let currentScenarioIndex = 0;
-    let progress = loadProgress();
+
+    let progress =
+        loadProgress();
 
     function loadProgress() {
         try {
             const saved =
-                localStorage.getItem(STORAGE_KEY);
+                localStorage.getItem(
+                    STORAGE_KEY
+                );
 
             if (!saved) {
                 return {};
             }
 
-            const parsed = JSON.parse(saved);
+            const parsed =
+                JSON.parse(saved);
 
-            return parsed &&
-                typeof parsed === "object"
+            return (
+                parsed &&
+                typeof parsed === "object" &&
+                !Array.isArray(parsed)
+            )
                 ? parsed
                 : {};
         } catch (error) {
@@ -505,21 +675,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    function countWords(value) {
-        const text =
-            String(value || "").trim();
-
-        if (!text) {
-            return 0;
-        }
-
-        return text
-            .split(/\s+/)
-            .filter(Boolean)
-            .length;
-    }
-
-    function setStatus(message, type = "") {
+    function setStatus(
+        message,
+        type = ""
+    ) {
         elements.status.textContent =
             message || "";
 
@@ -533,7 +692,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    function setApiStatus(status, message) {
+    function setApiStatus(
+        status,
+        message
+    ) {
         elements.apiStatusDot.className =
             `simulation-status-dot ${status}`;
 
@@ -541,7 +703,9 @@ document.addEventListener("DOMContentLoaded", () => {
             message;
     }
 
-    function setSubmitting(isSubmitting) {
+    function setSubmitting(
+        isSubmitting
+    ) {
         elements.submitButton.disabled =
             isSubmitting;
 
@@ -557,18 +721,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function createElement(
         tagName,
-        className,
-        text
+        className = "",
+        text = ""
     ) {
         const element =
-            document.createElement(tagName);
+            document.createElement(
+                tagName
+            );
 
         if (className) {
             element.className =
                 className;
         }
 
-        if (typeof text === "string") {
+        if (text) {
             element.textContent =
                 text;
         }
@@ -577,86 +743,128 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function getCurrentScenario() {
-        return scenarios[currentScenarioIndex];
+        return scenarios[
+            currentScenarioIndex
+        ];
     }
 
     function renderScenarioNavigation() {
-        elements.navigation.replaceChildren();
+        elements.navigation
+            .replaceChildren();
 
-        scenarios.forEach((scenario, index) => {
-            const button =
-                createElement(
-                    "button",
-                    "simulation-level-button"
-                );
+        scenarios.forEach(
+            (
+                scenario,
+                index
+            ) => {
+                const button =
+                    createElement(
+                        "button",
+                        "simulation-level-button"
+                    );
 
-            button.type = "button";
+                button.type =
+                    "button";
 
-            if (index === currentScenarioIndex) {
-                button.classList.add("active");
-                button.setAttribute(
-                    "aria-current",
-                    "step"
-                );
-            }
+                if (
+                    index ===
+                    currentScenarioIndex
+                ) {
+                    button.classList.add(
+                        "active"
+                    );
 
-            if (progress[scenario.id]?.best) {
-                button.classList.add("completed");
-            }
-
-            const number =
-                createElement(
-                    "span",
-                    "simulation-level-number",
-                    String(index + 1).padStart(2, "0")
-                );
-
-            const copy =
-                createElement(
-                    "span",
-                    "simulation-level-copy"
-                );
-
-            const level =
-                createElement(
-                    "small",
-                    "",
-                    scenario.level
-                );
-
-            const title =
-                createElement(
-                    "strong",
-                    "",
-                    scenario.title
-                );
-
-            copy.append(level, title);
-            button.append(number, copy);
-
-            button.addEventListener(
-                "click",
-                () => {
-                    currentScenarioIndex =
-                        index;
-
-                    renderCurrentScenario();
-
-                    elements.scenarioPanel.scrollIntoView({
-                        behavior: "smooth",
-                        block: "start"
-                    });
+                    button.setAttribute(
+                        "aria-current",
+                        "step"
+                    );
                 }
-            );
 
-            elements.navigation.appendChild(
-                button
-            );
-        });
+                if (
+                    progress[
+                        scenario.id
+                    ]?.best
+                ) {
+                    button.classList.add(
+                        "completed"
+                    );
+                }
+
+                const number =
+                    createElement(
+                        "span",
+                        "simulation-level-number",
+                        String(
+                            index + 1
+                        ).padStart(
+                            2,
+                            "0"
+                        )
+                    );
+
+                const copy =
+                    createElement(
+                        "span",
+                        "simulation-level-copy"
+                    );
+
+                const level =
+                    createElement(
+                        "small",
+                        "",
+                        scenario.level
+                    );
+
+                const title =
+                    createElement(
+                        "strong",
+                        "",
+                        scenario.title
+                    );
+
+                copy.append(
+                    level,
+                    title
+                );
+
+                button.append(
+                    number,
+                    copy
+                );
+
+                button.addEventListener(
+                    "click",
+                    () => {
+                        currentScenarioIndex =
+                            index;
+
+                        renderCurrentScenario();
+
+                        elements
+                            .scenarioPanel
+                            .scrollIntoView({
+                                behavior:
+                                    "smooth",
+
+                                block:
+                                    "start"
+                            });
+                    }
+                );
+
+                elements.navigation
+                    .appendChild(
+                        button
+                    );
+            }
+        );
     }
 
-    function renderConstraints(scenario) {
-        elements.scenarioConstraints
+    function renderConstraints(
+        scenario
+    ) {
+        elements
+            .scenarioConstraints
             .replaceChildren();
 
         scenario.constraints.forEach(
@@ -668,18 +876,27 @@ document.addEventListener("DOMContentLoaded", () => {
                         constraint
                     );
 
-                elements.scenarioConstraints
-                    .appendChild(item);
+                elements
+                    .scenarioConstraints
+                    .appendChild(
+                        item
+                    );
             }
         );
     }
 
-    function renderDecisionGroups(scenario) {
-        elements.decisionGroups
+    function renderDecisionGroups(
+        scenario
+    ) {
+        elements
+            .decisionGroups
             .replaceChildren();
 
         scenario.decisions.forEach(
-            (decision, decisionIndex) => {
+            (
+                decision,
+                decisionIndex
+            ) => {
                 const section =
                     createElement(
                         "fieldset",
@@ -696,12 +913,18 @@ document.addEventListener("DOMContentLoaded", () => {
                     createElement(
                         "span",
                         "simulation-question-number",
-                        String(decisionIndex + 1)
-                            .padStart(2, "0")
+                        String(
+                            decisionIndex + 1
+                        ).padStart(
+                            2,
+                            "0"
+                        )
                     );
 
                 const headingCopy =
-                    createElement("div");
+                    createElement(
+                        "div"
+                    );
 
                 const label =
                     createElement(
@@ -727,7 +950,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     headingCopy
                 );
 
-                section.appendChild(header);
+                section.appendChild(
+                    header
+                );
 
                 const options =
                     createElement(
@@ -747,14 +972,24 @@ document.addEventListener("DOMContentLoaded", () => {
                             );
 
                         const input =
-                            document.createElement("input");
+                            document.createElement(
+                                "input"
+                            );
 
-                        input.type = "radio";
+                        input.type =
+                            "radio";
+
                         input.name =
                             `decision-${decision.id}`;
-                        input.id = optionId;
-                        input.value = option.id;
-                        input.required = true;
+
+                        input.id =
+                            optionId;
+
+                        input.value =
+                            option.id;
+
+                        input.required =
+                            true;
 
                         const optionLabel =
                             createElement(
@@ -779,6 +1014,21 @@ document.addEventListener("DOMContentLoaded", () => {
                             optionLetter
                         );
 
+                        input.addEventListener(
+                            "change",
+                            () => {
+                                const error =
+                                    document.getElementById(
+                                        `error-${decision.id}`
+                                    );
+
+                                if (error) {
+                                    error.textContent =
+                                        "";
+                                }
+                            }
+                        );
+
                         wrapper.append(
                             input,
                             optionLabel
@@ -798,6 +1048,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 error.id =
                     `error-${decision.id}`;
+
                 error.setAttribute(
                     "role",
                     "alert"
@@ -808,8 +1059,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     error
                 );
 
-                elements.decisionGroups
-                    .appendChild(section);
+                elements
+                    .decisionGroups
+                    .appendChild(
+                        section
+                    );
             }
         );
     }
@@ -836,40 +1090,31 @@ document.addEventListener("DOMContentLoaded", () => {
         elements.scenarioObjective.textContent =
             scenario.objective;
 
-        renderConstraints(scenario);
-        renderDecisionGroups(scenario);
+        elements.nextButton.textContent =
+            currentScenarioIndex ===
+            scenarios.length - 1
+                ? "Return to First Scenario"
+                : "Continue to Next Scenario";
+
+        renderConstraints(
+            scenario
+        );
+
+        renderDecisionGroups(
+            scenario
+        );
+
         renderScenarioNavigation();
 
         elements.form.reset();
 
-        elements.rationale.value = "";
-        elements.rationale.classList.remove(
-            "is-invalid"
-        );
-
-        elements.rationaleError.textContent =
-            "";
-
-        updateWordCount();
-
         setStatus("");
+
         hideResult();
+
         renderProgress();
+
         renderHistory();
-    }
-
-    function updateWordCount() {
-        const words =
-            countWords(elements.rationale.value);
-
-        elements.rationaleWordCount.textContent =
-            `${Math.min(words, MAX_RATIONALE_WORDS)} / ${MAX_RATIONALE_WORDS} words`;
-
-        elements.rationaleWordCount.classList
-            .toggle(
-                "limit-reached",
-                words > MAX_RATIONALE_WORDS
-            );
     }
 
     function clearValidationErrors() {
@@ -877,25 +1122,28 @@ document.addEventListener("DOMContentLoaded", () => {
             .querySelectorAll(
                 ".simulation-field-error"
             )
-            .forEach(element => {
-                element.textContent = "";
-            });
-
-        elements.rationale.classList.remove(
-            "is-invalid"
-        );
+            .forEach(
+                element => {
+                    element.textContent =
+                        "";
+                }
+            );
     }
 
-    function collectResponses(scenario) {
+    function collectResponses(
+        scenario
+    ) {
         const responses = {};
+
         let valid = true;
 
         scenario.decisions.forEach(
             decision => {
                 const selected =
-                    elements.form.querySelector(
-                        `input[name="decision-${decision.id}"]:checked`
-                    );
+                    elements.form
+                        .querySelector(
+                            `input[name="decision-${decision.id}"]:checked`
+                        );
 
                 const error =
                     document.getElementById(
@@ -905,10 +1153,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (!selected) {
                     valid = false;
 
-                    error.textContent =
-                        "Please select one decision before submitting.";
+                    if (error) {
+                        error.textContent =
+                            "Please select one answer before submitting.";
+                    }
                 } else {
-                    responses[decision.id] =
+                    responses[
+                        decision.id
+                    ] =
                         selected.value;
                 }
             }
@@ -920,86 +1172,41 @@ document.addEventListener("DOMContentLoaded", () => {
         };
     }
 
-    function validateSubmission() {
+    async function submitForEvaluation(
+        event
+    ) {
+        event.preventDefault();
+
         clearValidationErrors();
+
+        setStatus("");
 
         const scenario =
             getCurrentScenario();
 
-        const collected =
-            collectResponses(scenario);
-
-        const rationale =
-            elements.rationale.value.trim();
-
-        const wordCount =
-            countWords(rationale);
-
-        let valid =
-            collected.valid;
-
-        if (wordCount < MIN_RATIONALE_WORDS) {
-            valid = false;
-
-            elements.rationale.classList.add(
-                "is-invalid"
-            );
-
-            elements.rationaleError.textContent =
-                `Please provide at least ${MIN_RATIONALE_WORDS} words so that the AI can evaluate your reasoning properly.`;
-        } else if (
-            wordCount > MAX_RATIONALE_WORDS
-        ) {
-            valid = false;
-
-            elements.rationale.classList.add(
-                "is-invalid"
-            );
-
-            elements.rationaleError.textContent =
-                `Please reduce your response to ${MAX_RATIONALE_WORDS} words or fewer.`;
-        }
-
-        if (!elements.consent.checked) {
-            valid = false;
-
-            setStatus(
-                "Please confirm the responsible-use statement before submitting.",
-                "error"
-            );
-        }
-
-        return {
-            valid,
-            scenario,
-            responses:
-                collected.responses,
-            rationale
-        };
-    }
-
-    async function submitForEvaluation(event) {
-        event.preventDefault();
-
         const submission =
-            validateSubmission();
+            collectResponses(
+                scenario
+            );
 
         if (!submission.valid) {
-            if (!elements.status.textContent) {
-                setStatus(
-                    "Complete every decision and review the highlighted fields.",
-                    "error"
-                );
-            }
+            setStatus(
+                "Please answer every multiple-choice question before submitting.",
+                "error"
+            );
 
             const firstError =
-                elements.form.querySelector(
-                    ".simulation-field-error:not(:empty)"
-                );
+                elements.form
+                    .querySelector(
+                        ".simulation-field-error:not(:empty)"
+                    );
 
             firstError?.scrollIntoView({
-                behavior: "smooth",
-                block: "center"
+                behavior:
+                    "smooth",
+
+                block:
+                    "center"
             });
 
             return;
@@ -1008,7 +1215,7 @@ document.addEventListener("DOMContentLoaded", () => {
         setSubmitting(true);
 
         setStatus(
-            "DeepSeek is evaluating your decisions and executive rationale. This may take a few seconds.",
+            "DeepSeek is evaluating your selected multiple-choice decisions. This may take a few seconds.",
             "loading"
         );
 
@@ -1017,51 +1224,58 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const timeout =
             window.setTimeout(
-                () => controller.abort(),
+                () =>
+                    controller.abort(),
+
                 REQUEST_TIMEOUT_MS
             );
 
         try {
             const response =
-                await fetch(API_URL, {
-                    method: "POST",
+                await fetch(
+                    API_URL,
+                    {
+                        method:
+                            "POST",
 
-                    headers: {
-                        "Content-Type":
-                            "application/json"
-                    },
+                        headers: {
+                            "Content-Type":
+                                "application/json"
+                        },
 
-                    body: JSON.stringify({
-                        scenarioId:
-                            submission.scenario.id,
+                        body:
+                            JSON.stringify({
+                                scenarioId:
+                                    scenario.id,
 
-                        responses:
-                            submission.responses,
+                                responses:
+                                    submission.responses
+                            }),
 
-                        rationale:
-                            submission.rationale
-                    }),
-
-                    signal:
-                        controller.signal
-                });
+                        signal:
+                            controller.signal
+                    }
+                );
 
             const responseData =
                 await response
                     .json()
-                    .catch(() => null);
+                    .catch(
+                        () => null
+                    );
 
             if (!response.ok) {
                 throw new Error(
                     responseData?.error ||
-                    "The AI scoring service could not evaluate the response."
+                    "The AI scoring service could not evaluate the answers."
                 );
             }
 
             if (
                 !responseData ||
-                typeof responseData.overallScore
-                    !== "number" ||
+                typeof responseData
+                    .overallScore !==
+                    "number" ||
                 !responseData.dimensions
             ) {
                 throw new Error(
@@ -1071,7 +1285,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const savedAttempt =
                 saveAttempt(
-                    submission.scenario,
+                    scenario,
                     responseData
                 );
 
@@ -1086,13 +1300,19 @@ document.addEventListener("DOMContentLoaded", () => {
             );
 
             renderProgress();
+
             renderScenarioNavigation();
+
             renderHistory();
 
-            elements.result.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
+            elements.result
+                .scrollIntoView({
+                    behavior:
+                        "smooth",
+
+                    block:
+                        "start"
+                });
         } catch (error) {
             console.error(
                 "Simulation evaluation failed:",
@@ -1100,7 +1320,8 @@ document.addEventListener("DOMContentLoaded", () => {
             );
 
             const message =
-                error?.name === "AbortError"
+                error?.name ===
+                "AbortError"
                     ? "The AI evaluation took too long. Please check your connection and try again."
                     : error?.message ||
                       "The AI evaluation is temporarily unavailable.";
@@ -1110,7 +1331,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 "error"
             );
         } finally {
-            window.clearTimeout(timeout);
+            window.clearTimeout(
+                timeout
+            );
+
             setSubmitting(false);
         }
     }
@@ -1120,7 +1344,9 @@ document.addEventListener("DOMContentLoaded", () => {
         evaluation
     ) {
         const previous =
-            progress[scenario.id] || {
+            progress[
+                scenario.id
+            ] || {
                 attempts: 0,
                 best: null,
                 latest: null
@@ -1140,7 +1366,10 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         previous.attempts =
-            Number(previous.attempts || 0) + 1;
+            Number(
+                previous.attempts ||
+                0
+            ) + 1;
 
         previous.latest =
             attempt;
@@ -1148,13 +1377,15 @@ document.addEventListener("DOMContentLoaded", () => {
         if (
             !previous.best ||
             attempt.score >
-                previous.best.score
+            previous.best.score
         ) {
             previous.best =
                 attempt;
         }
 
-        progress[scenario.id] =
+        progress[
+            scenario.id
+        ] =
             previous;
 
         saveProgress();
@@ -1167,7 +1398,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 previous.best.score,
 
             isBest:
-                previous.best.timestamp ===
+                previous.best
+                    .timestamp ===
                 attempt.timestamp
         };
     }
@@ -1176,22 +1408,30 @@ document.addEventListener("DOMContentLoaded", () => {
         result,
         attempt
     ) {
-        elements.result.hidden = false;
+        elements.result.hidden =
+            false;
 
         elements.overallScore.textContent =
-            String(result.overallScore);
+            String(
+                result.overallScore
+            );
 
-        elements.scoreRing.style.setProperty(
-            "--simulation-score",
-            String(result.overallScore)
-        );
+        elements.scoreRing
+            .style
+            .setProperty(
+                "--simulation-score",
+                String(
+                    result.overallScore
+                )
+            );
 
         elements.performanceBand.textContent =
             result.performanceBand ||
             "Completed";
 
         elements.executiveSummary.textContent =
-            result.executiveSummary || "";
+            result.executiveSummary ||
+            "";
 
         elements.attemptSummary.textContent =
             `Attempt ${attempt.attempts}. Best score: ${attempt.bestScore}/100${
@@ -1215,13 +1455,16 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
         elements.likelyConsequence.textContent =
-            result.likelyConsequence || "";
+            result.likelyConsequence ||
+            "";
 
         elements.recommendedAction.textContent =
-            result.recommendedAction || "";
+            result.recommendedAction ||
+            "";
 
         elements.followUpQuestion.textContent =
-            result.followUpQuestion || "";
+            result.followUpQuestion ||
+            "";
     }
 
     function renderDimensionScores(
@@ -1230,15 +1473,27 @@ document.addEventListener("DOMContentLoaded", () => {
         elements.dimensionScores
             .replaceChildren();
 
-        Object.entries(dimensionLabels)
-            .forEach(([key, label]) => {
+        Object.entries(
+            dimensionLabels
+        ).forEach(
+            (
+                [
+                    key,
+                    label
+                ]
+            ) => {
                 const score =
                     Math.max(
                         0,
+
                         Math.min(
                             20,
-                            Number(dimensions[key]) ||
-                            0
+
+                            Number(
+                                dimensions[
+                                    key
+                                ]
+                            ) || 0
                         )
                     );
 
@@ -1288,71 +1543,93 @@ document.addEventListener("DOMContentLoaded", () => {
                 fill.style.width =
                     `${score * 5}%`;
 
-                track.appendChild(fill);
+                track.appendChild(
+                    fill
+                );
 
                 card.append(
                     header,
                     track
                 );
 
-                elements.dimensionScores
-                    .appendChild(card);
-            });
+                elements
+                    .dimensionScores
+                    .appendChild(
+                        card
+                    );
+            }
+        );
     }
 
     function renderList(
         container,
         values
     ) {
-        container.replaceChildren();
+        container
+            .replaceChildren();
 
         const items =
-            Array.isArray(values)
+            Array.isArray(
+                values
+            )
                 ? values
                 : [];
 
-        items.forEach(value => {
-            container.appendChild(
-                createElement(
-                    "li",
-                    "",
-                    String(value)
-                )
-            );
-        });
+        items.forEach(
+            value => {
+                container.appendChild(
+                    createElement(
+                        "li",
+                        "",
+                        String(value)
+                    )
+                );
+            }
+        );
     }
 
     function hideResult() {
-        elements.result.hidden = true;
+        elements.result.hidden =
+            true;
     }
 
     function resetCurrentScenario() {
         elements.form.reset();
 
-        elements.rationale.value = "";
-
         clearValidationErrors();
-        updateWordCount();
+
         setStatus("");
+
         hideResult();
 
-        elements.scenarioPanel.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-        });
+        elements.scenarioPanel
+            .scrollIntoView({
+                behavior:
+                    "smooth",
+
+                block:
+                    "start"
+            });
     }
 
     function goToNextScenario() {
         currentScenarioIndex =
-            (currentScenarioIndex + 1) %
+            (
+                currentScenarioIndex +
+                1
+            ) %
             scenarios.length;
 
         renderCurrentScenario();
 
-        elements.scenarioPanel.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-        });
+        elements.scenarioPanel
+            .scrollIntoView({
+                behavior:
+                    "smooth",
+
+                block:
+                    "start"
+            });
     }
 
     function renderProgress() {
@@ -1360,13 +1637,18 @@ document.addEventListener("DOMContentLoaded", () => {
             scenarios.filter(
                 scenario =>
                     Boolean(
-                        progress[scenario.id]?.best
+                        progress[
+                            scenario.id
+                        ]?.best
                     )
             ).length;
 
         const percentage =
             Math.round(
-                (completed / scenarios.length) *
+                (
+                    completed /
+                    scenarios.length
+                ) *
                 100
             );
 
@@ -1380,16 +1662,22 @@ document.addEventListener("DOMContentLoaded", () => {
             `${percentage}%`;
     }
 
-    function formatDate(isoDate) {
+    function formatDate(
+        isoDate
+    ) {
         if (!isoDate) {
             return "";
         }
 
         const date =
-            new Date(isoDate);
+            new Date(
+                isoDate
+            );
 
         if (
-            Number.isNaN(date.getTime())
+            Number.isNaN(
+                date.getTime()
+            )
         ) {
             return "";
         }
@@ -1397,134 +1685,161 @@ document.addEventListener("DOMContentLoaded", () => {
         return new Intl.DateTimeFormat(
             undefined,
             {
-                dateStyle: "medium",
-                timeStyle: "short"
+                dateStyle:
+                    "medium",
+
+                timeStyle:
+                    "short"
             }
-        ).format(date);
+        ).format(
+            date
+        );
     }
 
     function renderHistory() {
-        elements.history.replaceChildren();
+        elements.history
+            .replaceChildren();
 
-        scenarios.forEach(scenario => {
-            const record =
-                progress[scenario.id];
+        scenarios.forEach(
+            scenario => {
+                const record =
+                    progress[
+                        scenario.id
+                    ];
 
-            const column =
-                createElement(
-                    "div",
-                    "col-md-6 col-xl-4"
-                );
-
-            const card =
-                createElement(
-                    "article",
-                    "simulation-history-card"
-                );
-
-            const level =
-                createElement(
-                    "span",
-                    "simulation-level-badge",
-                    scenario.level
-                );
-
-            const title =
-                createElement(
-                    "h3",
-                    "",
-                    scenario.title
-                );
-
-            card.append(
-                level,
-                title
-            );
-
-            if (record?.best) {
-                card.classList.add(
-                    "completed"
-                );
-
-                const score =
+                const column =
                     createElement(
-                        "strong",
-                        "simulation-history-score",
-                        `${record.best.score}/100`
+                        "div",
+                        "col-md-6 col-xl-4"
                     );
 
-                const band =
+                const card =
                     createElement(
-                        "p",
-                        "",
-                        record.best.band ||
-                        "Completed"
+                        "article",
+                        "simulation-history-card"
                     );
 
-                const meta =
+                const level =
                     createElement(
-                        "small",
+                        "span",
+                        "simulation-level-badge",
+                        scenario.level
+                    );
+
+                const title =
+                    createElement(
+                        "h3",
                         "",
-                        `${record.attempts} attempt${
-                            record.attempts === 1
-                                ? ""
-                                : "s"
-                        } · Last completed ${formatDate(
-                            record.latest?.timestamp
-                        )}`
+                        scenario.title
                     );
 
                 card.append(
-                    score,
-                    band,
-                    meta
+                    level,
+                    title
                 );
-            } else {
-                const status =
-                    createElement(
-                        "p",
-                        "simulation-history-pending",
-                        "Not completed yet"
+
+                if (record?.best) {
+                    card.classList.add(
+                        "completed"
                     );
 
-                card.appendChild(status);
-            }
-
-            const button =
-                createElement(
-                    "button",
-                    "btn btn-sm btn-outline-secondary",
-                    record?.best
-                        ? "Open Scenario"
-                        : "Begin Scenario"
-                );
-
-            button.type = "button";
-
-            button.addEventListener(
-                "click",
-                () => {
-                    currentScenarioIndex =
-                        scenarios.findIndex(
-                            item =>
-                                item.id ===
-                                scenario.id
+                    const score =
+                        createElement(
+                            "strong",
+                            "simulation-history-score",
+                            `${record.best.score}/100`
                         );
 
-                    renderCurrentScenario();
+                    const band =
+                        createElement(
+                            "p",
+                            "",
+                            record.best.band ||
+                            "Completed"
+                        );
 
-                    elements.scenarioPanel
-                        .scrollIntoView({
-                            behavior: "smooth",
-                            block: "start"
-                        });
+                    const meta =
+                        createElement(
+                            "small",
+                            "",
+                            `${record.attempts} attempt${
+                                record.attempts === 1
+                                    ? ""
+                                    : "s"
+                            } · Last completed ${formatDate(
+                                record.latest
+                                    ?.timestamp
+                            )}`
+                        );
+
+                    card.append(
+                        score,
+                        band,
+                        meta
+                    );
+                } else {
+                    const status =
+                        createElement(
+                            "p",
+                            "simulation-history-pending",
+                            "Not completed yet"
+                        );
+
+                    card.appendChild(
+                        status
+                    );
                 }
-            );
 
-            card.appendChild(button);
-            column.appendChild(card);
-            elements.history.appendChild(column);
-        });
+                const button =
+                    createElement(
+                        "button",
+                        "btn btn-sm btn-outline-secondary",
+                        record?.best
+                            ? "Open Scenario"
+                            : "Begin Scenario"
+                    );
+
+                button.type =
+                    "button";
+
+                button.addEventListener(
+                    "click",
+                    () => {
+                        currentScenarioIndex =
+                            scenarios.findIndex(
+                                item =>
+                                    item.id ===
+                                    scenario.id
+                            );
+
+                        renderCurrentScenario();
+
+                        elements
+                            .scenarioPanel
+                            .scrollIntoView({
+                                behavior:
+                                    "smooth",
+
+                                block:
+                                    "start"
+                            });
+                    }
+                );
+
+                card.appendChild(
+                    button
+                );
+
+                column.appendChild(
+                    card
+                );
+
+                elements.history
+                    .appendChild(
+                        column
+                    );
+            }
+        );
     }
 
     async function checkApiStatus() {
@@ -1533,26 +1848,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const timeout =
             window.setTimeout(
-                () => controller.abort(),
+                () =>
+                    controller.abort(),
+
                 8000
             );
 
         try {
             const response =
-                await fetch(API_URL, {
-                    method: "GET",
-                    headers: {
-                        Accept:
-                            "application/json"
-                    },
-                    signal:
-                        controller.signal
-                });
+                await fetch(
+                    API_URL,
+                    {
+                        method:
+                            "GET",
+
+                        headers: {
+                            Accept:
+                                "application/json"
+                        },
+
+                        signal:
+                            controller.signal
+                    }
+                );
 
             const data =
                 await response
                     .json()
-                    .catch(() => null);
+                    .catch(
+                        () => null
+                    );
 
             if (
                 response.ok &&
@@ -1560,6 +1885,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ) {
                 setApiStatus(
                     "online",
+
                     `AI scoring service is ready${
                         data.model
                             ? ` · Model: ${data.model}`
@@ -1568,25 +1894,31 @@ document.addEventListener("DOMContentLoaded", () => {
                 );
             } else if (
                 response.ok &&
-                data?.configured === false
+                data?.configured ===
+                false
             ) {
                 setApiStatus(
                     "offline",
+
                     "AI scoring is deployed, but DEEPSEEK_API_KEY has not been configured in Netlify."
                 );
             } else {
                 setApiStatus(
                     "offline",
+
                     "The AI scoring service is currently unavailable."
                 );
             }
         } catch (error) {
             setApiStatus(
                 "warning",
-                "AI scoring will be available when the site is run through Netlify or Netlify Dev."
+
+                "AI scoring is available when the site is run through Netlify or Netlify Dev."
             );
         } finally {
-            window.clearTimeout(timeout);
+            window.clearTimeout(
+                timeout
+            );
         }
     }
 
@@ -1619,30 +1951,30 @@ document.addEventListener("DOMContentLoaded", () => {
         submitForEvaluation
     );
 
-    elements.rationale.addEventListener(
-        "input",
-        updateWordCount
-    );
+    elements.resetButton
+        .addEventListener(
+            "click",
+            resetCurrentScenario
+        );
 
-    elements.resetButton.addEventListener(
-        "click",
-        resetCurrentScenario
-    );
+    elements.retryButton
+        .addEventListener(
+            "click",
+            resetCurrentScenario
+        );
 
-    elements.retryButton.addEventListener(
-        "click",
-        resetCurrentScenario
-    );
+    elements.nextButton
+        .addEventListener(
+            "click",
+            goToNextScenario
+        );
 
-    elements.nextButton.addEventListener(
-        "click",
-        goToNextScenario
-    );
-
-    elements.printButton.addEventListener(
-        "click",
-        () => window.print()
-    );
+    elements.printButton
+        .addEventListener(
+            "click",
+            () =>
+                window.print()
+        );
 
     elements.clearProgressButton
         .addEventListener(
@@ -1651,5 +1983,6 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
     renderCurrentScenario();
+
     checkApiStatus();
 });

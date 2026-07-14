@@ -27,3 +27,6 @@ env*
 .env
 .env.local
 .netlify
+.env
+.env.local
+.netlify
