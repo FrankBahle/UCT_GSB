@@ -15,22 +15,22 @@ document.addEventListener("DOMContentLoaded", () => {
             duration: "5–10 minutes",
 
             title:
-                "Strategic Alignment and AI Readiness",
+                "Intelligent Network and AI Readiness",
 
             summary:
-                "Your organisation is under pressure to announce an AI initiative. Several departments have proposed ideas, but there is no shared business priority, data-readiness view or agreement about success.",
+                "TNM is considering an AI initiative to improve network reliability and service quality, but leaders do not yet share a priority use case, data-readiness view or agreed success measures.",
 
             role:
-                "You are part of the executive steering committee responsible for determining how the organisation should begin its AI journey.",
+                "You are part of the TNM executive steering group responsible for selecting the first network-intelligence opportunity.",
 
             objective:
-                "Establish a credible foundation for selecting a responsible, measurable and strategically relevant AI opportunity.",
+                "Establish a credible foundation for a responsible, measurable network-intelligence pilot that works within Malawi’s infrastructure constraints.",
 
             constraints: [
-                "Leadership expects visible progress within six months.",
-                "Data is fragmented across several departments.",
-                "Employees are concerned about job impact and accountability.",
-                "The organisation has limited AI implementation experience."
+                "Leadership expects visible network and customer-service improvements within six months.",
+                "Network, customer, field-service and asset data are fragmented across several systems.",
+                "Network and field teams are concerned about workflow changes, job impact and accountability.",
+                "TNM must balance legacy-system constraints, skills development, affordability and service continuity."
             ],
 
             decisions: [
@@ -153,22 +153,22 @@ document.addEventListener("DOMContentLoaded", () => {
             duration: "5–10 minutes",
 
             title:
-                "Pilot Design and Business Value",
+                "Mpamba Pilot Design and Financial Inclusion",
 
             summary:
-                "The organisation has selected customer-service response times as a priority. A vendor proposes an AI system that could draft responses and recommend actions, but leaders disagree about scope, autonomy and how value should be measured.",
+                "TNM has selected Mpamba fraud reduction and agent liquidity support as a priority. A vendor proposes an AI system, but leaders disagree about pilot scope, human oversight, inclusion and how value should be measured.",
 
             role:
-                "You are the executive sponsor responsible for turning the opportunity into a controlled and evidence-based pilot.",
+                "You are the executive sponsor responsible for designing a controlled Mpamba pilot that improves trust, agent performance and financial inclusion.",
 
             objective:
-                "Design a realistic pilot that creates measurable value while maintaining human accountability and organisational learning.",
+                "Design a realistic Mpamba pilot that creates measurable value while protecting customers, agents, privacy and accountable human decision-making.",
 
             constraints: [
-                "The pilot must demonstrate useful evidence within twelve weeks.",
-                "Frontline staff currently use inconsistent processes.",
-                "Some customer interactions contain sensitive information.",
-                "The organisation cannot disrupt essential service delivery."
+                "The pilot must demonstrate useful evidence within 90 days.",
+                "Agent and operational processes vary across locations and customer contexts.",
+                "Mpamba transactions and customer information are highly sensitive.",
+                "The pilot must not disrupt essential mobile-money services or exclude vulnerable users."
             ],
 
             decisions: [
@@ -291,22 +291,22 @@ document.addEventListener("DOMContentLoaded", () => {
             duration: "5–10 minutes",
 
             title:
-                "Governance, Scaling and Organisational Change",
+                "Responsible AI, Governance and Future Readiness",
 
             summary:
-                "The pilot has improved response times and staff adoption is encouraging. However, performance varies between customer groups, managers want a rapid organisation-wide rollout and governance responsibilities remain unclear.",
+                "A TNM AI prototype shows promise, but performance varies across customer groups and regions. Leaders want rapid scaling while governance, data ownership, vendor accountability and human-review responsibilities remain unclear.",
 
             role:
-                "You are advising the executive committee on whether and how the solution should move from pilot to scaled implementation.",
+                "You are advising the TNM executive committee and board on whether and how the solution should move from prototype to a governed pilot and responsible scaling pathway.",
 
             objective:
-                "Create a controlled scaling decision that protects value, accountability, fairness and long-term organisational capability.",
+                "Create a controlled decision that protects value, customer dignity, inclusion, accountability, regulatory trust and long-term TNM capability.",
 
             constraints: [
-                "The board expects a recommendation within four weeks.",
-                "Performance evidence is positive but not yet consistent.",
-                "Different business units have different levels of readiness.",
-                "The organisation must maintain regulatory and public trust."
+                "The board expects a recommendation and governance canvas before formal closure.",
+                "Performance evidence is promising but not yet consistent across rural, urban and customer segments.",
+                "TNM business, data, technology, legal and operational teams have different readiness levels.",
+                "TNM must maintain customer, employee, regulatory and public trust."
             ],
 
             decisions: [

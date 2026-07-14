@@ -22,10 +22,10 @@ const DIMENSION_KEYS = [
 const SCENARIOS = {
     readiness: {
         title:
-            "Strategic Alignment and AI Readiness",
+            "Intelligent Network and AI Readiness",
 
         context:
-            "The organisation is under pressure to announce an AI initiative, but it has no shared business priority, consolidated data-readiness view or agreed measures of success.",
+            "TNM is considering an AI initiative to improve network reliability and service quality, but leaders do not yet share a priority use case, consolidated data-readiness view or agreed measures of success.",
 
         decisions: {
             priority: {
@@ -74,10 +74,10 @@ const SCENARIOS = {
 
     pilot: {
         title:
-            "Pilot Design and Business Value",
+            "Mpamba Pilot Design and Financial Inclusion",
 
         context:
-            "The organisation has selected customer-service response times as a priority. A vendor proposes an AI system that can draft responses and recommend actions, but leaders disagree about scope, autonomy and success measures.",
+            "TNM has selected Mpamba fraud reduction and agent liquidity support as a priority. A vendor proposes an AI system, but leaders disagree about pilot scope, autonomy, inclusion, human oversight and success measures.",
 
         decisions: {
             design: {
@@ -126,10 +126,10 @@ const SCENARIOS = {
 
     scale: {
         title:
-            "Governance, Scaling and Organisational Change",
+            "Responsible AI, Governance and Future Readiness",
 
         context:
-            "A pilot has improved response times, but performance varies between customer groups. Managers want a rapid organisation-wide rollout while governance responsibilities remain unclear.",
+            "A TNM AI prototype shows promise, but performance varies across customer groups and regions. Leaders want rapid scaling while governance, data ownership, vendor accountability and human-review responsibilities remain unclear.",
 
         decisions: {
             scaling: {
@@ -179,7 +179,7 @@ const SCENARIOS = {
 
 const SYSTEM_PROMPT = `
 You are an executive education evaluator for a UCT GSB
-Artificial Intelligence for Business Transformation simulation.
+AI Leadership in Action simulation prepared for Telekom Networks Malawi.
 
 This is a multiple-choice-only simulation.
 

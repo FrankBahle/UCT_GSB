@@ -523,7 +523,7 @@ async function copyCode(button) {
 
 function exportProgress() {
     const progressData = {
-        programme: 'UCT GSB Executive AI Programme',
+        programme: 'AI Leadership in Action — TNM Executive Programme',
         completedSessions: {},
         assessment: getStoredJson(`${UCT_GSB_STORAGE_PREFIX}_assessment`, null),
         bookmarks: getStoredJson(`${UCT_GSB_STORAGE_PREFIX}_bookmarks`, []),
@@ -555,7 +555,7 @@ function exportProgress() {
     const link = document.createElement('a');
 
     link.href = url;
-    link.download = 'uct-gsb-programme-progress.json';
+    link.download = 'ai-leadership-in-action-tnm-progress.json';
     document.body.appendChild(link);
     link.click();
     link.remove();
@@ -566,7 +566,7 @@ function exportProgress() {
 function downloadCertificate() {
     showSuccessModal(
         'Certificate information',
-        'Certificate requirements and download functionality will be added after the programme completion criteria are approved.'
+        "The supplied executive learning guide does not specify certificate requirements. Please follow the facilitator\'s programme guidance."
     );
 }
 
@@ -632,7 +632,7 @@ function initializeChatbot() {
     addChatbotMessage(
         messages,
         'bot',
-        'Welcome. I am connected to the programme knowledge assistant and can help with the provisional UCT GSB executive AI programme, including the three-day journey, delegates, slides, assessments and simulation.'
+        'Welcome to AI Leadership in Action. I can help with the TNM programme purpose, three-day journey, delegates, challenge groups, learning guide, practical canvases, implementation planning and simulation.'
     );
 
     const openChatbot = () => {
@@ -769,49 +769,23 @@ function trimChatbotHistory(history) {
 function getFallbackChatbotResponse(message) {
     const text = String(message || '').toLowerCase();
 
-    if (matchesAny(text, ['hello', 'hi', 'hey', 'help'])) {
-        return 'Hello. Ask me about the programme overview, Day 1, Day 2, Day 3, delegates, slides, assessments, the welcome avatar, the simulation or programme support.';
-    }
-
-    if (matchesAny(text, ['provisional', 'placeholder', 'final content', 'approved'])) {
-        return 'Some programme wording, schedules, forms and resources are authentic working placeholders and will be replaced when approved UCT GSB programme material is supplied.';
-    }
-
-    if (matchesAny(text, ['day 1', 'first day', 'readiness', 'alignment'])) {
-        return 'Day 1 provisionally focuses on strategic alignment and AI readiness, including orientation, applied demonstrations, readiness discussion and priority challenge mapping.';
-    }
-
-    if (matchesAny(text, ['day 2', 'second day', 'prototype', 'co-creation', 'pitch'])) {
-        return 'Day 2 provisionally focuses on problem framing, collaborative solution design, rapid prototyping, value and risk testing, and executive pitching.';
-    }
-
-    if (matchesAny(text, ['day 3', 'third day', 'responsible ai', 'governance', 'implementation'])) {
-        return 'Day 3 provisionally focuses on responsible AI, governance, executive decision-making, pilot planning, implementation roadmaps and action priorities.';
-    }
-
-    if (matchesAny(text, ['slide', 'pdf', 'download', 'material', 'resource'])) {
-        return 'The Slides page contains honest placeholders until approved UCT GSB programme PDFs are supplied. Outdated SARS files should not be presented as current material.';
-    }
-
-    if (matchesAny(text, ['assessment', 'feedback', 'form', 'qr code'])) {
-        return 'The Assessments page is waiting for the approved diagnostic, reflection and evaluation links and QR codes.';
-    }
-
-    if (matchesAny(text, ['simulation', 'scenario', 'exercise'])) {
-        return 'The Simulation page is intended for a scenario-based executive decision exercise. Its final scenario and scoring rules are still awaiting approval.';
-    }
-
-    if (matchesAny(text, ['delegate', 'participant'])) {
-        return 'The Delegates page contains 16 supplied participant profiles, with names, roles and organisations marked for verification before publication.';
-    }
-
-    if (matchesAny(text, ['contact', 'support', 'venue', 'location', 'email'])) {
-        return 'Official programme contact, venue and support details are still pending approval and should not be invented.';
-    }
-
-    return 'I can help with the provisional UCT GSB executive AI programme and its website pages.';
+    if (matchesAny(text, ['hello', 'hi', 'hey', 'help'])) return 'Welcome to AI Leadership in Action. Ask me about the TNM programme purpose, dates, venue, facilitator, Day 1, Day 2, Day 3, delegates, challenge groups, canvases or implementation planning.';
+    if (matchesAny(text, ['date', 'when'])) return 'AI Leadership in Action takes place from 15–17 July 2026.';
+    if (matchesAny(text, ['venue', 'where', 'location'])) return 'The venue is the UCT Graduate School of Business in Cape Town.';
+    if (matchesAny(text, ['facilitator', 'professor', 'abejide'])) return 'The facilitator is Professor Abejide Ade-Ibijola, Professor of Artificial Intelligence and Founder and Chairman of GRIT Lab Africa.';
+    if (matchesAny(text, ['purpose', 'overview', 'philosophy'])) return 'AI Leadership in Action is an applied, design-led executive intervention tailored to TNM. It positions participants as executive co-designers who diagnose organisational realities, co-create AI solutions and develop pilot-ready pathways suited to Malawi.';
+    if (matchesAny(text, ['day 1', 'first day'])) return 'Day 1 is Introductions, Shared Understanding and Pain-Point Diagnosis. It covers executive introductions, programme orientation, AI foundations, demonstrations, the TNM and Malawi reality check, pain-point diagnosis, prioritisation and team formation from 08:30 to 16:00.';
+    if (matchesAny(text, ['day 2', 'second day'])) return 'Day 2 is Co-Creation, Practical AI and Rapid Prototyping. It covers use-case matching, practical AI, solution architecture, prototyping, peer critique and Day 3 handover from 08:30 to 16:00.';
+    if (matchesAny(text, ['day 3', 'third day'])) return 'Day 3 is Strategy, Responsible AI and Future Readiness. It covers competitive positioning, human-centred AI, governance, risk, data, cybersecurity, IP, future telecom scenarios, pilot selection and 90-day action planning from 08:30 to 15:00.';
+    if (matchesAny(text, ['network', 'infrastructure'])) return 'The Intelligent Network and Digital Infrastructure group asks how TNM can use AI to improve network reliability, infrastructure investment, service quality and operational efficiency.';
+    if (matchesAny(text, ['customer', 'churn', 'commercial'])) return 'The Customer Growth, Commercial Intelligence and Market Leadership group asks how TNM can use AI to grow customers, reduce churn, personalise services and strengthen its competitive position.';
+    if (matchesAny(text, ['mpamba', 'financial inclusion', 'fraud'])) return 'The Mpamba, Financial Inclusion and Digital Ecosystems group explores how AI can expand inclusion, improve agent performance, reduce fraud and create new digital services.';
+    if (matchesAny(text, ['governance', 'responsible ai', 'trust'])) return 'The Responsible AI, Governance and Institutional Trust group focuses on protecting customers, employees, data, intellectual property and institutional reputation.';
+    if (matchesAny(text, ['canvas', 'template', 'action plan'])) return 'The learning guide includes an AI Opportunity Canvas, AI Governance Canvas and 90-Day Executive Action Plan. Open the Programme Canvases or Implementation Guide pages.';
+    if (matchesAny(text, ['slide', 'pdf', 'guide', 'download'])) return 'The Slides page provides the complete AI Leadership in Action Executive Learning Guide and direct links to the Day 1, Day 2 and Day 3 schedules.';
+    if (matchesAny(text, ['outcome', 'deliverable'])) return 'Programme deliverables include a TNM AI Strategic Vision, AI Maturity Snapshot, Opportunity Portfolio, Responsible AI Concepts, Governance Canvas, Pilot Roadmap and Executive Commitments.';
+    return 'I can help with AI Leadership in Action for TNM, including the programme purpose, dates, venue, facilitator, daily schedules, challenge groups, learning outcomes, canvases and 90-day follow-through.';
 }
-
 function matchesAny(text, phrases) {
     return phrases.some((phrase) => text.includes(phrase));
 }
@@ -836,9 +810,9 @@ function escapeHtml(value) {
 }
 
 console.log(
-    '%cUCT GSB Executive AI Programme',
+    '%cAI Leadership in Action — TNM Executive Programme',
     'color: #00aeef; background: #124f7c; padding: 8px 12px; font-size: 16px; font-weight: 700;'
 );
 console.log(
-    'Programme content marked as provisional should be replaced only with approved material.'
+    'Programme content is aligned with the supplied AI Leadership in Action Executive Learning Guide.'
 );

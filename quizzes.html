@@ -1,849 +1,484 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <meta
-        name="description"
-        content="Scenario-based executive AI decision simulation with DeepSeek scoring and feedback for the UCT GSB programme."
-    >
-
-    <title>
-        Executive AI Simulation | UCT Graduate School of Business
-    </title>
-
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-    >
-
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
-    >
-
-    <link
-        href="assets/css/style.css"
-        rel="stylesheet"
-    >
-
-    <link
-        href="assets/css/simulation.css"
-        rel="stylesheet"
-    >
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Scenario-based executive AI decision simulation with DeepSeek scoring and feedback for the UCT GSB programme." name="description"/>
+<title>TNM Executive AI Simulation | AI Leadership in Action</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet"/>
+<link href="assets/css/style.css" rel="stylesheet"/>
+<link href="assets/css/simulation.css" rel="stylesheet"/>
 </head>
-
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light gsb-navbar sticky-top">
-        <div class="container">
-            <a
-                class="navbar-brand"
-                href="index.html"
-                aria-label="UCT Graduate School of Business home"
-            >
-                <img
-                    src="assets/images/UCT_Logo.png"
-                    alt="UCT Graduate School of Business"
-                    class="gsb-logo"
-                >
-            </a>
-
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNav"
-                aria-controls="navbarNav"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-            >
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div
-                class="collapse navbar-collapse"
-                id="navbarNav"
-            >
-                <ul class="navbar-nav ms-auto align-items-lg-center">
-                    <li class="nav-item">
-                        <a
-                            class="nav-link"
-                            href="index.html"
-                        >
+<nav class="navbar navbar-expand-lg navbar-light gsb-navbar sticky-top">
+<div class="container">
+<a aria-label="UCT Graduate School of Business home" class="navbar-brand" href="index.html">
+<img alt="UCT Graduate School of Business" class="gsb-logo" src="assets/images/UCT_Logo.png"/>
+</a>
+<button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav ms-auto align-items-lg-center">
+<li class="nav-item">
+<a class="nav-link" href="index.html">
                             Home
                         </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a
-                            class="nav-link"
-                            href="day-1.html"
-                        >
+</li>
+<li class="nav-item">
+<a class="nav-link" href="day-1.html">
                             Day 1
                         </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a
-                            class="nav-link"
-                            href="day-2.html"
-                        >
+</li>
+<li class="nav-item">
+<a class="nav-link" href="day-2.html">
                             Day 2
                         </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a
-                            class="nav-link"
-                            href="day-3.html"
-                        >
+</li>
+<li class="nav-item">
+<a class="nav-link" href="day-3.html">
                             Day 3
                         </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a
-                            class="nav-link"
-                            href="delegates.html"
-                        >
+</li>
+<li class="nav-item">
+<a class="nav-link" href="delegates.html">
                             Delegates
                         </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a
-                            class="nav-link"
-                            href="slides.html"
-                        >
+</li>
+<li class="nav-item">
+<a class="nav-link" href="slides.html">
                             Slides
                         </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a
-                            class="nav-link active"
-                            aria-current="page"
-                            href="quizzes.html"
-                        >
+</li>
+<li class="nav-item">
+<a aria-current="page" class="nav-link active" href="quizzes.html">
                             Simulation
                         </a>
-                    </li>
-					<li class="nav-item">
-						<a class="nav-link" href="practical-ai-use.html">
+</li>
+<li class="nav-item">
+<a class="nav-link" href="practical-ai-use.html">
 							Practical AI Use
 						</a>
-					</li>
-
-                    <li class="nav-item dropdown">
-                        <a
-                            class="nav-link dropdown-toggle"
-                            href="#"
-                            id="resourcesDropdown"
-                            role="button"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                        >
+</li>
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="resourcesDropdown" role="button">
                             Resources
                         </a>
-
-                        <ul
-                            class="dropdown-menu dropdown-menu-end"
-                            aria-labelledby="resourcesDropdown"
-                        >
-                            <li>
-                                <a
-                                    class="dropdown-item"
-                                    href="assessments.html"
-                                >
+<ul aria-labelledby="resourcesDropdown" class="dropdown-menu dropdown-menu-end">
+<li>
+<a class="dropdown-item" href="assessments.html">
                                     Assessments
                                 </a>
-                            </li>
-
-                            <li>
-                                <a
-                                    class="dropdown-item"
-                                    href="case-studies.html"
-                                >
+</li>
+<li>
+<a class="dropdown-item" href="case-studies.html">
                                     Case Studies
                                 </a>
-                            </li>
-
-                            <li>
-                                <a
-                                    class="dropdown-item"
-                                    href="implementation.html"
-                                >
+</li>
+<li>
+<a class="dropdown-item" href="implementation.html">
                                     Implementation Guide
                                 </a>
-                            </li>
-
-                            <li>
-                                <a
-                                    class="dropdown-item"
-                                    href="Digital_Human.html"
-                                >
+</li>
+<li>
+<a class="dropdown-item" href="Digital_Human.html">
                                     Welcome Avatar
                                 </a>
-                            </li>
-
-                            <li>
-                                <a
-                                    class="dropdown-item"
-                                    href="contact.html"
-                                >
+</li>
+<li>
+<a class="dropdown-item" href="contact.html">
                                     Programme Support
                                 </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <main>
-        <section class="page-hero">
-            <div class="container">
-                <div class="page-meta">
-                    <span class="meta-chip">
-                        Applied Simulation
-                    </span>
-
-                    <span>
-                        DeepSeek-supported multiple-choice evaluation
-                    </span>
-                </div>
-
-                <span class="eyebrow">
-                    Applied Executive Learning
-                </span>
-
-                <h1>
-                    Executive AI Decision Simulation
-                </h1>
-
-                <p>
-                    Work through realistic AI transformation decisions,
-                    select the strongest executive actions and receive
-                    structured AI-generated scoring and feedback.
-                </p>
-            </div>
-        </section>
-
-        <section class="section section-white">
-            <div class="container">
-                <div class="section-heading text-center">
-                    <span class="eyebrow eyebrow-dark">
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<main>
+<section class="page-hero">
+<div class="container">
+<div class="page-meta">
+<span class="meta-chip">Simulation</span>
+<span>TNM executive decision practice</span>
+</div>
+<span class="eyebrow">AI Leadership in Action</span>
+<h1>TNM Executive AI Decision Simulation</h1>
+<p>Work through TNM-focused decisions covering strategic alignment, practical AI, customer and network value, responsible governance, pilot design and organisational adoption.</p>
+</div>
+</section>
+<section class="section section-white">
+<div class="container">
+<div class="section-heading text-center">
+<span class="eyebrow eyebrow-dark">
                         Simulation Journey
                     </span>
-
-                    <h2>
-                        Move from strategic readiness to responsible scaling
-                    </h2>
-
-                    <span
-                        class="heading-line"
-                        aria-hidden="true"
-                    ></span>
-
-                    <p>
-                        Complete three multiple-choice scenarios covering
-                        strategic alignment, pilot design, responsible AI,
-                        governance, implementation and organisational change.
-                    </p>
-                </div>
-
-                <div class="row g-4">
-                    <div class="col-md-4">
-                        <article class="simulation-feature-card">
-                            <div class="simulation-feature-icon">
-                                <i
-                                    class="bi bi-ui-checks"
-                                    aria-hidden="true"
-                                ></i>
-                            </div>
-
-                            <h3>
+<h2>Move from TNM opportunity diagnosis to responsible pilot action</h2>
+<span aria-hidden="true" class="heading-line"></span>
+<p>Complete three multiple-choice scenarios aligned with the programme learning journey and receive structured AI-generated executive feedback.</p>
+</div>
+<div class="row g-4">
+<div class="col-md-4">
+<article class="simulation-feature-card">
+<div class="simulation-feature-icon">
+<i aria-hidden="true" class="bi bi-ui-checks"></i>
+</div>
+<h3>
                                 Multiple choice only
                             </h3>
-
-                            <p>
+<p>
                                 Select one executive action for each decision.
                                 No written response is required.
                             </p>
-                        </article>
-                    </div>
-
-                    <div class="col-md-4">
-                        <article class="simulation-feature-card">
-                            <div class="simulation-feature-icon">
-                                <i
-                                    class="bi bi-stars"
-                                    aria-hidden="true"
-                                ></i>
-                            </div>
-
-                            <h3>
+</article>
+</div>
+<div class="col-md-4">
+<article class="simulation-feature-card">
+<div class="simulation-feature-icon">
+<i aria-hidden="true" class="bi bi-stars"></i>
+</div>
+<h3>
                                 DeepSeek evaluation
                             </h3>
-
-                            <p>
+<p>
                                 Your selected actions are evaluated securely
                                 through a server-side Netlify Function.
                             </p>
-                        </article>
-                    </div>
-
-                    <div class="col-md-4">
-                        <article class="simulation-feature-card">
-                            <div class="simulation-feature-icon">
-                                <i
-                                    class="bi bi-bar-chart"
-                                    aria-hidden="true"
-                                ></i>
-                            </div>
-
-                            <h3>
+</article>
+</div>
+<div class="col-md-4">
+<article class="simulation-feature-card">
+<div class="simulation-feature-icon">
+<i aria-hidden="true" class="bi bi-bar-chart"></i>
+</div>
+<h3>
                                 Developmental feedback
                             </h3>
-
-                            <p>
+<p>
                                 Receive dimension scores, strengths,
                                 development priorities and recommended actions.
                             </p>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section section-soft">
-            <div class="container">
-                <div
-                    id="simulationApp"
-                    class="executive-simulation"
-                >
-                    <div class="simulation-notice">
-                        <i
-                            class="bi bi-shield-check"
-                            aria-hidden="true"
-                        ></i>
-
-                        <div>
-                            <strong>
+</article>
+</div>
+</div>
+</div>
+</section>
+<section class="section section-soft">
+<div class="container">
+<div class="executive-simulation" id="simulationApp">
+<div class="simulation-notice">
+<i aria-hidden="true" class="bi bi-shield-check"></i>
+<div>
+<strong>
                                 AI evaluation notice
                             </strong>
-
-                            <p>
+<p>
                                 Only your selected multiple-choice answers are
                                 sent securely through a Netlify Function to
                                 DeepSeek for scoring and feedback.
                             </p>
-                        </div>
-                    </div>
-
-                    <div
-                        id="apiStatus"
-                        class="simulation-api-status"
-                        role="status"
-                        aria-live="polite"
-                    >
-                        <span
-                            id="apiStatusDot"
-                            class="simulation-status-dot checking"
-                            aria-hidden="true"
-                        ></span>
-
-                        <span id="apiStatusText">
+</div>
+</div>
+<div aria-live="polite" class="simulation-api-status" id="apiStatus" role="status">
+<span aria-hidden="true" class="simulation-status-dot checking" id="apiStatusDot"></span>
+<span id="apiStatusText">
                             Checking AI scoring service...
                         </span>
-                    </div>
-
-                    <div class="simulation-progress-card">
-                        <div class="simulation-progress-top">
-                            <div>
-                                <span class="simulation-small-label">
+</div>
+<div class="simulation-progress-card">
+<div class="simulation-progress-top">
+<div>
+<span class="simulation-small-label">
                                     Overall progress
                                 </span>
-
-                                <strong id="progressText">
+<strong id="progressText">
                                     0 of 3 scenarios completed
                                 </strong>
-                            </div>
-
-                            <span id="progressPercentage">
+</div>
+<span id="progressPercentage">
                                 0%
                             </span>
-                        </div>
-
-                        <div
-                            class="simulation-progress-track"
-                            aria-hidden="true"
-                        >
-                            <span
-                                id="simulationProgressBar"
-                                class="simulation-progress-fill"
-                            ></span>
-                        </div>
-                    </div>
-
-                    <nav
-                        id="scenarioNavigation"
-                        class="simulation-level-navigation"
-                        aria-label="Simulation scenarios"
-                    ></nav>
-
-                    <section
-                        id="scenarioPanel"
-                        class="simulation-scenario-panel"
-                        aria-labelledby="scenarioTitle"
-                    >
-                        <div class="simulation-scenario-heading">
-                            <div>
-                                <span
-                                    id="scenarioLevel"
-                                    class="simulation-level-badge"
-                                ></span>
-
-                                <span id="scenarioDuration"></span>
-                            </div>
-
-                            <h2 id="scenarioTitle"></h2>
-
-                            <p id="scenarioSummary"></p>
-                        </div>
-
-                        <div class="row g-4">
-                            <div class="col-lg-4">
-                                <article class="simulation-context-card">
-                                    <span class="simulation-card-label">
+</div>
+<div aria-hidden="true" class="simulation-progress-track">
+<span class="simulation-progress-fill" id="simulationProgressBar"></span>
+</div>
+</div>
+<nav aria-label="Simulation scenarios" class="simulation-level-navigation" id="scenarioNavigation"></nav>
+<section aria-labelledby="scenarioTitle" class="simulation-scenario-panel" id="scenarioPanel">
+<div class="simulation-scenario-heading">
+<div>
+<span class="simulation-level-badge" id="scenarioLevel"></span>
+<span id="scenarioDuration"></span>
+</div>
+<h2 id="scenarioTitle"></h2>
+<p id="scenarioSummary"></p>
+</div>
+<div class="row g-4">
+<div class="col-lg-4">
+<article class="simulation-context-card">
+<span class="simulation-card-label">
                                         Your role
                                     </span>
-
-                                    <h3>
+<h3>
                                         Executive responsibility
                                     </h3>
-
-                                    <p id="scenarioRole"></p>
-                                </article>
-                            </div>
-
-                            <div class="col-lg-4">
-                                <article class="simulation-context-card">
-                                    <span class="simulation-card-label">
+<p id="scenarioRole"></p>
+</article>
+</div>
+<div class="col-lg-4">
+<article class="simulation-context-card">
+<span class="simulation-card-label">
                                         Objective
                                     </span>
-
-                                    <h3>
+<h3>
                                         Leadership outcome
                                     </h3>
-
-                                    <p id="scenarioObjective"></p>
-                                </article>
-                            </div>
-
-                            <div class="col-lg-4">
-                                <article class="simulation-context-card">
-                                    <span class="simulation-card-label">
+<p id="scenarioObjective"></p>
+</article>
+</div>
+<div class="col-lg-4">
+<article class="simulation-context-card">
+<span class="simulation-card-label">
                                         Constraints
                                     </span>
-
-                                    <h3>
+<h3>
                                         What you must consider
                                     </h3>
-
-                                    <ul
-                                        id="scenarioConstraints"
-                                        class="simulation-constraint-list"
-                                    ></ul>
-                                </article>
-                            </div>
-                        </div>
-
-                        <form
-                            id="simulationForm"
-                            class="simulation-form"
-                            novalidate
-                        >
-                            <div id="decisionGroups"></div>
-
-                            <div
-                                id="simulationStatus"
-                                class="simulation-message"
-                                role="status"
-                                aria-live="polite"
-                            ></div>
-
-                            <div class="simulation-actions">
-                                <button
-                                    id="submitSimulation"
-                                    class="btn btn-gsb-primary btn-lg"
-                                    type="submit"
-                                >
-                                    <span class="simulation-submit-label">
-                                        <i
-                                            class="bi bi-stars"
-                                            aria-hidden="true"
-                                        ></i>
+<ul class="simulation-constraint-list" id="scenarioConstraints"></ul>
+</article>
+</div>
+</div>
+<form class="simulation-form" id="simulationForm" novalidate="">
+<div id="decisionGroups"></div>
+<div aria-live="polite" class="simulation-message" id="simulationStatus" role="status"></div>
+<div class="simulation-actions">
+<button class="btn btn-gsb-primary btn-lg" id="submitSimulation" type="submit">
+<span class="simulation-submit-label">
+<i aria-hidden="true" class="bi bi-stars"></i>
 
                                         Submit Answers for AI Evaluation
                                     </span>
-
-                                    <span
-                                        class="simulation-submit-loading"
-                                        hidden
-                                    >
-                                        <span
-                                            class="spinner-border spinner-border-sm"
-                                            aria-hidden="true"
-                                        ></span>
+<span class="simulation-submit-loading" hidden="">
+<span aria-hidden="true" class="spinner-border spinner-border-sm"></span>
 
                                         Evaluating answers...
                                     </span>
-                                </button>
-
-                                <button
-                                    id="resetSimulation"
-                                    class="btn btn-outline-secondary btn-lg"
-                                    type="button"
-                                >
+</button>
+<button class="btn btn-outline-secondary btn-lg" id="resetSimulation" type="button">
                                     Reset Scenario
                                 </button>
-                            </div>
-                        </form>
-                    </section>
-
-                    <section
-                        id="simulationResult"
-                        class="simulation-result-panel"
-                        aria-labelledby="resultHeading"
-                        hidden
-                    >
-                        <div class="simulation-result-header">
-                            <div
-                                id="scoreRing"
-                                class="simulation-score-ring"
-                                aria-label="Overall simulation score"
-                            >
-                                <div>
-                                    <strong id="overallScore">
+</div>
+</form>
+</section>
+<section aria-labelledby="resultHeading" class="simulation-result-panel" hidden="" id="simulationResult">
+<div class="simulation-result-header">
+<div aria-label="Overall simulation score" class="simulation-score-ring" id="scoreRing">
+<div>
+<strong id="overallScore">
                                         0
                                     </strong>
-
-                                    <span>
+<span>
                                         /100
                                     </span>
-                                </div>
-                            </div>
-
-                            <div class="simulation-result-intro">
-                                <span class="simulation-small-label">
+</div>
+</div>
+<div class="simulation-result-intro">
+<span class="simulation-small-label">
                                     AI-generated evaluation
                                 </span>
-
-                                <h2 id="resultHeading">
+<h2 id="resultHeading">
                                     Executive Simulation Result
                                 </h2>
-
-                                <span
-                                    id="performanceBand"
-                                    class="simulation-performance-band"
-                                ></span>
-
-                                <p id="executiveSummary"></p>
-
-                                <small id="attemptSummary"></small>
-                            </div>
-                        </div>
-
-                        <div>
-                            <h3 class="simulation-result-section-title">
+<span class="simulation-performance-band" id="performanceBand"></span>
+<p id="executiveSummary"></p>
+<small id="attemptSummary"></small>
+</div>
+</div>
+<div>
+<h3 class="simulation-result-section-title">
                                 Score breakdown
                             </h3>
-
-                            <div
-                                id="dimensionScores"
-                                class="simulation-dimension-grid"
-                            ></div>
-                        </div>
-
-                        <div class="row g-4 simulation-feedback-grid">
-                            <div class="col-lg-6">
-                                <article
-                                    class="simulation-feedback-card positive"
-                                >
-                                    <div class="simulation-feedback-heading">
-                                        <i
-                                            class="bi bi-check-circle"
-                                            aria-hidden="true"
-                                        ></i>
-
-                                        <h3>
+<div class="simulation-dimension-grid" id="dimensionScores"></div>
+</div>
+<div class="row g-4 simulation-feedback-grid">
+<div class="col-lg-6">
+<article class="simulation-feedback-card positive">
+<div class="simulation-feedback-heading">
+<i aria-hidden="true" class="bi bi-check-circle"></i>
+<h3>
                                             Strengths
                                         </h3>
-                                    </div>
-
-                                    <ul id="strengthsList"></ul>
-                                </article>
-                            </div>
-
-                            <div class="col-lg-6">
-                                <article
-                                    class="simulation-feedback-card improvement"
-                                >
-                                    <div class="simulation-feedback-heading">
-                                        <i
-                                            class="bi bi-arrow-up-circle"
-                                            aria-hidden="true"
-                                        ></i>
-
-                                        <h3>
+</div>
+<ul id="strengthsList"></ul>
+</article>
+</div>
+<div class="col-lg-6">
+<article class="simulation-feedback-card improvement">
+<div class="simulation-feedback-heading">
+<i aria-hidden="true" class="bi bi-arrow-up-circle"></i>
+<h3>
                                             Development priorities
                                         </h3>
-                                    </div>
-
-                                    <ul id="improvementsList"></ul>
-                                </article>
-                            </div>
-
-                            <div class="col-lg-6">
-                                <article class="simulation-feedback-card">
-                                    <span class="simulation-card-label">
+</div>
+<ul id="improvementsList"></ul>
+</article>
+</div>
+<div class="col-lg-6">
+<article class="simulation-feedback-card">
+<span class="simulation-card-label">
                                         Likely consequence
                                     </span>
-
-                                    <h3>
+<h3>
                                         What your selected approach could produce
                                     </h3>
-
-                                    <p id="likelyConsequence"></p>
-                                </article>
-                            </div>
-
-                            <div class="col-lg-6">
-                                <article class="simulation-feedback-card">
-                                    <span class="simulation-card-label">
+<p id="likelyConsequence"></p>
+</article>
+</div>
+<div class="col-lg-6">
+<article class="simulation-feedback-card">
+<span class="simulation-card-label">
                                         Recommended next action
                                     </span>
-
-                                    <h3>
+<h3>
                                         Strengthen the decision
                                     </h3>
-
-                                    <p id="recommendedAction"></p>
-                                </article>
-                            </div>
-                        </div>
-
-                        <article class="simulation-reflection-card">
-                            <span class="simulation-card-label">
+<p id="recommendedAction"></p>
+</article>
+</div>
+</div>
+<article class="simulation-reflection-card">
+<span class="simulation-card-label">
                                 Executive reflection
                             </span>
-
-                            <h3>
+<h3>
                                 Consider this before moving forward
                             </h3>
-
-                            <p id="followUpQuestion"></p>
-                        </article>
-
-                        <p class="simulation-ai-disclaimer">
+<p id="followUpQuestion"></p>
+</article>
+<p class="simulation-ai-disclaimer">
                             This feedback is AI-generated for executive
                             learning and reflection. It is not legal,
                             regulatory, employment, investment or
                             professional advice.
                         </p>
-
-                        <div class="simulation-result-actions no-print">
-                            <button
-                                id="retryScenario"
-                                class="btn btn-gsb-primary"
-                                type="button"
-                            >
+<div class="simulation-result-actions no-print">
+<button class="btn btn-gsb-primary" id="retryScenario" type="button">
                                 Retry This Scenario
                             </button>
-
-                            <button
-                                id="nextScenario"
-                                class="btn btn-outline-secondary"
-                                type="button"
-                            >
+<button class="btn btn-outline-secondary" id="nextScenario" type="button">
                                 Continue to Next Scenario
                             </button>
-
-                            <button
-                                id="printResult"
-                                class="btn btn-outline-secondary"
-                                type="button"
-                            >
-                                <i
-                                    class="bi bi-printer"
-                                    aria-hidden="true"
-                                ></i>
+<button class="btn btn-outline-secondary" id="printResult" type="button">
+<i aria-hidden="true" class="bi bi-printer"></i>
 
                                 Print Result
                             </button>
-                        </div>
-                    </section>
-
-                    <section class="simulation-history-section">
-                        <div class="simulation-history-heading">
-                            <div>
-                                <span class="simulation-small-label">
+</div>
+</section>
+<section class="simulation-history-section">
+<div class="simulation-history-heading">
+<div>
+<span class="simulation-small-label">
                                     Saved in this browser
                                 </span>
-
-                                <h2>
+<h2>
                                     Simulation progress
                                 </h2>
-                            </div>
-
-                            <button
-                                id="clearProgress"
-                                class="btn btn-sm btn-outline-secondary"
-                                type="button"
-                            >
+</div>
+<button class="btn btn-sm btn-outline-secondary" id="clearProgress" type="button">
                                 Clear Progress
                             </button>
-                        </div>
-
-                        <div
-                            id="simulationHistory"
-                            class="row g-4"
-                        ></div>
-                    </section>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="gsb-footer">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-4">
-                    <img
-                        src="assets/images/UCT_Logo.png"
-                        alt="UCT Graduate School of Business"
-                        class="footer-logo"
-                    >
-
-                    <p class="footer-intro">
-                        A customised executive learning platform supporting
-                        applied artificial intelligence, responsible
-                        innovation and organisational transformation.
-                    </p>
-                </div>
-
-                <div class="col-sm-6 col-lg-2">
-                    <h2>
+</div>
+<div class="row g-4" id="simulationHistory"></div>
+</section>
+</div>
+</div>
+</section>
+</main>
+<footer class="gsb-footer">
+<div class="container">
+<div class="row g-5">
+<div class="col-lg-4">
+<img alt="UCT Graduate School of Business" class="footer-logo" src="assets/images/UCT_Logo.png"/>
+<p class="footer-intro">AI Leadership in Action: Building an Intelligent, Trusted and Future-Ready TNM, prepared for Telekom Networks Malawi and strategic partners.</p>
+</div>
+<div class="col-sm-6 col-lg-2">
+<h2>
                         Programme
                     </h2>
-
-                    <ul>
-                        <li>
-                            <a href="day-1.html">
+<ul>
+<li>
+<a href="day-1.html">
                                 Day 1
                             </a>
-                        </li>
-
-                        <li>
-                            <a href="day-2.html">
+</li>
+<li>
+<a href="day-2.html">
                                 Day 2
                             </a>
-                        </li>
-
-                        <li>
-                            <a href="day-3.html">
+</li>
+<li>
+<a href="day-3.html">
                                 Day 3
                             </a>
-                        </li>
-
-                        <li>
-                            <a href="delegates.html">
+</li>
+<li>
+<a href="delegates.html">
                                 Delegates
                             </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="col-sm-6 col-lg-3">
-                    <h2>
+</li>
+</ul>
+</div>
+<div class="col-sm-6 col-lg-3">
+<h2>
                         Learning Resources
                     </h2>
-
-                    <ul>
-                        <li>
-                            <a href="slides.html">
+<ul>
+<li>
+<a href="slides.html">
                                 Downloadable Slides
                             </a>
-                        </li>
-
-                        <li>
-                            <a href="quizzes.html">
+</li>
+<li>
+<a href="quizzes.html">
                                 Applied Simulation
                             </a>
-                        </li>
-
-                        <li>
-                            <a href="assessments.html">
+</li>
+<li>
+<a href="assessments.html">
                                 Assessments
                             </a>
-                        </li>
-
-                        <li>
-                            <a href="implementation.html">
+</li>
+<li>
+<a href="implementation.html">
                                 Implementation Guide
                             </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-3">
-                    <h2>
+</li>
+</ul>
+</div>
+<div class="col-lg-3">
+<h2>
                         Programme Support
                     </h2>
-
-                    <p class="footer-copy">
-                        Final contact, venue and programme-support information
-                        will be added after approval.
-                    </p>
-
-                    <a
-                        href="contact.html"
-                        class="footer-contact-link"
-                    >
+<p class="footer-copy">15–17 July 2026 • UCT Graduate School of Business, Cape Town • Facilitator: Professor Abejide Ade-Ibijola.</p>
+<a class="footer-contact-link" href="contact.html">
                         Contact programme support
 
-                        <i
-                            class="bi bi-arrow-right"
-                            aria-hidden="true"
-                        ></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>
-                    &copy; 2026 UCT Graduate School of Business.
-                    Programme platform content subject to approval.
-                </p>
-
-                <p>
-                    Executive Education Learning Platform
-                </p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script src="assets/js/script.js"></script>
-
-    <script src="assets/js/simulation.js"></script>
+                        <i aria-hidden="true" class="bi bi-arrow-right"></i>
+</a>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2026 UCT Graduate School of Business • Telekom Networks Malawi Executive Programme.</p>
+<p>AI Leadership in Action • 15–17 July 2026</p>
+</div>
+</div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/script.js"></script>
+<script src="assets/js/simulation.js"></script>
 </body>
 </html>
