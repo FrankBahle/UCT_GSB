@@ -575,46 +575,111 @@ function initializeChatbot() {
         return;
     }
 
+    const quickQuestions = [
+        ['Programme overview', 'What is the AI Leadership in Action programme about?'],
+        ['Day 1 timetable', 'Show me the full Day 1 schedule.'],
+        ['Challenge groups', 'Explain the four TNM challenge groups.'],
+        ['TNM priorities', 'What are the main TNM AI opportunity areas?'],
+        ['Preparation', 'What should delegates prepare before the programme?'],
+        ['90-day plan', 'Explain the 90-day executive action plan.']
+    ];
+
     const widget = document.createElement('div');
-    widget.className = 'chatbot-widget';
+    widget.className = 'chatbot-widget chatbot-widget--tnm';
 
     widget.innerHTML = `
+        <div class="chatbot-launch-copy" id="chatbotLaunchCopy" aria-hidden="true">
+            <span class="chatbot-launch-title">Ask TNM AI</span>
+            <span class="chatbot-launch-subtitle">Programme assistant</span>
+        </div>
+
         <div
-            class="chatbot-panel"
+            class="chatbot-panel chatbot-panel--tnm"
             id="chatbotPanel"
             role="dialog"
             aria-modal="false"
             aria-labelledby="chatbotTitle"
             aria-hidden="true"
         >
-            <div class="chatbot-header">
-                <strong id="chatbotTitle">
-                    <i class="bi bi-chat-dots-fill me-2"></i>UCT GSB Programme Assistant
-                </strong>
-                <button type="button" class="btn btn-sm btn-light" id="chatbotClose" aria-label="Close programme assistant">×</button>
-            </div>
+            <div class="chatbot-shell">
+                <aside class="chatbot-side">
+                    <div class="chatbot-brand">
+                        <span class="chatbot-eyebrow">UCT GSB Executive Education · TNM</span>
+                        <h2>AI Leadership<br>in Action</h2>
+                        <p>Building an Intelligent, Trusted and Future-Ready TNM</p>
+                    </div>
 
-            <div class="chatbot-messages" id="chatbotMessages" aria-live="polite"></div>
+                    <div class="chatbot-meta" aria-label="Programme summary">
+                        <div><strong>3</strong><span>Programme days</span></div>
+                        <div><strong>16</strong><span>Delegates</span></div>
+                        <div><strong>4</strong><span>Challenge groups</span></div>
+                        <div><strong>20</strong><span>Priority pain points</span></div>
+                    </div>
 
-            <div class="chatbot-input">
-                <form id="chatbotForm">
-                    <label class="visually-hidden" for="chatbotInput">Ask a programme question</label>
-                    <input
-                        id="chatbotInput"
-                        type="text"
-                        maxlength="2000"
-                        placeholder="Ask about the programme, slides or simulation..."
-                        autocomplete="off"
-                    >
-                    <button type="submit" aria-label="Send question">
-                        <i class="bi bi-send" aria-hidden="true"></i>
-                    </button>
-                </form>
+                    <div class="chatbot-quick-section">
+                        <h3>Ask a quick question</h3>
+                        <div class="chatbot-quick-grid">
+                            ${quickQuestions.map(([label, question]) => `
+                                <button type="button" class="chatbot-quick" data-question="${escapeHtml(question)}">${escapeHtml(label)}</button>
+                            `).join('')}
+                        </div>
+                    </div>
+
+                    <div class="chatbot-security">
+                        <i class="bi bi-shield-check" aria-hidden="true"></i>
+                        <div>
+                            <strong>Secure AI connection</strong>
+                            <span>Questions are sent through the protected programme API.</span>
+                        </div>
+                    </div>
+                </aside>
+
+                <section class="chatbot-main">
+                    <header class="chatbot-header chatbot-header--tnm">
+                        <div class="chatbot-title-wrap">
+                            <span class="chatbot-botmark" aria-hidden="true">✦</span>
+                            <div>
+                                <strong id="chatbotTitle">TNM Workshop Assistant</strong>
+                                <small>15–17 July 2026 · UCT GSB, Cape Town</small>
+                            </div>
+                        </div>
+
+                        <div class="chatbot-header-actions">
+                            <span class="chatbot-status"><span class="chatbot-status-dot"></span> AI ready</span>
+                            <button type="button" class="chatbot-action" id="chatbotDownload" title="Download chat transcript" aria-label="Download chat transcript">
+                                <i class="bi bi-download" aria-hidden="true"></i>
+                            </button>
+                            <button type="button" class="chatbot-action" id="chatbotClear" title="Clear conversation" aria-label="Clear conversation">
+                                <i class="bi bi-arrow-counterclockwise" aria-hidden="true"></i>
+                            </button>
+                            <button type="button" class="chatbot-close" id="chatbotClose" aria-label="Close programme assistant">×</button>
+                        </div>
+                    </header>
+
+                    <div class="chatbot-messages chatbot-messages--tnm" id="chatbotMessages" aria-live="polite"></div>
+
+                    <div class="chatbot-input chatbot-input--tnm">
+                        <form id="chatbotForm">
+                            <label class="visually-hidden" for="chatbotInput">Ask a programme question</label>
+                            <textarea
+                                id="chatbotInput"
+                                rows="1"
+                                maxlength="2000"
+                                placeholder="Ask about schedules, delegates, groups, Mpamba, governance or implementation..."
+                                autocomplete="off"
+                            ></textarea>
+                            <button type="submit" aria-label="Send question">
+                                <i class="bi bi-send-fill" aria-hidden="true"></i>
+                            </button>
+                        </form>
+                        <small>Press Enter to send · Shift+Enter for a new line</small>
+                    </div>
+                </section>
             </div>
         </div>
 
-        <button class="chatbot-toggle" id="chatbotToggle" type="button" aria-label="Open programme assistant" aria-expanded="false">
-            <i class="bi bi-chat-dots" aria-hidden="true"></i>
+        <button class="chatbot-toggle chatbot-toggle--tnm" id="chatbotToggle" type="button" aria-label="Open TNM programme assistant" aria-expanded="false">
+            <i class="bi bi-chat-dots-fill" aria-hidden="true"></i>
         </button>
     `;
 
@@ -622,23 +687,32 @@ function initializeChatbot() {
 
     const panel = widget.querySelector('#chatbotPanel');
     const toggle = widget.querySelector('#chatbotToggle');
+    const launchCopy = widget.querySelector('#chatbotLaunchCopy');
     const closeButton = widget.querySelector('#chatbotClose');
+    const clearButton = widget.querySelector('#chatbotClear');
+    const downloadButton = widget.querySelector('#chatbotDownload');
     const form = widget.querySelector('#chatbotForm');
     const input = widget.querySelector('#chatbotInput');
     const submitButton = form.querySelector('button[type="submit"]');
     const messages = widget.querySelector('#chatbotMessages');
+    const quickButtons = widget.querySelectorAll('.chatbot-quick');
     const conversationHistory = [];
 
-    addChatbotMessage(
-        messages,
-        'bot',
-        'Welcome to AI Leadership in Action. I can help with the TNM programme purpose, three-day journey, delegates, challenge groups, learning guide, practical canvases, implementation planning and simulation.'
-    );
+    const welcomeMessage = 'Welcome to AI Leadership in Action. I can help with the TNM programme purpose, three-day schedule, delegates, challenge groups, practical canvases, responsible AI, implementation planning and the 90-day action plan.';
+
+    const resetConversation = () => {
+        conversationHistory.length = 0;
+        messages.innerHTML = '';
+        addChatbotMessage(messages, 'bot', welcomeMessage);
+    };
+
+    resetConversation();
 
     const openChatbot = () => {
         panel.classList.add('open');
         panel.setAttribute('aria-hidden', 'false');
         toggle.setAttribute('aria-expanded', 'true');
+        launchCopy.classList.add('hidden');
         input.focus();
     };
 
@@ -646,31 +720,21 @@ function initializeChatbot() {
         panel.classList.remove('open');
         panel.setAttribute('aria-hidden', 'true');
         toggle.setAttribute('aria-expanded', 'false');
+        launchCopy.classList.remove('hidden');
         toggle.focus();
     };
 
     const setChatbotBusy = (isBusy) => {
         input.disabled = isBusy;
         submitButton.disabled = isBusy;
+        quickButtons.forEach((button) => {
+            button.disabled = isBusy;
+        });
         form.setAttribute('aria-busy', isBusy ? 'true' : 'false');
     };
 
-    toggle.addEventListener('click', () => {
-        panel.classList.contains('open') ? closeChatbot() : openChatbot();
-    });
-
-    closeButton.addEventListener('click', closeChatbot);
-
-    document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape' && panel.classList.contains('open')) {
-            closeChatbot();
-        }
-    });
-
-    form.addEventListener('submit', async (event) => {
-        event.preventDefault();
-
-        const userMessage = input.value.trim();
+    const submitQuestion = async (question) => {
+        const userMessage = String(question || '').trim();
 
         if (!userMessage || input.disabled) {
             return;
@@ -681,9 +745,10 @@ function initializeChatbot() {
         trimChatbotHistory(conversationHistory);
 
         input.value = '';
+        resizeChatbotInput(input);
         setChatbotBusy(true);
 
-        const typingMessage = addChatbotMessage(messages, 'bot', 'Thinking…', 'chatbot-typing');
+        const typingMessage = addChatbotTypingMessage(messages);
 
         try {
             const reply = await requestDeepSeekChatbotResponse(conversationHistory);
@@ -705,6 +770,44 @@ function initializeChatbot() {
             setChatbotBusy(false);
             input.focus();
         }
+    };
+
+    toggle.addEventListener('click', () => {
+        panel.classList.contains('open') ? closeChatbot() : openChatbot();
+    });
+
+    launchCopy.addEventListener('click', openChatbot);
+    closeButton.addEventListener('click', closeChatbot);
+    clearButton.addEventListener('click', resetConversation);
+
+    downloadButton.addEventListener('click', () => {
+        downloadChatbotTranscript(messages);
+    });
+
+    quickButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            openChatbot();
+            submitQuestion(button.dataset.question);
+        });
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && panel.classList.contains('open')) {
+            closeChatbot();
+        }
+    });
+
+    input.addEventListener('input', () => resizeChatbotInput(input));
+    input.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' && !event.shiftKey) {
+            event.preventDefault();
+            form.requestSubmit();
+        }
+    });
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        submitQuestion(input.value);
     });
 }
 
@@ -720,6 +823,51 @@ function addChatbotMessage(container, sender, text, extraClass = '') {
     container.scrollTop = container.scrollHeight;
 
     return message;
+}
+
+function addChatbotTypingMessage(container) {
+    const message = document.createElement('div');
+    message.className = 'chatbot-message bot chatbot-typing';
+    message.setAttribute('aria-label', 'Assistant is typing');
+
+    const bubble = document.createElement('span');
+    bubble.innerHTML = '<i></i><i></i><i></i>';
+
+    message.appendChild(bubble);
+    container.appendChild(message);
+    container.scrollTop = container.scrollHeight;
+
+    return message;
+}
+
+function resizeChatbotInput(input) {
+    input.style.height = 'auto';
+    input.style.height = `${Math.min(input.scrollHeight, 120)}px`;
+}
+
+function downloadChatbotTranscript(messagesContainer) {
+    const lines = [...messagesContainer.querySelectorAll('.chatbot-message')].map((message) => {
+        const speaker = message.classList.contains('user') ? 'Delegate' : 'TNM Workshop Assistant';
+        return `${speaker}: ${message.textContent.trim()}`;
+    });
+
+    const transcript = [
+        'TNM AI Leadership in Action — Chat Transcript',
+        `Downloaded: ${new Date().toLocaleString()}`,
+        '',
+        ...lines
+    ].join('\n\n');
+
+    const blob = new Blob([transcript], { type: 'text/plain;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+
+    link.href = url;
+    link.download = 'tnm-workshop-assistant-transcript.txt';
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(url);
 }
 
 async function requestDeepSeekChatbotResponse(conversationHistory) {
