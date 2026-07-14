@@ -1,8 +1,0 @@
-{
-  "name": "uct-gsb-training-platform",
-  "private": true,
-  "scripts": {
-    "dev": "npx netlify dev",
-    "check": "node --check assets/js/script.js && node --check netlify/functions/deepseek-chat.mjs"
-  }
-}
