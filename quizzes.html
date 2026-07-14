@@ -1,484 +1,1057 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Scenario-based executive AI decision simulation with DeepSeek scoring and feedback for the UCT GSB programme." name="description"/>
-<title>TNM Executive AI Simulation | AI Leadership in Action</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet"/>
-<link href="assets/css/style.css" rel="stylesheet"/>
-<link href="assets/css/simulation.css" rel="stylesheet"/>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Day-based quizzes and the TNM Malawi AI Reality Puzzle Challenge for the UCT GSB programme."
+    >
+
+    <title>
+        Programme Quizzes | UCT Graduate School of Business
+    </title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+    >
+
+    <link
+        href="assets/css/style.css"
+        rel="stylesheet"
+    >
+
+    <link
+        href="assets/css/day-one-puzzle-game.css"
+        rel="stylesheet"
+    >
 </head>
+
 <body>
-<nav class="navbar navbar-expand-lg navbar-light gsb-navbar sticky-top">
-<div class="container">
-<a aria-label="UCT Graduate School of Business home" class="navbar-brand" href="index.html">
-<img alt="UCT Graduate School of Business" class="gsb-logo" src="assets/images/UCT_Logo.png"/>
-</a>
-<button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="navbarNav">
-<ul class="navbar-nav ms-auto align-items-lg-center">
-<li class="nav-item">
-<a class="nav-link" href="index.html">
+    <nav class="navbar navbar-expand-lg navbar-light gsb-navbar sticky-top">
+        <div class="container">
+            <a
+                class="navbar-brand"
+                href="index.html"
+                aria-label="UCT Graduate School of Business home"
+            >
+                <img
+                    src="assets/images/UCT_Logo.png"
+                    alt="UCT Graduate School of Business"
+                    class="gsb-logo"
+                >
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div
+                class="collapse navbar-collapse"
+                id="navbarNav"
+            >
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="index.html"
+                        >
                             Home
                         </a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="day-1.html">
+                    </li>
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="day-1.html"
+                        >
                             Day 1
                         </a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="day-2.html">
+                    </li>
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="day-2.html"
+                        >
                             Day 2
                         </a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="day-3.html">
+                    </li>
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="day-3.html"
+                        >
                             Day 3
                         </a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="delegates.html">
+                    </li>
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="delegates.html"
+                        >
                             Delegates
                         </a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="slides.html">
+                    </li>
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="slides.html"
+                        >
                             Slides
                         </a>
-</li>
-<li class="nav-item">
-<a aria-current="page" class="nav-link active" href="quizzes.html">
+                    </li>
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link active"
+                            aria-current="page"
+                            href="quizzes.html"
+                        >
                             Simulation
                         </a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="practical-ai-use.html">
-							Practical AI Use
-						</a>
-</li>
-<li class="nav-item dropdown">
-<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="resourcesDropdown" role="button">
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            id="resourcesDropdown"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                        >
                             Resources
                         </a>
-<ul aria-labelledby="resourcesDropdown" class="dropdown-menu dropdown-menu-end">
-<li>
-<a class="dropdown-item" href="assessments.html">
+
+                        <ul
+                            class="dropdown-menu dropdown-menu-end"
+                            aria-labelledby="resourcesDropdown"
+                        >
+                            <li>
+                                <a
+                                    class="dropdown-item"
+                                    href="assessments.html"
+                                >
                                     Assessments
                                 </a>
-</li>
-<li>
-<a class="dropdown-item" href="case-studies.html">
+                            </li>
+
+                            <li>
+                                <a
+                                    class="dropdown-item"
+                                    href="case-studies.html"
+                                >
                                     Case Studies
                                 </a>
-</li>
-<li>
-<a class="dropdown-item" href="implementation.html">
+                            </li>
+
+                            <li>
+                                <a
+                                    class="dropdown-item"
+                                    href="implementation.html"
+                                >
                                     Implementation Guide
                                 </a>
-</li>
-<li>
-<a class="dropdown-item" href="Digital_Human.html">
+                            </li>
+
+                            <li>
+                                <a
+                                    class="dropdown-item"
+                                    href="Digital_Human.html"
+                                >
                                     Welcome Avatar
                                 </a>
-</li>
-<li>
-<a class="dropdown-item" href="contact.html">
+                            </li>
+
+                            <li>
+                                <a
+                                    class="dropdown-item"
+                                    href="contact.html"
+                                >
                                     Programme Support
                                 </a>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-</nav>
-<main>
-<section class="page-hero">
-<div class="container">
-<div class="page-meta">
-<span class="meta-chip">Simulation</span>
-<span>TNM executive decision practice</span>
-</div>
-<span class="eyebrow">AI Leadership in Action</span>
-<h1>TNM Executive AI Decision Simulation</h1>
-<p>Work through TNM-focused decisions covering strategic alignment, practical AI, customer and network value, responsible governance, pilot design and organisational adoption.</p>
-</div>
-</section>
-<section class="section section-white">
-<div class="container">
-<div class="section-heading text-center">
-<span class="eyebrow eyebrow-dark">
-                        Simulation Journey
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <div class="page-meta">
+                    <span class="meta-chip">
+                        Programme Quizzes
                     </span>
-<h2>Move from TNM opportunity diagnosis to responsible pilot action</h2>
-<span aria-hidden="true" class="heading-line"></span>
-<p>Complete three multiple-choice scenarios aligned with the programme learning journey and receive structured AI-generated executive feedback.</p>
-</div>
-<div class="row g-4">
-<div class="col-md-4">
-<article class="simulation-feature-card">
-<div class="simulation-feature-icon">
-<i aria-hidden="true" class="bi bi-ui-checks"></i>
-</div>
-<h3>
-                                Multiple choice only
-                            </h3>
-<p>
-                                Select one executive action for each decision.
-                                No written response is required.
-                            </p>
-</article>
-</div>
-<div class="col-md-4">
-<article class="simulation-feature-card">
-<div class="simulation-feature-icon">
-<i aria-hidden="true" class="bi bi-stars"></i>
-</div>
-<h3>
-                                DeepSeek evaluation
-                            </h3>
-<p>
-                                Your selected actions are evaluated securely
-                                through a server-side Netlify Function.
-                            </p>
-</article>
-</div>
-<div class="col-md-4">
-<article class="simulation-feature-card">
-<div class="simulation-feature-icon">
-<i aria-hidden="true" class="bi bi-bar-chart"></i>
-</div>
-<h3>
-                                Developmental feedback
-                            </h3>
-<p>
-                                Receive dimension scores, strengths,
-                                development priorities and recommended actions.
-                            </p>
-</article>
-</div>
-</div>
-</div>
-</section>
-<section class="section section-soft">
-<div class="container">
-<div class="executive-simulation" id="simulationApp">
-<div class="simulation-notice">
-<i aria-hidden="true" class="bi bi-shield-check"></i>
-<div>
-<strong>
-                                AI evaluation notice
-                            </strong>
-<p>
-                                Only your selected multiple-choice answers are
-                                sent securely through a Netlify Function to
-                                DeepSeek for scoring and feedback.
-                            </p>
-</div>
-</div>
-<div aria-live="polite" class="simulation-api-status" id="apiStatus" role="status">
-<span aria-hidden="true" class="simulation-status-dot checking" id="apiStatusDot"></span>
-<span id="apiStatusText">
-                            Checking AI scoring service...
-                        </span>
-</div>
-<div class="simulation-progress-card">
-<div class="simulation-progress-top">
-<div>
-<span class="simulation-small-label">
-                                    Overall progress
+
+                    <span>
+                        Day 1 · Day 2 · Day 3
+                    </span>
+                </div>
+
+                <span class="eyebrow">
+                    Applied Learning
+                </span>
+
+                <h1>
+                    Programme Quiz Centre
+                </h1>
+
+                <p>
+                    Complete the knowledge challenge for each programme day.
+                    Day 1 is currently available. Day 2 and Day 3 quizzes
+                    will be added when their approved questions are supplied.
+                </p>
+            </div>
+        </section>
+
+        <section
+            id="quiz-days"
+            class="section section-white"
+        >
+            <div class="container">
+                <div class="section-heading text-center">
+                    <span class="eyebrow eyebrow-dark">
+                        Select a Programme Day
+                    </span>
+
+                    <h2>
+                        Choose your quiz
+                    </h2>
+
+                    <span
+                        class="heading-line"
+                        aria-hidden="true"
+                    ></span>
+
+                    <p>
+                        Each programme day has its own quiz and learning
+                        progress.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <article class="quiz-day-card available">
+                            <div class="quiz-day-card-top">
+                                <span class="quiz-day-number">
+                                    01
                                 </span>
-<strong id="progressText">
-                                    0 of 3 scenarios completed
-                                </strong>
-</div>
-<span id="progressPercentage">
-                                0%
-                            </span>
-</div>
-<div aria-hidden="true" class="simulation-progress-track">
-<span class="simulation-progress-fill" id="simulationProgressBar"></span>
-</div>
-</div>
-<nav aria-label="Simulation scenarios" class="simulation-level-navigation" id="scenarioNavigation"></nav>
-<section aria-labelledby="scenarioTitle" class="simulation-scenario-panel" id="scenarioPanel">
-<div class="simulation-scenario-heading">
-<div>
-<span class="simulation-level-badge" id="scenarioLevel"></span>
-<span id="scenarioDuration"></span>
-</div>
-<h2 id="scenarioTitle"></h2>
-<p id="scenarioSummary"></p>
-</div>
-<div class="row g-4">
-<div class="col-lg-4">
-<article class="simulation-context-card">
-<span class="simulation-card-label">
-                                        Your role
-                                    </span>
-<h3>
-                                        Executive responsibility
-                                    </h3>
-<p id="scenarioRole"></p>
-</article>
-</div>
-<div class="col-lg-4">
-<article class="simulation-context-card">
-<span class="simulation-card-label">
-                                        Objective
-                                    </span>
-<h3>
-                                        Leadership outcome
-                                    </h3>
-<p id="scenarioObjective"></p>
-</article>
-</div>
-<div class="col-lg-4">
-<article class="simulation-context-card">
-<span class="simulation-card-label">
-                                        Constraints
-                                    </span>
-<h3>
-                                        What you must consider
-                                    </h3>
-<ul class="simulation-constraint-list" id="scenarioConstraints"></ul>
-</article>
-</div>
-</div>
-<form class="simulation-form" id="simulationForm" novalidate="">
-<div id="decisionGroups"></div>
-<div aria-live="polite" class="simulation-message" id="simulationStatus" role="status"></div>
-<div class="simulation-actions">
-<button class="btn btn-gsb-primary btn-lg" id="submitSimulation" type="submit">
-<span class="simulation-submit-label">
-<i aria-hidden="true" class="bi bi-stars"></i>
 
-                                        Submit Answers for AI Evaluation
-                                    </span>
-<span class="simulation-submit-loading" hidden="">
-<span aria-hidden="true" class="spinner-border spinner-border-sm"></span>
+                                <span class="quiz-status available">
+                                    Available
+                                </span>
+                            </div>
 
-                                        Evaluating answers...
-                                    </span>
-</button>
-<button class="btn btn-outline-secondary btn-lg" id="resetSimulation" type="button">
-                                    Reset Scenario
-                                </button>
-</div>
-</form>
-</section>
-<section aria-labelledby="resultHeading" class="simulation-result-panel" hidden="" id="simulationResult">
-<div class="simulation-result-header">
-<div aria-label="Overall simulation score" class="simulation-score-ring" id="scoreRing">
-<div>
-<strong id="overallScore">
-                                        0
+                            <div class="quiz-day-icon">
+                                <i
+                                    class="bi bi-puzzle"
+                                    aria-hidden="true"
+                                ></i>
+                            </div>
+
+                            <h2>
+                                Day 1 Quiz
+                            </h2>
+
+                            <p class="quiz-day-subtitle">
+                                TNM Malawi AI Reality Puzzle Challenge
+                            </p>
+
+                            <p>
+                                Test your understanding of what AI is,
+                                where it creates value and how it should
+                                be governed responsibly.
+                            </p>
+
+                            <div class="quiz-day-stat-grid">
+                                <div>
+                                    <strong id="dayOneQuestionCount">
+                                        15
                                     </strong>
-<span>
-                                        /100
-                                    </span>
-</div>
-</div>
-<div class="simulation-result-intro">
-<span class="simulation-small-label">
-                                    AI-generated evaluation
-                                </span>
-<h2 id="resultHeading">
-                                    Executive Simulation Result
-                                </h2>
-<span class="simulation-performance-band" id="performanceBand"></span>
-<p id="executiveSummary"></p>
-<small id="attemptSummary"></small>
-</div>
-</div>
-<div>
-<h3 class="simulation-result-section-title">
-                                Score breakdown
-                            </h3>
-<div class="simulation-dimension-grid" id="dimensionScores"></div>
-</div>
-<div class="row g-4 simulation-feedback-grid">
-<div class="col-lg-6">
-<article class="simulation-feedback-card positive">
-<div class="simulation-feedback-heading">
-<i aria-hidden="true" class="bi bi-check-circle"></i>
-<h3>
-                                            Strengths
-                                        </h3>
-</div>
-<ul id="strengthsList"></ul>
-</article>
-</div>
-<div class="col-lg-6">
-<article class="simulation-feedback-card improvement">
-<div class="simulation-feedback-heading">
-<i aria-hidden="true" class="bi bi-arrow-up-circle"></i>
-<h3>
-                                            Development priorities
-                                        </h3>
-</div>
-<ul id="improvementsList"></ul>
-</article>
-</div>
-<div class="col-lg-6">
-<article class="simulation-feedback-card">
-<span class="simulation-card-label">
-                                        Likely consequence
-                                    </span>
-<h3>
-                                        What your selected approach could produce
-                                    </h3>
-<p id="likelyConsequence"></p>
-</article>
-</div>
-<div class="col-lg-6">
-<article class="simulation-feedback-card">
-<span class="simulation-card-label">
-                                        Recommended next action
-                                    </span>
-<h3>
-                                        Strengthen the decision
-                                    </h3>
-<p id="recommendedAction"></p>
-</article>
-</div>
-</div>
-<article class="simulation-reflection-card">
-<span class="simulation-card-label">
-                                Executive reflection
-                            </span>
-<h3>
-                                Consider this before moving forward
-                            </h3>
-<p id="followUpQuestion"></p>
-</article>
-<p class="simulation-ai-disclaimer">
-                            This feedback is AI-generated for executive
-                            learning and reflection. It is not legal,
-                            regulatory, employment, investment or
-                            professional advice.
-                        </p>
-<div class="simulation-result-actions no-print">
-<button class="btn btn-gsb-primary" id="retryScenario" type="button">
-                                Retry This Scenario
-                            </button>
-<button class="btn btn-outline-secondary" id="nextScenario" type="button">
-                                Continue to Next Scenario
-                            </button>
-<button class="btn btn-outline-secondary" id="printResult" type="button">
-<i aria-hidden="true" class="bi bi-printer"></i>
 
-                                Print Result
+                                    <span>
+                                        Questions
+                                    </span>
+                                </div>
+
+                                <div>
+                                    <strong id="dayOneMaximumPoints">
+                                        75
+                                    </strong>
+
+                                    <span>
+                                        Points
+                                    </span>
+                                </div>
+
+                                <div>
+                                    <strong>
+                                        3
+                                    </strong>
+
+                                    <span>
+                                        Levels
+                                    </span>
+                                </div>
+                            </div>
+
+                            <button
+                                id="openDayOneQuiz"
+                                class="btn btn-gsb-primary btn-lg w-100"
+                                type="button"
+                                disabled
+                            >
+                                <i
+                                    class="bi bi-play-circle"
+                                    aria-hidden="true"
+                                ></i>
+
+                                Start Day 1 Quiz
                             </button>
-</div>
-</section>
-<section class="simulation-history-section">
-<div class="simulation-history-heading">
-<div>
-<span class="simulation-small-label">
-                                    Saved in this browser
+
+                            <p
+                                id="dayOneLoadStatus"
+                                class="quiz-load-status"
+                                role="status"
+                            >
+                                Loading quiz questions...
+                            </p>
+                        </article>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <article class="quiz-day-card upcoming">
+                            <div class="quiz-day-card-top">
+                                <span class="quiz-day-number">
+                                    02
                                 </span>
-<h2>
-                                    Simulation progress
-                                </h2>
-</div>
-<button class="btn btn-sm btn-outline-secondary" id="clearProgress" type="button">
-                                Clear Progress
+
+                                <span class="quiz-status upcoming">
+                                    Upcoming
+                                </span>
+                            </div>
+
+                            <div class="quiz-day-icon">
+                                <i
+                                    class="bi bi-tools"
+                                    aria-hidden="true"
+                                ></i>
+                            </div>
+
+                            <h2>
+                                Day 2 Quiz
+                            </h2>
+
+                            <p class="quiz-day-subtitle">
+                                Co-Creation, Prototyping and Business Value
+                            </p>
+
+                            <p>
+                                The Day 2 quiz will be added when the
+                                approved questions and scoring information
+                                are supplied.
+                            </p>
+
+                            <button
+                                class="btn btn-outline-secondary btn-lg w-100"
+                                type="button"
+                                disabled
+                            >
+                                Quiz Upcoming
                             </button>
-</div>
-<div class="row g-4" id="simulationHistory"></div>
-</section>
-</div>
-</div>
-</section>
-</main>
-<footer class="gsb-footer">
-<div class="container">
-<div class="row g-5">
-<div class="col-lg-4">
-<img alt="UCT Graduate School of Business" class="footer-logo" src="assets/images/UCT_Logo.png"/>
-<p class="footer-intro">AI Leadership in Action: Building an Intelligent, Trusted and Future-Ready TNM, prepared for Telekom Networks Malawi and strategic partners.</p>
-</div>
-<div class="col-sm-6 col-lg-2">
-<h2>
+                        </article>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <article class="quiz-day-card upcoming">
+                            <div class="quiz-day-card-top">
+                                <span class="quiz-day-number">
+                                    03
+                                </span>
+
+                                <span class="quiz-status upcoming">
+                                    Upcoming
+                                </span>
+                            </div>
+
+                            <div class="quiz-day-icon">
+                                <i
+                                    class="bi bi-shield-check"
+                                    aria-hidden="true"
+                                ></i>
+                            </div>
+
+                            <h2>
+                                Day 3 Quiz
+                            </h2>
+
+                            <p class="quiz-day-subtitle">
+                                Responsible AI, Governance and Implementation
+                            </p>
+
+                            <p>
+                                The Day 3 quiz will be added when the
+                                approved questions and scoring information
+                                are supplied.
+                            </p>
+
+                            <button
+                                class="btn btn-outline-secondary btn-lg w-100"
+                                type="button"
+                                disabled
+                            >
+                                Quiz Upcoming
+                            </button>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section
+            id="dayOneGameSection"
+            class="section section-soft"
+            hidden
+        >
+            <div class="container">
+                <div class="day-one-game-shell">
+                    <div
+                        id="gameError"
+                        class="game-message game-message-error"
+                        role="alert"
+                        hidden
+                    ></div>
+
+                    <section
+                        id="gameWelcome"
+                        class="game-welcome-card"
+                    >
+                        <div class="game-welcome-icon">
+                            <i
+                                class="bi bi-puzzle-fill"
+                                aria-hidden="true"
+                            ></i>
+                        </div>
+
+                        <span class="game-eyebrow">
+                            Day 1 Knowledge Challenge
+                        </span>
+
+                        <h2 id="gameTitle">
+                            TNM Malawi AI Reality Puzzle Challenge
+                        </h2>
+
+                        <p id="gameTheme">
+                            Understanding what AI is, where it creates value
+                            and how it should be governed.
+                        </p>
+
+                        <div class="game-welcome-stat-grid">
+                            <article>
+                                <strong id="welcomeQuestionCount">
+                                    15
+                                </strong>
+
+                                <span>
+                                    Scored questions
+                                </span>
+                            </article>
+
+                            <article>
+                                <strong id="welcomeMaximumScore">
+                                    75
+                                </strong>
+
+                                <span>
+                                    Maximum points
+                                </span>
+                            </article>
+
+                            <article>
+                                <strong>
+                                    1
+                                </strong>
+
+                                <span>
+                                    Question at a time
+                                </span>
+                            </article>
+                        </div>
+
+                        <div class="game-instructions">
+                            <h3>
+                                How it works
+                            </h3>
+
+                            <ul>
+                                <li>
+                                    Questions are displayed one at a time.
+                                </li>
+
+                                <li>
+                                    Select one answer and submit it.
+                                </li>
+
+                                <li>
+                                    Correct answers immediately add the
+                                    points specified in the JSON file.
+                                </li>
+
+                                <li>
+                                    Every scored question can award points
+                                    only once per attempt.
+                                </li>
+
+                                <li>
+                                    Review the explanation before moving
+                                    to the next question.
+                                </li>
+
+                                <li>
+                                    The final bonus question is unscored.
+                                </li>
+                            </ul>
+                        </div>
+
+                        <button
+                            id="startGameButton"
+                            class="btn btn-gsb-primary btn-lg"
+                            type="button"
+                        >
+                            Begin Day 1 Challenge
+
+                            <i
+                                class="bi bi-arrow-right"
+                                aria-hidden="true"
+                            ></i>
+                        </button>
+                    </section>
+
+                    <section
+                        id="gamePlayArea"
+                        hidden
+                    >
+                        <div class="game-scorebar">
+                            <div>
+                                <span>
+                                    Current Score
+                                </span>
+
+                                <strong>
+                                    <span id="liveScore">
+                                        0
+                                    </span>
+
+                                    /
+
+                                    <span id="liveMaximumScore">
+                                        75
+                                    </span>
+                                </strong>
+                            </div>
+
+                            <div class="game-progress-copy">
+                                <span id="questionCounter">
+                                    Question 1 of 15
+                                </span>
+
+                                <strong id="progressPercentage">
+                                    0%
+                                </strong>
+                            </div>
+                        </div>
+
+                        <div
+                            class="game-progress-track"
+                            aria-hidden="true"
+                        >
+                            <span
+                                id="gameProgressBar"
+                                class="game-progress-fill"
+                            ></span>
+                        </div>
+
+                        <article class="game-question-card">
+                            <div class="game-question-meta">
+                                <div>
+                                    <span
+                                        id="levelBadge"
+                                        class="game-level-badge"
+                                    >
+                                        Level 1
+                                    </span>
+
+                                    <span
+                                        id="difficultyBadge"
+                                        class="game-difficulty-badge"
+                                    >
+                                        Easy
+                                    </span>
+                                </div>
+
+                                <span id="questionPoints">
+                                    5 points
+                                </span>
+                            </div>
+
+                            <div class="game-level-context">
+                                <strong id="levelName"></strong>
+
+                                <p id="levelFocus"></p>
+                            </div>
+
+                            <h2 id="puzzleTitle"></h2>
+
+                            <div class="game-scenario">
+                                <span>
+                                    Scenario
+                                </span>
+
+                                <p id="puzzleScenario"></p>
+                            </div>
+
+                            <fieldset class="game-question-fieldset">
+                                <legend id="puzzleQuestion"></legend>
+
+                                <div
+                                    id="puzzleOptions"
+                                    class="game-option-list"
+                                ></div>
+                            </fieldset>
+
+                            <div
+                                id="answerValidation"
+                                class="game-message"
+                                role="alert"
+                                aria-live="polite"
+                            ></div>
+
+                            <section
+                                id="answerFeedback"
+                                class="game-feedback"
+                                hidden
+                            >
+                                <div
+                                    id="feedbackStatus"
+                                    class="game-feedback-status"
+                                ></div>
+
+                                <article class="game-feedback-block">
+                                    <h3>
+                                        Correct Answer
+                                    </h3>
+
+                                    <p id="correctAnswerText"></p>
+                                </article>
+
+                                <article class="game-feedback-block">
+                                    <h3>
+                                        Explanation
+                                    </h3>
+
+                                    <p id="explanationText"></p>
+                                </article>
+
+                                <article
+                                    class="game-feedback-block teaching"
+                                >
+                                    <h3>
+                                        Key Learning
+                                    </h3>
+
+                                    <p id="teachingPointText"></p>
+                                </article>
+
+                                <article
+                                    id="funAddOnSection"
+                                    class="game-feedback-block fun"
+                                >
+                                    <h3>
+                                        <i
+                                            class="bi bi-emoji-smile"
+                                            aria-hidden="true"
+                                        ></i>
+
+                                        Fun Note
+                                    </h3>
+
+                                    <p id="funAddOnText"></p>
+                                </article>
+                            </section>
+
+                            <div class="game-question-actions">
+                                <button
+                                    id="submitAnswerButton"
+                                    class="btn btn-gsb-primary btn-lg"
+                                    type="button"
+                                    disabled
+                                >
+                                    Submit Answer
+                                </button>
+
+                                <button
+                                    id="nextQuestionButton"
+                                    class="btn btn-gsb-primary btn-lg"
+                                    type="button"
+                                    hidden
+                                >
+                                    Next Question
+
+                                    <i
+                                        class="bi bi-arrow-right"
+                                        aria-hidden="true"
+                                    ></i>
+                                </button>
+                            </div>
+                        </article>
+                    </section>
+
+                    <section
+                        id="gameResults"
+                        class="game-results-card"
+                        hidden
+                    >
+                        <div
+                            id="resultMedal"
+                            class="game-result-medal"
+                        >
+                            🏅
+                        </div>
+
+                        <span class="game-eyebrow">
+                            Day 1 Quiz Complete
+                        </span>
+
+                        <h2>
+                            Your Final Score
+                        </h2>
+
+                        <div class="game-final-score">
+                            <strong id="finalScore">
+                                0
+                            </strong>
+
+                            <span>
+                                /
+
+                                <span id="finalMaximumScore">
+                                    75
+                                </span>
+                            </span>
+                        </div>
+
+                        <span
+                            id="resultBand"
+                            class="game-result-band"
+                        ></span>
+
+                        <p id="resultSummary"></p>
+
+                        <div class="game-result-stat-grid">
+                            <article>
+                                <strong id="correctAnswerCount">
+                                    0
+                                </strong>
+
+                                <span>
+                                    Correct answers
+                                </span>
+                            </article>
+
+                            <article>
+                                <strong id="incorrectAnswerCount">
+                                    0
+                                </strong>
+
+                                <span>
+                                    Incorrect answers
+                                </span>
+                            </article>
+
+                            <article>
+                                <strong id="finalPercentage">
+                                    0%
+                                </strong>
+
+                                <span>
+                                    Final percentage
+                                </span>
+                            </article>
+
+                            <article>
+                                <strong id="bestScore">
+                                    0/75
+                                </strong>
+
+                                <span>
+                                    Best browser score
+                                </span>
+                            </article>
+                        </div>
+
+                        <div class="game-level-results">
+                            <h3>
+                                Performance by Level
+                            </h3>
+
+                            <div
+                                id="levelResultsGrid"
+                                class="row g-4"
+                            ></div>
+                        </div>
+
+                        <div class="game-score-guide">
+                            <h3>
+                                Score Guide
+                            </h3>
+
+                            <div class="row g-3">
+                                <div class="col-md-3">
+                                    <article>
+                                        <strong>
+                                            🧭 AI Explorer
+                                        </strong>
+
+                                        <span>
+                                            0–24 points
+                                        </span>
+                                    </article>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <article>
+                                        <strong>
+                                            🥉 Bronze
+                                        </strong>
+
+                                        <span>
+                                            25–49 points
+                                        </span>
+                                    </article>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <article>
+                                        <strong>
+                                            🥈 Silver
+                                        </strong>
+
+                                        <span>
+                                            50–74 points
+                                        </span>
+                                    </article>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <article>
+                                        <strong>
+                                            🥇 Gold
+                                        </strong>
+
+                                        <span>
+                                            75 points
+                                        </span>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-wrap justify-content-center gap-3">
+                            <button
+                                id="restartGameButton"
+                                class="btn btn-gsb-primary btn-lg"
+                                type="button"
+                            >
+                                <i
+                                    class="bi bi-arrow-clockwise"
+                                    aria-hidden="true"
+                                ></i>
+
+                                Attempt Day 1 Quiz Again
+                            </button>
+
+                            <a
+                                href="day-2.html"
+                                class="btn btn-outline-secondary btn-lg"
+                            >
+                                Continue to Day 2
+
+                                <i
+                                    class="bi bi-arrow-right"
+                                    aria-hidden="true"
+                                ></i>
+                            </a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <div
+            id="scorePopup"
+            class="game-score-popup"
+            role="status"
+            aria-live="assertive"
+            hidden
+        >
+            <strong id="scorePopupHeading">
+                +5 Points
+            </strong>
+
+            <span id="scorePopupTotal">
+                Total: 5 / 75
+            </span>
+        </div>
+    </main>
+
+    <footer class="gsb-footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <img
+                        src="assets/images/UCT_Logo.png"
+                        alt="UCT Graduate School of Business"
+                        class="footer-logo"
+                    >
+
+                    <p class="footer-intro">
+                        A customised executive learning platform supporting
+                        applied artificial intelligence, responsible
+                        innovation and organisational transformation.
+                    </p>
+                </div>
+
+                <div class="col-sm-6 col-lg-2">
+                    <h2>
                         Programme
                     </h2>
-<ul>
-<li>
-<a href="day-1.html">
+
+                    <ul>
+                        <li>
+                            <a href="day-1.html">
                                 Day 1
                             </a>
-</li>
-<li>
-<a href="day-2.html">
+                        </li>
+
+                        <li>
+                            <a href="day-2.html">
                                 Day 2
                             </a>
-</li>
-<li>
-<a href="day-3.html">
+                        </li>
+
+                        <li>
+                            <a href="day-3.html">
                                 Day 3
                             </a>
-</li>
-<li>
-<a href="delegates.html">
+                        </li>
+
+                        <li>
+                            <a href="delegates.html">
                                 Delegates
                             </a>
-</li>
-</ul>
-</div>
-<div class="col-sm-6 col-lg-3">
-<h2>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-6 col-lg-3">
+                    <h2>
                         Learning Resources
                     </h2>
-<ul>
-<li>
-<a href="slides.html">
+
+                    <ul>
+                        <li>
+                            <a href="slides.html">
                                 Downloadable Slides
                             </a>
-</li>
-<li>
-<a href="quizzes.html">
+                        </li>
+
+                        <li>
+                            <a href="quizzes.html">
                                 Applied Simulation
                             </a>
-</li>
-<li>
-<a href="assessments.html">
+                        </li>
+
+                        <li>
+                            <a href="assessments.html">
                                 Assessments
                             </a>
-</li>
-<li>
-<a href="implementation.html">
+                        </li>
+
+                        <li>
+                            <a href="implementation.html">
                                 Implementation Guide
                             </a>
-</li>
-</ul>
-</div>
-<div class="col-lg-3">
-<h2>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3">
+                    <h2>
                         Programme Support
                     </h2>
-<p class="footer-copy">15–17 July 2026 • UCT Graduate School of Business, Cape Town • Facilitator: Professor Abejide Ade-Ibijola.</p>
-<a class="footer-contact-link" href="contact.html">
+
+                    <p class="footer-copy">
+                        Final contact, venue and programme-support
+                        information will be added after approval.
+                    </p>
+
+                    <a
+                        href="contact.html"
+                        class="footer-contact-link"
+                    >
                         Contact programme support
 
-                        <i aria-hidden="true" class="bi bi-arrow-right"></i>
-</a>
-</div>
-</div>
-<div class="footer-bottom">
-<p>© 2026 UCT Graduate School of Business • Telekom Networks Malawi Executive Programme.</p>
-<p>AI Leadership in Action • 15–17 July 2026</p>
-</div>
-</div>
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/script.js"></script>
-<script src="assets/js/simulation.js"></script>
+                        <i
+                            class="bi bi-arrow-right"
+                            aria-hidden="true"
+                        ></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>
+                    &copy; 2026 UCT Graduate School of Business.
+                    Programme platform content subject to approval.
+                </p>
+
+                <p>
+                    Executive Education Learning Platform
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/script.js"></script>
+
+    <script src="assets/js/day-one-puzzle-game.js"></script>
 </body>
 </html>

@@ -63,28 +63,6 @@ PRACTICAL CANVASES
 - AI Governance Canvas: board oversight, sponsor, business/data/technical owners, legal review, human review, monitoring, incidents and vendor accountability.
 - 90-Day Executive Action Plan: initiative, sponsor, owner, 30/60/90-day actions, data/technology, approvals, people/change, indicators and Day 90 decision.
 
-
-DELEGATES AND CHALLENGE-GROUP MEMBERS
-1. Intelligent Network and Digital Infrastructure: Lloyd James Gowera (Chief Technical Officer, TNM); Peter Munthali (Chief Information Officer, TNM); Dr Frank Dalitso Chozenga (Non-Executive Director and Board Audit Committee Chair, TNM); Khumbo Phiri (Operations Executive, Old Mutual Malawi).
-2. Customer Growth, Commercial Intelligence and Market Leadership: Michel Hebert (Chief Executive Officer, TNM); Amon Sobhuza Jere (Chief Commercial Officer, TNM); Tobias George Jack (Chief Operating Officer, ATM Technologies; TNM Non-Executive Director); Dalitso Nkunika (Human Resources and Administration Director, TNM).
-3. Mpamba, Financial Inclusion and Digital Ecosystems: Christopher Sukasuka (General Manager, Mpamba); Peter Kadzitche (Chief Finance Officer, TNM); Gerald Mayamiko Chungu (Group IT Executive, Old Mutual Malawi); Dr Ronald Dadi Mangani (Chief Executive Officer, Press Corporation Plc).
-4. Responsible AI, Governance and Institutional Trust: Chisomo Nyemba (Legal and Regulatory Director and Company Secretary, TNM); Ted Sauti-Phiri (Board Chairperson, TNM); Dr Lyton Chithambo (Chief Operating Officer, Press Corporation Plc); Madalo Mungapoti Nyambose (Principal Secretary, Office of the Second Vice-President, Malawi).
-
-WORKSHOP PREPARATION AND CONFIDENTIALITY
-- Delegates should bring a laptop or computer, charger, notebook and role-relevant material approved for workshop use.
-- Complete the baseline assessment before the programme through the platform's Assessments page.
-- Never ask delegates to paste confidential TNM, customer, employee, partner, network, contract, credential or unpublished financial information into public AI services. Recommend approved, anonymised or synthetic examples.
-
-TNM DIAGNOSTIC PAIN-POINT HYPOTHESES
-Treat these as evidence-based hypotheses for executive validation, not confirmed declarations of internal failure: foreign-exchange scarcity; inflation and currency depreciation; high capital-investment requirements; high financing costs; network reliability and service quality; unreliable electricity and high site-energy costs; affordability of data and devices; competition from Airtel Malawi; customer churn and weak loyalty visibility; declining strategic importance of traditional voice and SMS; mobile-money fraud and social-engineering scams; managing the Mpamba agent ecosystem; revenue leakage across GSM and Mpamba; slow or inconsistent customer-service resolution; fragmented systems and data silos; difficulty converting large datasets into timely decisions; regulatory and compliance complexity; import and supply-chain delays; expanding rural coverage while preserving commercial returns; and shortage or retention of specialised digital talent.
-Five urgent strategic priorities used in the workshop are: forex scarcity and rising technology costs; network reliability and customer experience; mobile-money fraud and revenue leakage; customer affordability, churn and digital adoption; and fragmented data with slow decision-making.
-
-PRACTICAL CUSTOMER-ANALYTICS TRAINING CASE
-- The synthetic TNM customer-analytics case uses the public Mxit Mxit bundle context and Smart App or *202# USSD channels.
-- The training dataset has 1,000 customer-month records covering 311 anonymised customers from January to June 2026 with 45 variables. It contains no real customer data.
-- Settled synthetic-case figures: total spend MWK 5,231,500; average satisfaction 3.40/5; churn 7.4%; Smart App adoption 30.1%; and 174 high-risk customer-month records.
-- These are training results only and must never be described as TNM's actual operational performance.
-
 FACILITATOR
 Professor Abejide Ade-Ibijola is Professor of Artificial Intelligence, Founder and Chairman of GRIT Lab Africa, and an applied AI researcher, innovator and executive educator. Contact: abejide@gritlabafrica.org; linkedin.com/in/abejide; abejide.org; gritlabafrica.org.
 

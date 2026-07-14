@@ -1,0 +1,303 @@
+{
+  "game_title": "TNM Malawi AI Reality Puzzle Challenge",
+  "audience": "Telekom Networks Malawi executives, managers, specialists, and strategic partners participating in the UCT GSB AI Leadership in Action programme",
+  "theme": "Understanding what AI is, where it creates value, and how it should be governed in telecommunications, mobile money, customer service, and the Malawian operating context",
+  "scoring": {
+    "points_per_puzzle": 5,
+    "total_puzzles": 15,
+    "maximum_score": 75
+  },
+  "levels": [
+    {
+      "level": 1,
+      "name": "Is This AI or Not?",
+      "difficulty": "Easy",
+      "focus": "Distinguishing AI from fixed rules, scheduled automation, reporting, and ordinary digitisation",
+      "puzzles": [
+        {
+          "id": 1,
+          "title": "The Limbe Network Congestion Alarm",
+          "scenario": "Chikondi Mbewe works in TNM’s network operations team in Blantyre. Customers around Limbe Market often complain that mobile data becomes slow during busy periods. Chikondi introduces a system that checks each nearby base station every five minutes. Whenever utilisation exceeds 85%, the dashboard turns red, an SMS is sent to the engineer, and a support ticket is created. The system always uses the same 85% rule and does not learn from previous traffic patterns.",
+          "question": "Is this system Artificial Intelligence?",
+          "options": {
+            "A": "Yes — it monitors the network automatically, so it is AI",
+            "B": "Yes — creating a ticket is a form of generative AI",
+            "C": "No — it is fixed-threshold monitoring and automation",
+            "D": "No — AI cannot be used in telecommunications"
+          },
+          "correct_answer": "C",
+          "points": 5,
+          "explanation": "The system follows a fixed rule written by people: if utilisation exceeds 85%, issue an alert. It does not learn, predict, classify, or adapt. An AI version could learn traffic patterns and forecast congestion before it occurs.",
+          "teaching_point": "Automatic reaction to a fixed threshold is useful automation, but it is not necessarily AI.",
+          "fun_add_on": "The dashboard is dramatic, but turning red does not qualify it for a machine-learning certificate."
+        },
+        {
+          "id": 2,
+          "title": "The Mzuzu Apology Machine",
+          "scenario": "At a TNM customer-service office in Mzuzu, Tiwonge Phiri sets up a system that sends the same message whenever a complaint is logged: “Pepani chifukwa cha vutoli. TNM is attending to your complaint.” The reply is sent whether the customer reported slow internet, a failed bundle activation, an Mpamba issue, or a SIM-registration problem. The team proudly calls it a generative-AI customer assistant.",
+          "question": "What is this system most likely to be?",
+          "options": {
+            "A": "Generative AI because it sends written messages",
+            "B": "Template-based automation because the response is fixed",
+            "C": "Predictive AI because it predicts that the customer is unhappy",
+            "D": "Computer vision because the message can be read on a screen"
+          },
+          "correct_answer": "B",
+          "points": 5,
+          "explanation": "A fixed, pre-written response is template automation. Generative AI would produce context-sensitive content based on the customer’s actual complaint, while still requiring safeguards and review for sensitive cases.",
+          "teaching_point": "Sending text automatically is not the same as generating text intelligently from context.",
+          "fun_add_on": "The machine has mastered one sentence and is now requesting a communications allowance."
+        },
+        {
+          "id": 3,
+          "title": "The Lilongwe Dashboard That Called Itself AI",
+          "scenario": "Memory Gondwe presents a colourful TNM dashboard at the Lilongwe office. It shows Mxit Mxit bundle sales, district revenue, customer satisfaction, dropped calls, complaints, and churn for the previous six months. The charts are interactive, but the dashboard only displays and filters historical data. It does not make predictions or recommendations.",
+          "question": "Which statement is most accurate?",
+          "options": {
+            "A": "It is definitely AI because it contains many charts",
+            "B": "It is business intelligence and reporting, not necessarily AI",
+            "C": "It is AI because the data belongs to a telecommunications company",
+            "D": "It is generative AI because the dashboard has colours"
+          },
+          "correct_answer": "B",
+          "points": 5,
+          "explanation": "Dashboards help people explore and understand information, but reporting alone is not AI. AI would add capabilities such as churn prediction, anomaly detection, recommendation, language generation, or automated pattern recognition.",
+          "teaching_point": "A dashboard can support intelligent decisions without being an intelligent system itself.",
+          "fun_add_on": "A pie chart remains a pie chart, even when it wears an executive title."
+        },
+        {
+          "id": 4,
+          "title": "The Area 25 Monday Bundle Reminder",
+          "scenario": "Kondwani Banda, a university student living in Area 25, usually buys a weekly data bundle. TNM configures a system to send him the same reminder every Monday at 7:00 a.m.: “Moni Kondwani. Dial *202# to purchase your weekly bundle.” The system does not examine his balance, usage, purchase history, or current bundle.",
+          "question": "What best describes the system?",
+          "options": {
+            "A": "Predictive AI because it knows Monday will arrive",
+            "B": "Machine learning because Kondwani receives the message repeatedly",
+            "C": "Scheduled automation because it follows a fixed time and message",
+            "D": "An autonomous AI agent because it sends an SMS"
+          },
+          "correct_answer": "C",
+          "points": 5,
+          "explanation": "The system performs a scheduled action without learning from data. An AI-enabled version could estimate when Kondwani’s bundle is likely to run out and recommend a suitable offer based on his usage and affordability.",
+          "teaching_point": "A scheduled action is automation; prediction requires evidence from changing data.",
+          "fun_add_on": "The system’s greatest prediction is that Monday follows Sunday."
+        },
+        {
+          "id": 5,
+          "title": "The Face at the Mzuzu Office Door",
+          "scenario": "TNM installs a camera at an access-controlled office in Mzuzu. When an employee approaches, the system detects a face, converts facial features into a numerical representation, compares it with authorised employee records, and estimates whether there is a match. Security staff review uncertain cases.",
+          "question": "Is this a credible example of AI?",
+          "options": {
+            "A": "Yes — it uses computer vision to recognise and compare facial patterns",
+            "B": "No — cameras can never be part of AI systems",
+            "C": "No — it is only AI when the employee speaks to the camera",
+            "D": "Yes — but only because the office is in Mzuzu"
+          },
+          "correct_answer": "A",
+          "points": 5,
+          "explanation": "Face detection and recognition are computer-vision tasks commonly performed using trained AI models. Because biometric systems can make mistakes and affect privacy, access decisions should include security, data-protection, and human-review controls.",
+          "teaching_point": "AI can recognise patterns in images, but technical capability does not remove governance responsibilities.",
+          "fun_add_on": "The camera recognises faces, but it still cannot remember who borrowed the office stapler."
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "name": "Where Should AI Be Used?",
+      "difficulty": "Medium",
+      "focus": "Selecting appropriate AI capabilities for realistic TNM, Mpamba, and customer-experience situations",
+      "puzzles": [
+        {
+          "id": 6,
+          "title": "The Mpamba Transaction That Did Not Look Right",
+          "scenario": "At 10:17 p.m., an Mpamba account normally used for small transactions in Mchinji suddenly attempts several large transfers to newly created recipients. The customer’s device, location pattern, transaction speed, and usual behaviour all appear different. A fixed-rule system checks only whether a transaction exceeds a single monetary limit, so the activity may not be stopped.",
+          "question": "Which AI capability is most suitable for identifying this type of risk?",
+          "options": {
+            "A": "Image generation to create a picture of the transaction",
+            "B": "Anomaly detection that compares the activity with normal behavioural patterns",
+            "C": "A scheduled SMS sent to every customer every Friday",
+            "D": "A dashboard that displays the transaction after month-end"
+          },
+          "correct_answer": "B",
+          "points": 5,
+          "explanation": "Anomaly-detection models can combine several signals and identify behaviour that differs from a customer’s or agent’s normal pattern. Alerts should support investigation rather than automatically treating every unusual transaction as fraud.",
+          "teaching_point": "AI is valuable when risk appears as a pattern across many variables rather than one simple rule.",
+          "fun_add_on": "Fraud rarely sends a calendar invitation before arriving."
+        },
+        {
+          "id": 7,
+          "title": "The Zomba Customer Who May Quietly Leave",
+          "scenario": "Thoko Chirwa manages customer retention. She notices that some TNM customers in Zomba gradually reduce bundle purchases, experience repeated service problems, contact support several times, and then stop using their TNM SIM. She wants to identify vulnerable customers before they become inactive.",
+          "question": "What is the strongest AI use case for this situation?",
+          "options": {
+            "A": "A predictive model that estimates churn risk and identifies the factors behind the score",
+            "B": "A spreadsheet that lists customers alphabetically",
+            "C": "A fixed message sent to every customer regardless of behaviour",
+            "D": "A 3D printer that produces replacement SIM cards"
+          },
+          "correct_answer": "A",
+          "points": 5,
+          "explanation": "A churn model can learn from historical behaviour and estimate which customers are at risk. The result should be used with explainability, affordability considerations, and appropriate offers rather than manipulative targeting.",
+          "teaching_point": "Prediction becomes useful when it leads to a timely, fair, and measurable intervention.",
+          "fun_add_on": "A customer should not have to disappear before the retention team discovers invisibility."
+        },
+        {
+          "id": 8,
+          "title": "Call-Centre Traffic in Blantyre",
+          "scenario": "It is Monday morning at the TNM contact centre in Blantyre. Customers are asking about bundle depletion, Mpamba reversals, SIM registration, network outages, and account balances. Agents search several systems and sometimes give inconsistent answers. The queue is growing faster than the tea is cooling.",
+          "question": "Which solution is the best responsible use of AI?",
+          "options": {
+            "A": "Replace all human agents and prevent customers from requesting a person",
+            "B": "Use an AI copilot to retrieve approved information, draft responses, classify complaints, and escalate complex cases to trained agents",
+            "C": "Send every customer to the same static FAQ page",
+            "D": "Automatically close complaints after five minutes"
+          },
+          "correct_answer": "B",
+          "points": 5,
+          "explanation": "A customer-service copilot can reduce search time, improve consistency, route cases, and draft responses. Human agents should remain responsible for complex, disputed, financial, or emotionally sensitive matters.",
+          "teaching_point": "The best service design often combines AI speed with human judgement and accountability.",
+          "fun_add_on": "The tea may still get cold, but the customer should not."
+        },
+        {
+          "id": 9,
+          "title": "The Chichewa and Chitumbuka Support Assistant",
+          "scenario": "A TNM digital team wants customers to ask common service questions in English, Chichewa, or Chitumbuka. The proposed system identifies the language, interprets the question, retrieves an approved answer, and translates the response into the customer’s chosen language. Human reviewers test accuracy, especially for financial and legal wording.",
+          "question": "Which combination of AI capabilities is being used?",
+          "options": {
+            "A": "Natural-language processing, information retrieval, and machine translation",
+            "B": "Only cloud storage",
+            "C": "Only scheduled automation",
+            "D": "Computer-aided manufacturing"
+          },
+          "correct_answer": "A",
+          "points": 5,
+          "explanation": "The system must recognise language, interpret text, locate relevant information, and produce a translated response. These are established natural-language AI tasks, although quality assurance is essential for lower-resource languages and sensitive content.",
+          "teaching_point": "Language AI can improve inclusion when it is tested with the people and languages it is intended to serve.",
+          "fun_add_on": "The assistant must understand the customer—not simply translate confusion into three languages."
+        },
+        {
+          "id": 10,
+          "title": "The Mangochi Mxit Mxit Campaign",
+          "scenario": "Pemphero Nkhoma is preparing a campaign for customers in Mangochi. She gives a system the bundle features, target audience, tone, and language requirements. The system drafts several new SMS messages, social-media captions, and radio-script options. Pemphero checks prices, claims, cultural appropriateness, and regulatory wording before publication.",
+          "question": "What kind of technology is this?",
+          "options": {
+            "A": "Generative AI used with human review",
+            "B": "A fixed threshold alarm",
+            "C": "A traditional dashboard",
+            "D": "A barcode scanner"
+          },
+          "correct_answer": "A",
+          "points": 5,
+          "explanation": "The system creates new text based on a prompt and supplied context, which is a generative-AI capability. Human review is necessary because the generated material could contain incorrect prices, unsupported claims, inappropriate language, or compliance problems.",
+          "teaching_point": "Generative AI can accelerate creative work, but publication accountability remains with people.",
+          "fun_add_on": "The model can draft ten slogans before lunch; it still cannot approve the marketing budget."
+        }
+      ]
+    },
+    {
+      "level": 3,
+      "name": "Strategic AI, Governance, and Other 4IR Technologies",
+      "difficulty": "Hard",
+      "focus": "Distinguishing advanced technologies, evaluating AI-enabled decisions, and applying governance to high-impact use cases",
+      "puzzles": [
+        {
+          "id": 11,
+          "title": "The Rural Site Investment Committee",
+          "scenario": "TNM is considering new network sites in Neno, Chitipa, and parts of Mangochi. Each location has different population density, demand forecasts, road access, power reliability, terrain, expected revenue, social value, equipment costs, and foreign-currency requirements. A proposed model learns from previous site performance and estimates demand, outage risk, cost, and likely return for each candidate location. It then ranks the sites for executive review.",
+          "question": "What is the best judgement about this proposal?",
+          "options": {
+            "A": "It is a credible AI decision-support use case, but executives should review assumptions, uncertainty, inclusion, and social obligations before approving investments",
+            "B": "It is not AI because finance and geography cannot be analysed together",
+            "C": "The model should make the final investment decision automatically because numbers are always neutral",
+            "D": "It is only a dashboard because it produces a ranking"
+          },
+          "correct_answer": "A",
+          "points": 5,
+          "explanation": "The proposal combines prediction and optimisation using multiple data sources. However, rural coverage decisions involve uncertainty, public value, inclusion, regulation, and strategic judgement. The model should support—not replace—accountable executive decisions.",
+          "teaching_point": "AI can improve capital allocation, but optimisation must reflect the organisation’s full responsibilities, not only short-term revenue.",
+          "fun_add_on": "A model can rank sites; it cannot attend the community meeting on behalf of leadership."
+        },
+        {
+          "id": 12,
+          "title": "The Missing Kwacha Between GSM and Mpamba",
+          "scenario": "Finance teams observe small but persistent differences between billing records, Mpamba transactions, promotions, partner settlements, and general-ledger entries. Each difference is too small to trigger existing rules, but together they may represent substantial revenue leakage. The proposed system learns normal reconciliation patterns, detects unusual combinations, and groups likely root causes for investigation.",
+          "question": "Which design is most appropriate?",
+          "options": {
+            "A": "Anomaly detection and intelligent reconciliation, followed by investigation and controlled financial adjustment",
+            "B": "A generative image model that draws a picture of the missing money",
+            "C": "Automatic deletion of every transaction that does not match immediately",
+            "D": "A monthly presentation with no transaction-level analysis"
+          },
+          "correct_answer": "A",
+          "points": 5,
+          "explanation": "AI can identify subtle inconsistencies across large transaction volumes and help investigators prioritise likely causes. Financial corrections should still follow approved controls, evidence requirements, segregation of duties, and audit trails.",
+          "teaching_point": "Detection may be automated; accountable financial action should remain controlled and auditable.",
+          "fun_add_on": "The missing kwacha may be small individually, but they have excellent teamwork."
+        },
+        {
+          "id": 13,
+          "title": "The Mpamba Model with Too Much Authority",
+          "scenario": "A vendor proposes an AI model that instantly freezes any Mpamba account it considers suspicious. Customers receive no explanation, agents cannot challenge the decision, there is no appeal process, and the model has not been tested for errors affecting rural customers, shared devices, or people who frequently change locations for work. The vendor says that speed is more important than review.",
+          "question": "What is the best executive response?",
+          "options": {
+            "A": "Approve it because fraud prevention justifies any level of automation",
+            "B": "Approve it if the vendor promises that the algorithm is advanced",
+            "C": "Pause or redesign it to include testing, proportional action, explanations, human review, appeals, monitoring, and clear accountability",
+            "D": "Use it only on customers with low balances because mistakes would matter less"
+          },
+          "correct_answer": "C",
+          "points": 5,
+          "explanation": "Fraud controls can protect customers, but an unreviewable model can also block legitimate access to money and create unfair outcomes. High-impact decisions require validation, proportional responses, transparency, escalation, appeal, monitoring, and accountable ownership.",
+          "teaching_point": "A technically powerful AI system can still be an unacceptable system when governance is weak.",
+          "fun_add_on": "An algorithm that cannot explain itself should not be given the keys to everyone’s wallet."
+        },
+        {
+          "id": 14,
+          "title": "The 4IR Buzzword Buffet",
+          "scenario": "A project team announces: “We moved customer data to the cloud, connected tower batteries using Internet-of-Things sensors, recorded selected transactions on a blockchain, and introduced virtual-reality safety training. TNM has therefore implemented four new types of AI.” The presentation has arrows, glowing icons, and excellent animation.",
+          "question": "Which response is most accurate?",
+          "options": {
+            "A": "Correct — cloud, IoT, blockchain, and virtual reality are all forms of AI",
+            "B": "Incorrect — they are important digital or 4IR technologies, but none is automatically AI",
+            "C": "Correct — any technology with an acronym becomes AI",
+            "D": "Incorrect — AI can only exist in humanoid robots"
+          },
+          "correct_answer": "B",
+          "points": 5,
+          "explanation": "Cloud computing, IoT, blockchain, and virtual reality are distinct technologies. They can provide data, infrastructure, security mechanisms, or interfaces for an AI system, but they do not become AI merely by being advanced or connected.",
+          "teaching_point": "AI is part of the wider technology landscape; it is not a replacement name for every modern technology.",
+          "fun_add_on": "The glowing icons were advanced. The classification was not."
+        },
+        {
+          "id": 15,
+          "title": "The Executive Agent That Can Act",
+          "scenario": "TNM tests an AI agent that can read approved operational reports, identify a likely service issue, draft an incident summary, open a technical ticket, schedule a review meeting, and prepare a customer-notification draft. A project sponsor proposes giving it unrestricted access to send public messages, approve supplier payments, change network configurations, and close regulatory incidents without human approval.",
+          "question": "Which statement best distinguishes a responsible AI agent from unsafe automation?",
+          "options": {
+            "A": "An AI agent should receive every available permission so that it can demonstrate intelligence",
+            "B": "The agent is safe as long as it produces professional-looking text",
+            "C": "The agent may plan and use tools, but permissions, approval thresholds, logging, monitoring, and human control must match the risk of each action",
+            "D": "It is not AI because software cannot open tickets or schedule meetings"
+          },
+          "correct_answer": "C",
+          "points": 5,
+          "explanation": "Agentic AI can interpret goals, plan steps, and call tools. Those capabilities increase both value and risk. Low-risk actions may be automated, while financial, public, technical, legal, or regulatory actions need strict permissions and appropriate human approval.",
+          "teaching_point": "The more an AI system can do, the more carefully its authority must be designed.",
+          "fun_add_on": "A helpful assistant needs a job description; a powerful agent needs one plus access controls."
+        }
+      ]
+    }
+  ],
+  "bonus_meta_question": {
+    "title": "Should TNM Use AI Here at All?",
+    "question": "Which situation provides the strongest reason to pause or redesign an AI deployment?",
+    "options": {
+      "A": "The task is repetitive, data-rich, measurable, and reviewed by trained people",
+      "B": "The system makes high-impact financial or service decisions with no explanation, monitoring, appeal, or accountable owner",
+      "C": "The organisation already has cloud infrastructure",
+      "D": "The team wants to begin with a small, controlled pilot"
+    },
+    "correct_answer": "B",
+    "explanation": "AI should be paused or redesigned when its decisions can materially affect customers or the organisation but there is no transparency, validation, monitoring, human review, appeal process, or accountable owner."
+  }
+}
