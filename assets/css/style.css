@@ -1783,3 +1783,183 @@ video {
         width: 100%;
     }
 }
+
+/* =========================================================
+   Enhanced Delegate Profiles
+   ========================================================= */
+
+.delegate-search-wrapper {
+    position: relative;
+}
+
+.delegate-search-wrapper > i {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    z-index: 1;
+    color: var(--gsb-muted);
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.delegate-search-wrapper .delegate-search {
+    padding-left: 2.8rem;
+}
+
+.delegate-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.delegate-card img {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: center top;
+    background: var(--gsb-soft);
+}
+
+.delegate-card-body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.delegate-card h3 {
+    font-size: 1.12rem;
+}
+
+.delegate-description {
+    margin: 1rem 0 1.2rem;
+    color: var(--gsb-text);
+    font-size: 0.88rem;
+    line-height: 1.65;
+}
+
+.delegate-profile-details {
+    margin-top: auto;
+    border-top: 1px solid var(--gsb-border);
+}
+
+.delegate-profile-details summary {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0 0;
+    color: var(--gsb-navy);
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    cursor: pointer;
+    list-style: none;
+}
+
+.delegate-profile-details summary::-webkit-details-marker {
+    display: none;
+}
+
+.delegate-profile-details summary i {
+    transition: transform var(--gsb-transition);
+}
+
+.delegate-profile-details[open] summary i {
+    transform: rotate(180deg);
+}
+
+.delegate-profile-content {
+    padding-top: 1.25rem;
+}
+
+.delegate-profile-content section {
+    margin-bottom: 1.3rem;
+}
+
+.delegate-profile-content h4 {
+    margin-bottom: 0.65rem;
+    color: var(--gsb-navy);
+    font-size: 0.76rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.delegate-profile-content ul {
+    margin: 0;
+    padding-left: 1.15rem;
+    color: var(--gsb-text);
+    font-size: 0.82rem;
+}
+
+.delegate-profile-content li {
+    margin-bottom: 0.45rem;
+}
+
+.delegate-ai-relevance {
+    margin-bottom: 0 !important;
+    padding: 1rem;
+    background: var(--gsb-soft);
+    border-left: 4px solid var(--gsb-cyan);
+}
+
+.delegate-ai-relevance p {
+    margin: 0;
+    font-size: 0.82rem;
+    line-height: 1.6;
+}
+
+/* =========================================================
+   Practical AI Use placeholder
+   ========================================================= */
+
+.practical-ai-placeholder {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem;
+    background: var(--gsb-white);
+    border-top: 5px solid var(--gsb-cyan);
+    box-shadow: var(--gsb-shadow);
+    text-align: center;
+}
+
+.practical-ai-placeholder-icon {
+    width: 72px;
+    height: 72px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: var(--gsb-white);
+    background: var(--gsb-navy);
+    font-size: 1.8rem;
+}
+
+.practical-ai-placeholder h2 {
+    margin-bottom: 1rem;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+}
+
+.practical-ai-placeholder p {
+    max-width: 680px;
+    margin: 0 auto 1.5rem;
+    color: var(--gsb-muted);
+}
+
+.practical-ai-placeholder-status {
+    display: inline-flex;
+    gap: 0.55rem;
+    align-items: center;
+    padding: 0.6rem 0.85rem;
+    color: var(--gsb-navy);
+    background: var(--gsb-soft);
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+@media (max-width: 767.98px) {
+    .practical-ai-placeholder {
+        padding: 2rem 1.25rem;
+    }
+}
