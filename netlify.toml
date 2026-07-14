@@ -1,0 +1,22 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+[dev]
+  publish = "."
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/api/simulation/evaluate"
+  to = "/.netlify/functions/deepseek-simulation"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/deepseek/chat"
+  to = "/.netlify/functions/deepseek-chat"
+  status = 200
+  force = true

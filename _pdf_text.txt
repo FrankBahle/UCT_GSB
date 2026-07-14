@@ -1,0 +1,922 @@
+UCT GRADUATE SCHOOL OF BUSINESS | AI LEADERSHIP IN ACTION
+
+UCT GRADUATE SCHOOL OF BUSINESS • EXECUTIVE EDUCATION
+
+AI Leadership in Action
+Building an Intelligent, Trusted and Future-Ready TNM
+Executive Learning Guide and Programme Brochure
+
+Brochure
+
+Prepared for: Telekom Networks Malawi (TNM) and Strategic Partners​
+Dates: 15–17 July 2026​
+Venue: UCT Graduate School of Business, Cape Town​
+
+Facilitator: Professor Abejide Ade-Ibijola​
+
+Telekom Networks Malawi Executive Programme • 15–17 July 2026 • UCT GSB
+2
+
+UCT GRADUATE SCHOOL OF BUSINESS | AI LEADERSHIP IN ACTION
+
+WELCOME TO AI LEADERSHIP IN ACTION
+
+Purpose of this Brochure
+You are warmly welcomed to the Artificial Intelligence Masterclass for the Telekom Networks
+Malawi executive cohort. Your facilitator is Professor Abejide Ade-Ibijola, who will guide you
+through practical, responsible, and future-focused applications of AI.
+This brochure describes the AI Leadership in Action executive programme. It provides the:
+1.​ programme philosophy,
+2.​ learning outcomes,
+3.​ three-day schedule,
+4.​ TNM-specific challenge areas,
+5.​ group activities, games/simulations,
+6.​ delegate profile pages,
+7.​ practical canvases, and
+8.​ facilitator information.
+
+How to use this brochure​
+Participants may use the document before, during and after the programme. The programme
+timetable is only one subset of the brochure; the remaining sections support preparation, reflection,
+co-creation, implementation planning and follow-through.
+
+Programme Positioning
+AI Leadership in Action is an applied, design-led executive intervention tailored to Telekom
+Networks Malawi and its strategic ecosystem. It equips board members, executives and senior
+leaders to use artificial intelligence to improve network performance, grow customer value,
+strengthen Mpamba, enhance enterprise efficiency and govern AI responsibly.
+Participants will diagnose:
+1.​ TNM’s strategic and operational realities (painpoints),
+2.​ co-create priority AI solutions and develop pilot-ready implementation pathways suited to
+Malawi’s competitive,
+3.​ regulatory and socioeconomic environment.
+
+Telekom Networks Malawi Executive Programme • 15–17 July 2026 • UCT GSB
+3
+
+UCT GRADUATE SCHOOL OF BUSINESS | AI LEADERSHIP IN ACTION
+
+PROGRAMME CONTEXT AND RATIONALE
+
+Why this Programme, Why Now?
+Artificial intelligence is reshaping telecommunications, mobile financial services, customer
+engagement, workforce design, enterprise operations, governance and competition.
+For TNM, the strategic question is not whether AI will influence the organisation, but how
+leadership will direct its use to produce measurable value while preserving trust, accountability and
+inclusion.
+●​ Network intelligence: predictive maintenance, capacity planning, service assurance, energy
+optimisation and field-force effectiveness.
+●​ Customer and commercial intelligence: churn prediction, personalisation, next-best action,
+social listening and customer journey improvement.
+●​ Mpamba and financial inclusion: fraud detection, agent liquidity forecasting, merchant
+analytics, service reliability and inclusive digital finance.
+●​ Enterprise productivity: financial forecasting, HR analytics, legal review, knowledge
+management, procurement and executive decision support.
+●​ Trust and governance: privacy, cybersecurity, regulatory compliance, explainability, human
+oversight and responsible vendor use.
+
+Malawi Market Realities
+●​
+●​
+●​
+●​
+●​
+
+Affordability and uneven digital access must inform every AI design decision.
+Rural and urban customer realities may require different service models.
+Connectivity, cloud costs, data quality and legacy systems can constrain implementation.
+Local skills development and responsible partnerships are essential for sustainability.
+AI initiatives must strengthen (not weaken) customer trust and regulatory confidence.
+
+Core strategic question​
+Where can AI create a distinctive advantage for TNM that competitors cannot easily copy, while
+improving customer value and contributing to Malawi’s digital development?
+
+Telekom Networks Malawi Executive Programme • 15–17 July 2026 • UCT GSB
+4
+
+UCT GRADUATE SCHOOL OF BUSINESS | AI LEADERSHIP IN ACTION
+
+PROGRAMME PHILOSOPHY
+
+Programme Philosophy
+This programme is grounded in the belief that artificial intelligence should be approached not
+merely as a technical tool, but as a strategic capability for responsible leadership, innovation, and
+organisational transformation.
+Participants are positioned as executive co-designers, not passive learners. They bring their
+operational, technical, commercial, regulatory, and governance experience into the learning
+process.
+The programme therefore follows these principles:
+●​ Begin with organisational reality: Start with TNM’s actual priorities, challenges,
+opportunities, and operating context rather than abstract discussions about technology.
+●​ Make AI practical and visible: Use demonstrations, examples, and guided activities to show
+what AI can realistically do.
+●​ Diagnose before designing: Identify pain points, root causes, and user needs before
+proposing AI-enabled solutions.
+●​ Combine strategy with co-creation: Balance executive-level discussion with practical,
+hands-on development of ideas.
+●​ Test ideas responsibly: Assess proposed solutions for business value, technical feasibility,
+legality, explainability, governance, inclusion, and ethical risk.
+●​ Develop pilot-ready concepts: Move beyond broad recommendations towards clearly
+defined ideas that can be tested within the organisation.
+●​ Create ownership and momentum: Conclude with agreed action steps, accountable owners,
+implementation priorities, and institutional learning pathways.
+●​ Impact: Think of impact in Malawi, and Broader Africa.
+The overall aim is to ensure that participants leave with more than awareness. They should leave
+with practical insights, shared priorities, and actionable concepts that can support transformation
+within TNM, the wider Malawian economy, and Africa.
+
+Learning Experience
+Method
+
+Purpose
+
+Demonstrations
+
+Applied AI systems, tools and use cases.
+
+Critical reflection
+
+Interrogate hype, assumptions, risks and implementation constraints.
+
+Co-creation sessions
+
+Build multidisciplinary solutions around TNM priorities.
+
+Rapid prototyping
+
+Create interface concepts, workflow models, dashboards or storyboards.
+
+Executive pitching
+
+Present solutions using a clear problem–value–risk–implementation narrative.
+
+Telekom Networks Malawi Executive Programme • 15–17 July 2026 • UCT GSB
+5
+
+UCT GRADUATE SCHOOL OF BUSINESS | AI LEADERSHIP IN ACTION
+
+Strategic foresight
+
+Explore future telecom, fintech and regulatory scenarios.
+
+Action planning
+
+Translate selected ideas into 90-day leadership actions and pilot pathways.
+
+LEARNING OUTCOMES
+
+Programme-Level Outcomes
+●​ Explain foundational AI concepts and distinguish credible applications from hype.
+●​ Assess how AI may change business models, jobs, competition and customer expectations
+in Malawi.
+●​ Articulate an AI leadership vision aligned with TNM strategy and socioeconomic realities.
+●​ Identify and prioritise high-value AI opportunities across TNM’s business and governance
+functions.
+●​ Apply responsible AI principles covering fairness, accountability, transparency, inclusion
+and human oversight.
+●​ Develop an AI governance and risk framework suitable for board and executive oversight.
+●​ Establish data-governance, privacy, cybersecurity and intellectual-property considerations
+for AI projects.
+●​ Design AI-enabled workflows that integrate with business processes and preserve
+accountable human decision-making.
+●​ Build a credible implementation pathway including ownership, data requirements, value
+measures and change leadership.
+●​ Present and defend a pilot-ready AI solution to an executive audience.
+●​ Think Malawi, think Africa.
+
+Programme Deliverables
+Output
+
+Description
+
+TNM AI Strategic Vision
+
+A concise statement of desired AI-enabled organisational direction.
+
+AI Maturity Snapshot
+
+Current-state assessment across strategy, data, technology, talent, governance
+and culture.
+
+Opportunity Portfolio
+
+Prioritised AI opportunities linked to TNM’s strategic growth engines.
+
+Responsible AI Concepts
+
+Three to five cross-functional solution concepts with risks and safeguards.
+
+Governance Canvas
+
+Board, executive, data, technical and human-review responsibilities.
+
+Pilot Roadmap
+
+A 90-day action plan for selected initiatives.
+
+Executive Commitments
+
+Individual and team commitments for follow-through.
+
+Telekom Networks Malawi Executive Programme • 15–17 July 2026 • UCT GSB
+6
+
+UCT GRADUATE SCHOOL OF BUSINESS | AI LEADERSHIP IN ACTION
+
+PROGRAMME ARCHITECTURE
+
+Three-Day Learning Journey
+Day
+
+Cluster
+
+Primary outcome
+
+1
+
+Shared Understanding,
+Introductions & Pain-Point
+Diagnosis
+
+Aligned expectations, validated organisational realities,
+prioritised pain points and discussion of team formations.
+
+2
+
+Co-Creation, Practical AI & Rapid
+Prototyping
+
+AI-enabled solutions, tangible prototypes and peer-reviewed
+design improvements.
+
+3
+
+Strategy, Responsible AI &
+Future Readiness
+
+Governance choices, selected pilot pathways, 90-day action
+plans and executive commitments.
+
+Six Integrated Learning Domains
+●​
+●​
+●​
+●​
+●​
+●​
+
+AI foundations and strategic foresight
+Leadership and workforce transformation
+Responsible AI and ethics
+Governance, risk management and compliance
+Data strategy, cybersecurity and intellectual-property protection
+Applications, implementation and executive presentations
+
+●​ Think of society: Malawi and Africa
+
+Design principle
+​
+Every concept developed during the programme must answer five questions:
+●​
+●​
+●​
+●​
+●​
+●​
+
+Does it strengthen TNM’s competitive position?
+Does it improve customer or operational outcomes?
+Does it create or protect measurable value?
+Can it work under Malawi’s infrastructure and affordability constraints?
+Can it be governed responsibly?
+What does it mean for the broader Malawian and African context, in terms of societal impact?
+
+Telekom Networks Malawi Executive Programme • 15–17 July 2026 • UCT GSB
+7
+
+UCT GRADUATE SCHOOL OF BUSINESS | AI LEADERSHIP IN ACTION
+
+Delegate Profiles
+
+Telekom Networks Malawi Executive Programme • 15–17 July 2026 • UCT GSB
+8
+
+UCT GRADUATE SCHOOL OF BUSINESS | AI LEADERSHIP IN ACTION
+
+Telekom Networks Malawi Executive Programme • 15–17 July 2026 • UCT GSB
+9
+
+UCT GRADUATE SCHOOL OF BUSINESS | AI LEADERSHIP IN ACTION
+
+Telekom Networks Malawi Executive Programme • 15–17 July 2026 • UCT GSB
+10
+
+UCT GRADUATE SCHOOL OF BUSINESS | AI LEADERSHIP IN ACTION
+
+Delegate Groups
+Group 1: Intelligent Network and Digital Infrastructure
+Challenge​
+How can TNM use AI to improve network reliability, infrastructure investment, service quality and
+operational efficiency?
+
+Participant
+
+Role
+
+Lloyd James Gowera
+
+Chief Technical Officer, TNM
+
+Peter Munthali
+
+Chief Information Officer, TNM
+
+Dr Frank Dalitso Chozenga
+
+Non-Executive Director and Board Audit Committee Chair, TNM
+
+Khumbo Phiri
+
+Operations Executive, Old Mutual Malawi
+
+Group 2: Customer Growth, Commercial Intelligence and Market
+Leadership
+Challenge​
+How can TNM use AI to grow customers, reduce churn, personalise services and strengthen its
+competitive position?
+
+Participant
+
+Role
+
+Michel Hebert
+
+Chief Executive Officer, TNM
+
+Amon Sobhuza Jere
+
+Chief Commercial Officer, TNM
+
+Tobias George Jack
+
+Chief Operating Officer, ATM Technologies; TNM Non-Executive
+Director
+
+Dalitso Nkunika
+
+Human Resources and Administration Director, TNM
+
+Telekom Networks Malawi Executive Programme • 15–17 July 2026 • UCT GSB
+11
+
+UCT GRADUATE SCHOOL OF BUSINESS | AI LEADERSHIP IN ACTION
+
+Group 3: Mpamba, Financial Inclusion and Digital Ecosystems
+Challenge​
+How can AI help Mpamba expand financial inclusion, improve agent performance, reduce fraud and
+create new digital services?
+
+Participant
+
+Role
+
+Christopher Sukasuka
+
+General Manager, Mpamba
+
+Peter Kadzitche
+
+Chief Finance Officer, TNM
+
+Gerald Mayamiko Chungu
+
+Group IT Executive, Old Mutual Malawi
+
+Dr Ronald Dadi Mangani
+
+Chief Executive Officer, Press Corporation Plc
+
+Group 4: Responsible AI, Governance and Institutional Trust
+Challenge​
+How should TNM govern AI responsibly while protecting customers, employees, data, intellectual
+property and institutional reputation?
+
+Participant
+
+Role
+
+Chisomo Nyemba
+
+Legal and Regulatory Director and Company Secretary, TNM
+
+Ted Sauti-Phiri
+
+Board Chairperson, TNM
+
+Dr Lyton Chithambo
+
+Chief Operating Officer, Press Corporation Plc
+
+Madalo Mungapoti Nyambose
+
+Principal Secretary, Office of the Second Vice-President
+
+Telekom Networks Malawi Executive Programme • 15–17 July 2026 • UCT GSB
+12
+
+UCT GRADUATE SCHOOL OF BUSINESS | AI LEADERSHIP IN ACTION
+
+PROGRAMME
+
+DAY 1
+
+Introductions, Shared Understanding & Pain-Point
+Diagnosis
+
+Theme
+
+Begin with people, organisational reality and priority challenges.
+
+Focus
+
+Introductions, alignment, AI foundations, demonstrations, TNM reality check, pain-point diagnosis
+and challenge-team formation.
+
+Time
+
+Session
+
+Activities
+
+08:30–09:00
+
+Welcome, Registration and
+Executive Introductions
+
+Warm welcome; facilitator introduction; participant introductions;
+roles, expectations and perspectives brought into the room.
+
+09:00–09:30
+
+Programme Orientation and
+Co-Designer Positioning
+
+Programme purpose, outcomes, collaboration norms, daily outputs
+and the role of participants as executive co-designers rather than
+passive learners.
+
+09:30–10:15
+
+AI Reality Game: What AI Is—and
+What It Is Not
+
+Interactive clarification of AI, machine learning, generative AI,
+predictive AI, automation and agents; separating credible
+applications from hype.
+
+10:15–10:30
+
+Tea / Coffee Break
+
+Refreshments and informal conversation.
+
+10:30–11:30
+
+Applied AI Demonstration Studio
+
+The showroom, and a simulation on AI applications in
+telecommunications, mobile money, customer operations, network
+management, finance, HR, legal, governance and board reporting.
+
+11:30–12:15
+
+TNM and Malawi Reality Check
+
+Perceived painpoints: validate a working hypothesis of TNM’s
+current AI readiness, market pressures, infrastructure realities,
+regulatory context and leadership priorities.
+
+12:15–13:00
+
+Leadership Perspectives and
+Strategic Expectations
+
+Short executive contributions on operational, commercial, technical,
+regulatory, workforce and governance expectations for the
+programme.
+
+13:00–13:45
+
+Lunch Break
+
+Networking and reflection.
+
+13:45–14:45
+
+Pain-Point Diagnosis I:
+Organisational Reality
+
+Identify priority pain points; map affected users, processes,
+decisions, delays and consequences; distinguish symptoms from
+root causes.
+
+14:45–15:30
+
+Pain-Point Diagnosis II:
+Prioritisation and Impact
+
+Assess severity, frequency, customer impact, operational cost, risk
+and strategic importance; select the highest-value challenges.
+
+15:30–16:00
+
+Team Formation and Day 1
+Closure
+
+Form cross-functional teams; allocate challenge streams; frame
+Day 2 design briefs; capture reflections and unanswered questions.
+
+Telekom Networks Malawi Executive Programme • 15–17 July 2026 • UCT GSB
+13
+
+UCT GRADUATE SCHOOL OF BUSINESS | AI LEADERSHIP IN ACTION
+
+DAY 2
+
+Co-Creation, Practical AI & Rapid Prototyping
+
+Theme
+
+Move from priority pain points to visible, testable and responsibly designed AI-enabled concepts.
+
+Focus
+
+AI tools, multidisciplinary co-creation, practical design, workflow modelling, rapid prototyping,
+demonstrations and peer critique.
+
+Time
+
+Session
+
+Activities
+
+08:30–08:45
+
+Day 1 Recap and Design Criteria
+
+Confirm priority challenges and practical design criteria: value,
+feasibility, legality, explainability, inclusion and human oversight.
+
+08:45–09:30
+
+Executive AI Toolkit and
+Use-Case Matching
+
+Match pain points to AI tools.
+
+09:30–10:15
+
+Practical AI Demonstration
+
+Guided use of AI tools to research, structure, critique and improve
+solution ideas while protecting confidential information.
+
+10:15–10:30
+
+Tea / Coffee Break
+
+Refreshments and informal reflection.
+
+10:30–12:30
+
+Co-Creation Studio: From
+Problem to Solution Architecture
+
+Map users, workflows, decisions, systems, data requirements, AI
+capabilities and human-in-the-loop controls; sketch the end-to-end
+solution concept.
+
+12:30–13:15
+
+Lunch Break
+
+Networking and team preparation.
+
+13:15–15:15
+
+Rapid Prototyping Sprint
+
+Create tangible prototypes with AI tools.
+
+15:15–15:45
+
+Prototype Walkthroughs and
+Peer Critique
+
+Demonstrate each prototype; test assumptions; gather feedback on
+usability, business value, data, implementation and risk.
+
+15:45–16:00
+
+Day 2 Reflection and Handover
+
+Record design improvements and identify the strategic, governance
+and implementation questions to resolve on Day 3.
+
+DAY OUTPUT
+
+AI-enabled solution concepts; tangible prototypes; documented assumptions; peer feedback;
+implementation and governance questions for Day 3.
+
+Telekom Networks Malawi Executive Programme • 15–17 July 2026 • UCT GSB
+14
+
+UCT GRADUATE SCHOOL OF BUSINESS | AI LEADERSHIP IN ACTION
+
+AI LEADERSHIP IN ACTION
+
+DAY 3
+
+UCT GSB | TNM
+
+Strategy, Responsible AI & Future Readiness
+
+Theme
+
+Convert promising prototypes into governable strategic choices, pilot pathways and leadership
+commitments.
+
+Focus
+
+Strategy, responsible AI, governance, risk, future telecom scenarios, organisational adoption, pilot
+planning and executive ownership.
+
+Time
+
+Session
+
+Activities
+
+08:30–08:45
+
+Day 2 Reflection and Strategic
+Transition
+
+Review prototypes and shift from solution design to enterprise
+strategy, governance, implementation and future readiness.
+
+08:45–09:30
+
+AI Strategy and Competitive
+Positioning
+
+Align AI opportunities with TNM strategy, customer value, network
+leadership, Mpamba growth, enterprise efficiency and Malawi’s
+socioeconomic realities.
+
+09:30–10:15
+
+Responsible AI and
+Human-Centred Leadership
+
+Fairness, bias, transparency, explainability, inclusion, customer
+dignity, accountable human oversight and responsible automation.
+
+10:15–10:30
+
+Tea / Coffee Break
+
+Refreshments and informal reflection.
+
+10:30–11:15
+
+Governance, Risk, Data,
+Cybersecurity and IP
+
+Board oversight, executive accountability, risk classification,
+privacy, data ownership, vendor governance, cybersecurity, audit,
+incident response and intellectual-property protection.
+
+11:15–12:00
+
+Future of Telecom, Mpamba and
+Digital Services in Malawi
+
+Explore AI agents, autonomous networks, intelligent mobile money,
+personalisation, digital identity, cybersecurity and cross-sector
+digital ecosystems.
+
+12:00–12:45
+
+From Prototype to Pilot and
+Organisational Adoption
+
+Build-versus-buy, infrastructure, integration, vendors, procurement,
+workforce change, reskilling, operating ownership and value
+measurement.
+
+12:45–13:30
+
+Lunch Break
+
+Networking and preparation for final planning.
+
+13:30–14:15
+
+Pilot Selection and 90-Day Action
+Planning
+
+Select priority concepts; define scope, owners, partners,
+milestones, data needs, safeguards, budget assumptions, KPIs and
+decision gates.
+
+14:15–14:45
+
+Executive Governance Canvas
+and Commitments
+
+Assign board, executive, data, technical and human-review
+responsibilities; confirm leadership commitments and institutional
+learning pathways.
+
+14:45–15:00
+
+Programme Synthesis and
+Formal Closure
+
+Consolidate insights, confirm next steps, recognise contributions
+and close the programme.
+
+DAY OUTPUT
+
+Selected pilot pathways; responsible AI and governance canvas; 90-day action plans; named
+owners; executive commitments and future-learning priorities.
+
+Telekom Networks Malawi Executive Programme • 15–17 July 2026 • UCT GSB
+15
+
+UCT GRADUATE SCHOOL OF BUSINESS | AI LEADERSHIP IN ACTION
+
+PRACTICAL CANVASES AND WORKING TEMPLATES
+
+AI Opportunity Canvas
+Prompt
+
+Working Notes
+
+Business challenge
+
+Affected customers or stakeholders
+
+Current process and root cause
+
+Proposed AI capability
+
+Data required
+
+Human decision or oversight
+
+Expected value
+
+Key risks
+
+Pilot owner
+
+Success measures
+
+Telekom Networks Malawi Executive Programme • 15–17 July 2026 • UCT GSB
+16
+
+UCT GRADUATE SCHOOL OF BUSINESS | AI LEADERSHIP IN ACTION
+
+AI Governance Canvas
+Governance Element
+
+Working Notes
+
+Board oversight
+
+Executive sponsor
+
+Business owner
+
+Data owner
+
+Technical owner
+
+Legal / compliance reviewer
+
+Human review point
+
+Monitoring and audit
+
+Incident escalation
+
+Vendor accountability
+
+Telekom Networks Malawi Executive Programme • 15–17 July 2026 • UCT GSB
+17
+
+UCT GRADUATE SCHOOL OF BUSINESS | AI LEADERSHIP IN ACTION
+
+FACILITATOR PROFILE
+
+Professor Abejide Ade-Ibijola
+Facilitator​
+Professor of Artificial Intelligence • Founder and Chairman, GRIT Lab Africa • Applied AI researcher,
+innovator and executive educator
+
+Professor Abejide Ade-Ibijola is an artificial intelligence scholar,
+innovator and executive educator whose work connects theory,
+practice, product development, commercialisation and societal
+impact.
+He is the Founder and Chairman of GRIT Lab Africa, an innovation
+and skills-development platform focused on equipping African talent
+to solve business and societal problems using artificial intelligence
+and other future technologies.
+His applied work spans AI strategy, rule-based systems, digital
+transformation, serious games, virtual reality, business process
+optimisation, AI governance, entrepreneurship and responsible
+technology adoption across government, industry and higher
+education.
+He has led or contributed to projects involving big-data frameworks,
+customer intelligence, banking and fintech futures, legal technology,
+education, public-sector innovation and AI-enabled social solutions.
+
+Facilitator Contact Details
+Channel
+
+Details
+
+Email
+
+abejide@gritlabafrica.org
+
+LinkedIn
+
+www.linkedin.com/in/abejide/
+
+Websites
+
+www.abejide.org • www.gritlabafrica.org
+
+Telekom Networks Malawi Executive Programme • 15–17 July 2026 • UCT GSB
+18
+
+UCT GRADUATE SCHOOL OF BUSINESS | AI LEADERSHIP IN ACTION
+
+14 • ACTION PLANNING AND FOLLOW-THROUGH
+
+90-Day Executive Action Plan
+Action Area
+
+Working Notes
+
+Priority initiative
+
+Executive sponsor
+
+Business owner
+
+First 30 days
+
+Days 31–60
+
+Days 61–90
+
+Data and technology needs
+
+Governance approvals
+
+People and change actions
+
+Success indicators
+
+Decision at Day 90
+
+Telekom Networks Malawi Executive Programme • 15–17 July 2026 • UCT GSB
+19
+
+UCT GRADUATE SCHOOL OF BUSINESS | AI LEADERSHIP IN ACTION
+
+15 • REFERENCE NOTES AND EDITING CHECKLIST
+
+Reference Frameworks
+Malawi Data Protection Act, 2024.
+Malawi Communications Act, 2016.
+Electronic Transactions and Cyber Security Act, 2016.
+Malawi Copyright Act, 2016.
+Applicable MACRA directives, consumer-protection requirements and sector-specific
+regulations.
+●​ Relevant TNM data, cybersecurity, procurement, HR, risk, audit and governance policies.
+●​
+●​
+●​
+●​
+●​
+
+Telekom Networks Malawi Executive Programme • 15–17 July 2026 • UCT GSB
+20
+
+
