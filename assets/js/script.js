@@ -587,58 +587,147 @@ function initializeChatbot() {
             aria-labelledby="chatbotTitle"
             aria-hidden="true"
         >
-            <div class="chatbot-header">
-                <strong id="chatbotTitle">
-                    <i class="bi bi-chat-dots-fill me-2"></i>UCT GSB Programme Assistant
-                </strong>
-                <button type="button" class="btn btn-sm btn-light" id="chatbotClose" aria-label="Close programme assistant">×</button>
-            </div>
+            <div class="chatbot-sidebar-overlay" id="chatbotSidebarOverlay"></div>
 
-            <div class="chatbot-messages" id="chatbotMessages" aria-live="polite"></div>
+            <aside class="chatbot-sidebar" id="chatbotSidebar" aria-label="Assistant shortcuts">
+                <div class="chatbot-brand">
+                    <span class="chatbot-eyebrow">UCT GSB Executive Education · TNM</span>
+                    <h3>AI Leadership<br>in Action</h3>
+                    <p>Building an Intelligent, Trusted and Future-Ready TNM</p>
+                </div>
 
-            <div class="chatbot-input">
-                <form id="chatbotForm">
-                    <label class="visually-hidden" for="chatbotInput">Ask a programme question</label>
-                    <input
-                        id="chatbotInput"
-                        type="text"
-                        maxlength="2000"
-                        placeholder="Ask about the programme, slides or simulation..."
-                        autocomplete="off"
-                    >
-                    <button type="submit" aria-label="Send question">
-                        <i class="bi bi-send" aria-hidden="true"></i>
-                    </button>
-                </form>
-            </div>
+                <div class="chatbot-stats" aria-label="Programme summary">
+                    <div><strong>3</strong><span>Programme days</span></div>
+                    <div><strong>16</strong><span>Delegates</span></div>
+                    <div><strong>4</strong><span>Challenge groups</span></div>
+                    <div><strong>20</strong><span>TNM priorities</span></div>
+                </div>
+
+                <div class="chatbot-quick-section">
+                    <h4>Ask a quick question</h4>
+                    <button type="button" class="chatbot-quick" data-chatbot-question="What is the AI Leadership in Action programme about?">Programme overview</button>
+                    <button type="button" class="chatbot-quick" data-chatbot-question="Show me the full Day 1 timetable.">Day 1 timetable</button>
+                    <button type="button" class="chatbot-quick" data-chatbot-question="List all four delegate challenge groups and their members.">Challenge groups</button>
+                    <button type="button" class="chatbot-quick" data-chatbot-question="What are the five most urgent TNM strategic priorities?">TNM priority areas</button>
+                    <button type="button" class="chatbot-quick" data-chatbot-question="What should delegates bring and complete before the programme?">Preparation checklist</button>
+                    <button type="button" class="chatbot-quick" data-chatbot-question="Explain the synthetic TNM customer analytics training case.">Practical dataset case</button>
+                </div>
+
+                <div class="chatbot-service-note">
+                    <i class="bi bi-shield-check" aria-hidden="true"></i>
+                    <div>
+                        <strong>Secure AI assistant</strong>
+                        <span>Questions are sent through the protected DeepSeek server function. Do not share confidential TNM information.</span>
+                    </div>
+                </div>
+            </aside>
+
+            <section class="chatbot-main">
+                <header class="chatbot-topbar">
+                    <div class="chatbot-title-wrap">
+                        <button type="button" class="chatbot-menu-button" id="chatbotMenuButton" aria-label="Open assistant shortcuts">
+                            <i class="bi bi-list" aria-hidden="true"></i>
+                        </button>
+                        <span class="chatbot-botmark" aria-hidden="true"><i class="bi bi-stars"></i></span>
+                        <div>
+                            <h2 id="chatbotTitle">TNM Workshop Assistant</h2>
+                            <p>AI Leadership in Action · 15–17 July 2026</p>
+                        </div>
+                    </div>
+
+                    <div class="chatbot-actions">
+                        <span class="chatbot-status" id="chatbotStatus">
+                            <span class="chatbot-status-dot"></span>
+                            <span id="chatbotStatusText">AI ready</span>
+                        </span>
+                        <button type="button" class="chatbot-action-button" id="chatbotDownload" title="Download chat transcript" aria-label="Download chat transcript">
+                            <i class="bi bi-download" aria-hidden="true"></i>
+                            <span>Download</span>
+                        </button>
+                        <button type="button" class="chatbot-action-button" id="chatbotClear" title="Clear conversation" aria-label="Clear conversation">
+                            <i class="bi bi-arrow-counterclockwise" aria-hidden="true"></i>
+                            <span>Clear</span>
+                        </button>
+                        <button type="button" class="chatbot-close-button" id="chatbotClose" aria-label="Close workshop assistant" title="Close assistant">
+                            <i class="bi bi-x-lg" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </header>
+
+                <div class="chatbot-messages" id="chatbotMessages" aria-live="polite"></div>
+
+                <div class="chatbot-input">
+                    <form id="chatbotForm">
+                        <label class="visually-hidden" for="chatbotInput">Ask a workshop question</label>
+                        <textarea
+                            id="chatbotInput"
+                            rows="1"
+                            maxlength="2000"
+                            placeholder="Ask about schedules, delegates, TNM priorities, Mpamba, governance or the practical case..."
+                            autocomplete="off"
+                        ></textarea>
+                        <button type="submit" class="chatbot-send-button" aria-label="Send question">
+                            <i class="bi bi-send-fill" aria-hidden="true"></i>
+                        </button>
+                    </form>
+                    <p>Press Enter to send · Shift+Enter for a new line · Answers use the approved programme materials</p>
+                </div>
+            </section>
         </div>
 
-        <button class="chatbot-toggle" id="chatbotToggle" type="button" aria-label="Open programme assistant" aria-expanded="false">
-            <i class="bi bi-chat-dots" aria-hidden="true"></i>
+        <button class="chatbot-toggle" id="chatbotToggle" type="button" aria-label="Open TNM workshop assistant" aria-expanded="false">
+            <span class="chatbot-toggle-icon"><i class="bi bi-chat-dots-fill" aria-hidden="true"></i></span>
+            <span class="chatbot-toggle-label" id="chatbotToggleLabel">Ask TNM AI</span>
         </button>
     `;
 
     document.body.appendChild(widget);
 
     const panel = widget.querySelector('#chatbotPanel');
+    const sidebar = widget.querySelector('#chatbotSidebar');
+    const sidebarOverlay = widget.querySelector('#chatbotSidebarOverlay');
+    const menuButton = widget.querySelector('#chatbotMenuButton');
     const toggle = widget.querySelector('#chatbotToggle');
+    const toggleLabel = widget.querySelector('#chatbotToggleLabel');
     const closeButton = widget.querySelector('#chatbotClose');
+    const clearButton = widget.querySelector('#chatbotClear');
+    const downloadButton = widget.querySelector('#chatbotDownload');
     const form = widget.querySelector('#chatbotForm');
     const input = widget.querySelector('#chatbotInput');
     const submitButton = form.querySelector('button[type="submit"]');
     const messages = widget.querySelector('#chatbotMessages');
+    const status = widget.querySelector('#chatbotStatus');
+    const statusText = widget.querySelector('#chatbotStatusText');
     const conversationHistory = [];
 
-    addChatbotMessage(
-        messages,
-        'bot',
-        'Welcome to AI Leadership in Action. I can help with the TNM programme purpose, three-day journey, delegates, challenge groups, learning guide, practical canvases, implementation planning and simulation.'
-    );
+    const renderWelcome = () => {
+        addChatbotMessage(
+            messages,
+            'bot',
+            'Takulandirani — welcome. I am the TNM Workshop Assistant for AI Leadership in Action. Ask me about the three-day programme, delegates, challenge groups, TNM priority areas, practical canvases, responsible AI, implementation planning or the training dataset case.'
+        );
+    };
+
+    renderWelcome();
+
+    const openSidebar = () => {
+        sidebar.classList.add('open');
+        sidebarOverlay.classList.add('show');
+        menuButton.setAttribute('aria-expanded', 'true');
+    };
+
+    const closeSidebar = () => {
+        sidebar.classList.remove('open');
+        sidebarOverlay.classList.remove('show');
+        menuButton.setAttribute('aria-expanded', 'false');
+    };
 
     const openChatbot = () => {
         panel.classList.add('open');
         panel.setAttribute('aria-hidden', 'false');
         toggle.setAttribute('aria-expanded', 'true');
+        toggle.setAttribute('aria-label', 'Close TNM workshop assistant');
+        toggleLabel.textContent = 'Close Assistant';
         input.focus();
     };
 
@@ -646,31 +735,26 @@ function initializeChatbot() {
         panel.classList.remove('open');
         panel.setAttribute('aria-hidden', 'true');
         toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open TNM workshop assistant');
+        toggleLabel.textContent = 'Ask TNM AI';
+        closeSidebar();
         toggle.focus();
+    };
+
+    const setChatbotStatus = (mode, text) => {
+        status.dataset.status = mode;
+        statusText.textContent = text;
     };
 
     const setChatbotBusy = (isBusy) => {
         input.disabled = isBusy;
         submitButton.disabled = isBusy;
         form.setAttribute('aria-busy', isBusy ? 'true' : 'false');
+        setChatbotStatus(isBusy ? 'connecting' : 'ready', isBusy ? 'Connecting…' : 'AI ready');
     };
 
-    toggle.addEventListener('click', () => {
-        panel.classList.contains('open') ? closeChatbot() : openChatbot();
-    });
-
-    closeButton.addEventListener('click', closeChatbot);
-
-    document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape' && panel.classList.contains('open')) {
-            closeChatbot();
-        }
-    });
-
-    form.addEventListener('submit', async (event) => {
-        event.preventDefault();
-
-        const userMessage = input.value.trim();
+    const askQuestion = async (question) => {
+        const userMessage = String(question || '').trim();
 
         if (!userMessage || input.disabled) {
             return;
@@ -681,9 +765,11 @@ function initializeChatbot() {
         trimChatbotHistory(conversationHistory);
 
         input.value = '';
+        input.style.height = 'auto';
         setChatbotBusy(true);
+        closeSidebar();
 
-        const typingMessage = addChatbotMessage(messages, 'bot', 'Thinking…', 'chatbot-typing');
+        const typingMessage = addChatbotTypingMessage(messages);
 
         try {
             const reply = await requestDeepSeekChatbotResponse(conversationHistory);
@@ -691,6 +777,7 @@ function initializeChatbot() {
             addChatbotMessage(messages, 'bot', reply);
             conversationHistory.push({ role: 'assistant', content: reply });
             trimChatbotHistory(conversationHistory);
+            setChatbotStatus('connected', 'AI connected');
         } catch (error) {
             console.error('Programme assistant request failed:', error);
             typingMessage.remove();
@@ -699,27 +786,131 @@ function initializeChatbot() {
             addChatbotMessage(
                 messages,
                 'bot',
-                `${fallbackReply} The live AI service is temporarily unavailable, so this response is from the website's built-in programme guidance.`
+                `${fallbackReply}\n\nThe live AI service is temporarily unavailable, so this response comes from the website's built-in programme guidance.`
             );
+            setChatbotStatus('fallback', 'Fallback mode');
         } finally {
-            setChatbotBusy(false);
+            input.disabled = false;
+            submitButton.disabled = false;
+            form.setAttribute('aria-busy', 'false');
             input.focus();
         }
+    };
+
+    toggle.addEventListener('click', () => {
+        panel.classList.contains('open') ? closeChatbot() : openChatbot();
+    });
+
+    closeButton.addEventListener('click', closeChatbot);
+    menuButton.addEventListener('click', () => {
+        sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
+    });
+    sidebarOverlay.addEventListener('click', closeSidebar);
+
+    widget.querySelectorAll('[data-chatbot-question]').forEach((button) => {
+        button.addEventListener('click', () => askQuestion(button.dataset.chatbotQuestion));
+    });
+
+    clearButton.addEventListener('click', () => {
+        conversationHistory.splice(0, conversationHistory.length);
+        messages.innerHTML = '';
+        renderWelcome();
+        setChatbotStatus('ready', 'AI ready');
+        input.focus();
+    });
+
+    downloadButton.addEventListener('click', () => {
+        downloadChatbotTranscript(conversationHistory);
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && panel.classList.contains('open')) {
+            if (sidebar.classList.contains('open')) {
+                closeSidebar();
+            } else {
+                closeChatbot();
+            }
+        }
+    });
+
+    input.addEventListener('input', () => {
+        input.style.height = 'auto';
+        input.style.height = `${Math.min(input.scrollHeight, 120)}px`;
+    });
+
+    input.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' && !event.shiftKey) {
+            event.preventDefault();
+            form.requestSubmit();
+        }
+    });
+
+    form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        await askQuestion(input.value);
     });
 }
 
-function addChatbotMessage(container, sender, text, extraClass = '') {
+function addChatbotMessage(container, sender, text) {
     const message = document.createElement('div');
-    message.className = `chatbot-message ${sender}${extraClass ? ` ${extraClass}` : ''}`;
+    message.className = `chatbot-message ${sender}`;
 
-    const bubble = document.createElement('span');
+    const avatar = document.createElement('span');
+    avatar.className = 'chatbot-message-avatar';
+    avatar.setAttribute('aria-hidden', 'true');
+    avatar.innerHTML = sender === 'user'
+        ? '<i class="bi bi-person-fill"></i>'
+        : '<i class="bi bi-stars"></i>';
+
+    const bubble = document.createElement('div');
+    bubble.className = 'chatbot-message-bubble';
     bubble.textContent = text;
 
-    message.appendChild(bubble);
+    message.append(avatar, bubble);
     container.appendChild(message);
     container.scrollTop = container.scrollHeight;
 
     return message;
+}
+
+function addChatbotTypingMessage(container) {
+    const message = document.createElement('div');
+    message.className = 'chatbot-message bot chatbot-typing-message';
+    message.innerHTML = `
+        <span class="chatbot-message-avatar" aria-hidden="true"><i class="bi bi-stars"></i></span>
+        <div class="chatbot-message-bubble">
+            <span class="chatbot-typing" aria-label="Assistant is thinking">
+                <span></span><span></span><span></span>
+            </span>
+        </div>
+    `;
+
+    container.appendChild(message);
+    container.scrollTop = container.scrollHeight;
+    return message;
+}
+
+function downloadChatbotTranscript(conversationHistory) {
+    const lines = [
+        'AI Leadership in Action — TNM Workshop Assistant',
+        `Downloaded: ${new Date().toLocaleString()}`,
+        '',
+        ...conversationHistory.map((message) => {
+            const speaker = message.role === 'assistant' ? 'Assistant' : 'Delegate';
+            return `${speaker}: ${message.content}`;
+        })
+    ];
+
+    const blob = new Blob([lines.join('\n\n')], { type: 'text/plain;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+
+    link.href = url;
+    link.download = 'tnm-workshop-assistant-chat.txt';
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(url);
 }
 
 async function requestDeepSeekChatbotResponse(conversationHistory) {
@@ -781,11 +972,15 @@ function getFallbackChatbotResponse(message) {
     if (matchesAny(text, ['customer', 'churn', 'commercial'])) return 'The Customer Growth, Commercial Intelligence and Market Leadership group asks how TNM can use AI to grow customers, reduce churn, personalise services and strengthen its competitive position.';
     if (matchesAny(text, ['mpamba', 'financial inclusion', 'fraud'])) return 'The Mpamba, Financial Inclusion and Digital Ecosystems group explores how AI can expand inclusion, improve agent performance, reduce fraud and create new digital services.';
     if (matchesAny(text, ['governance', 'responsible ai', 'trust'])) return 'The Responsible AI, Governance and Institutional Trust group focuses on protecting customers, employees, data, intellectual property and institutional reputation.';
+    if (matchesAny(text, ['prepare', 'bring', 'before the programme', 'checklist'])) return 'Bring a laptop or computer, charger, notebook and approved role-relevant material. Complete the baseline assessment before the programme and use only approved, anonymised or synthetic information in public AI tools.';
+    if (matchesAny(text, ['priority', 'pain point', 'urgent'])) return 'Five urgent TNM strategic priorities are forex and technology costs; network reliability and customer experience; Mpamba fraud and revenue leakage; affordability, churn and digital adoption; and fragmented data with slow decision-making.';
+    if (matchesAny(text, ['dataset', 'case study', 'mxit', 'customer analytics'])) return 'The practical training case uses a synthetic TNM customer analytics dataset with 1,000 customer-month records, 311 anonymised customers, six months of data and 45 variables. It contains no real customer information.';
     if (matchesAny(text, ['canvas', 'template', 'action plan'])) return 'The learning guide includes an AI Opportunity Canvas, AI Governance Canvas and 90-Day Executive Action Plan. Open the Programme Canvases or Implementation Guide pages.';
     if (matchesAny(text, ['slide', 'pdf', 'guide', 'download'])) return 'The Slides page provides the complete AI Leadership in Action Executive Learning Guide and direct links to the Day 1, Day 2 and Day 3 schedules.';
     if (matchesAny(text, ['outcome', 'deliverable'])) return 'Programme deliverables include a TNM AI Strategic Vision, AI Maturity Snapshot, Opportunity Portfolio, Responsible AI Concepts, Governance Canvas, Pilot Roadmap and Executive Commitments.';
-    return 'I can help with AI Leadership in Action for TNM, including the programme purpose, dates, venue, facilitator, daily schedules, challenge groups, learning outcomes, canvases and 90-day follow-through.';
+    return 'I can help with AI Leadership in Action for TNM, including the programme purpose, dates, venue, facilitator, daily schedules, challenge groups, learning outcomes, priority areas, practical case, canvases and 90-day follow-through.';
 }
+
 function matchesAny(text, phrases) {
     return phrases.some((phrase) => text.includes(phrase));
 }
