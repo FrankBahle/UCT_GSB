@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Game Testing - GLA: two interactive AI games where every question you answer earns points on your own account.">
+    <title>Play the games | Game Testing - GLA</title>
+
+    <link rel="icon" type="image/png"
+        href="https://showroom.gritlabafrica.org/assets/images/logo.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+        rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/quiz-games.css" rel="stylesheet">
+    <link href="assets/css/auth.css" rel="stylesheet">
+    <link href="assets/css/theme.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light gsb-navbar sticky-top">
+        <div class="container">
+            <a class="site-brand" href="index.html" aria-label="Game Testing - GLA home">
+                <img class="gla-logo" alt="GRIT Lab Africa"
+                    src="https://showroom.gritlabafrica.org/assets/images/logo.png">
+
+                <span class="site-brand-text">
+                    <span class="site-brand-title">Game Testing - GLA</span>
+                    <span class="site-brand-sub">GRIT Lab Africa</span>
+                </span>
+            </a>
+
+            <div class="account-chip ms-auto" id="accountChip" hidden>
+                <span class="account-name" data-user-name></span>
+                <span class="account-points" data-user-points>0 / 175</span>
+                <button class="account-signout" type="button" data-sign-out hidden>
+                    Sign out
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <p class="db-note" data-db-note hidden></p>
+
+    <main id="appMain" hidden>
+        <section class="page-hero">
+            <div class="container">
+                <div class="page-meta">
+                    <span class="meta-chip">Game Testing</span>
+                    <span>Game 1 &middot; Game 2</span>
+                </div>
+
+                <span class="eyebrow">GRIT Lab Africa</span>
+                <h1>Game Testing - GLA</h1>
+
+                <p>
+                    Two interactive AI games. Every question you answer is scored on
+                    the server and saved to your own account, and only the best
+                    points you reach for a question are counted.
+                </p>
+
+                <div class="hero-actions">
+                    <a class="btn btn-gsb-primary btn-lg" href="#quiz-centre">
+                        Choose a game
+                        <i class="bi bi-controller" aria-hidden="true"></i>
+                    </a>
+
+                    <a class="btn btn-gsb-outline btn-lg" href="index.html">
+                        Session details
+                        <i class="bi bi-arrow-left" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-white">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <article class="content-card h-100">
+                            <span class="eyebrow eyebrow-dark">Your points</span>
+                            <h3 data-user-points>0 / 175</h3>
+                            <p>All points saved to your account across both games.</p>
+                        </article>
+                    </div>
+
+                    <div class="col-md-4">
+                        <article class="content-card h-100">
+                            <span class="eyebrow eyebrow-dark">Game 1</span>
+                            <h3 data-game-points="day1">0 / 75</h3>
+                            <p>15 questions worth 5 points each.</p>
+                        </article>
+                    </div>
+
+                    <div class="col-md-4">
+                        <article class="content-card h-100">
+                            <span class="eyebrow eyebrow-dark">Game 2</span>
+                            <h3 data-game-points="day2">0 / 100</h3>
+                            <p>10 rounds worth 10 points each.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="quiz-centre" class="section section-soft">
+            <div class="container">
+                <div class="section-heading text-center">
+                    <span class="eyebrow eyebrow-dark">GLA Game Testing</span>
+                    <h2>Choose your game</h2>
+                    <span class="heading-line" aria-hidden="true"></span>
+                    <p>Each game stores its own points on your account.</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <article class="quiz-hub-card">
+                            <div class="quiz-hub-card-top">
+                                <span class="quiz-hub-number">01</span>
+                                <span class="quiz-hub-status available">Available</span>
+                            </div>
+
+                            <div class="quiz-hub-icon">
+                                <i class="bi bi-puzzle" aria-hidden="true"></i>
+                            </div>
+
+                            <h2>Game 1</h2>
+
+                            <strong class="quiz-hub-subtitle">
+                                TNM Malawi AI Reality Puzzle Challenge
+                            </strong>
+
+                            <p>
+                                Distinguish AI from automation, identify valuable use
+                                cases and apply responsible governance judgement.
+                            </p>
+
+                            <div class="quiz-hub-stats">
+                                <div>
+                                    <strong id="day1CardQuestions">15</strong>
+                                    <span>Questions</span>
+                                </div>
+
+                                <div>
+                                    <strong id="day1CardScore">75</strong>
+                                    <span>Points</span>
+                                </div>
+
+                                <div>
+                                    <strong data-game-points="day1">0 / 75</strong>
+                                    <span>Your points</span>
+                                </div>
+                            </div>
+
+                            <button id="openDay1Game" class="btn btn-gsb-primary btn-lg w-100"
+                                type="button">
+                                Start Game 1
+                            </button>
+
+                            <p id="day1LoadStatus" class="quiz-load-status" role="status">
+                                Loading Game 1 questions...
+                            </p>
+                        </article>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <article class="quiz-hub-card">
+                            <div class="quiz-hub-card-top">
+                                <span class="quiz-hub-number">02</span>
+                                <span class="quiz-hub-status available">Available</span>
+                            </div>
+
+                            <div class="quiz-hub-icon">
+                                <i class="bi bi-diagram-3" aria-hidden="true"></i>
+                            </div>
+
+                            <h2>Game 2</h2>
+
+                            <strong class="quiz-hub-subtitle">
+                                TNM AI Solution Match
+                            </strong>
+
+                            <p>
+                                Match ten pain points with the best AI solution, data
+                                requirements, governance controls and success measures.
+                            </p>
+
+                            <div class="quiz-hub-stats">
+                                <div>
+                                    <strong id="day2CardScenarios">10</strong>
+                                    <span>Rounds</span>
+                                </div>
+
+                                <div>
+                                    <strong id="day2CardScore">100</strong>
+                                    <span>Points</span>
+                                </div>
+
+                                <div>
+                                    <strong data-game-points="day2">0 / 100</strong>
+                                    <span>Your points</span>
+                                </div>
+                            </div>
+
+                            <button id="openDay2Game" class="btn btn-gsb-primary btn-lg w-100"
+                                type="button" disabled>
+                                Start Game 2
+                            </button>
+
+                            <p id="day2LoadStatus" class="quiz-load-status" role="status">
+                                Loading Game 2 scenarios...
+                            </p>
+                        </article>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <article class="quiz-hub-card upcoming">
+                            <div class="quiz-hub-card-top">
+                                <span class="quiz-hub-number">03</span>
+                                <span class="quiz-hub-status upcoming">Upcoming</span>
+                            </div>
+
+                            <div class="quiz-hub-icon">
+                                <i class="bi bi-shield-check" aria-hidden="true"></i>
+                            </div>
+
+                            <h2>Game 3</h2>
+
+                            <strong class="quiz-hub-subtitle">
+                                Governance and Implementation
+                            </strong>
+
+                            <p>
+                                This game will be added once its approved questions and
+                                scoring rules have been supplied.
+                            </p>
+
+                            <button class="btn btn-outline-secondary btn-lg w-100 mt-auto"
+                                type="button" disabled>
+                                Game Upcoming
+                            </button>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="day1GameSection" class="section section-soft game-section" hidden>
+            <div class="container">
+                <div id="day1GameMount" class="game-mount"></div>
+            </div>
+        </section>
+
+        <section id="day2GameSection" class="section section-soft game-section" hidden>
+            <div class="container">
+                <div id="day2GameMount" class="game-mount"></div>
+            </div>
+        </section>
+
+        <div id="gameScoreToast" class="game-score-toast" role="status" aria-live="assertive"
+            hidden>
+            <strong id="gameScoreToastHeading"></strong>
+            <span id="gameScoreToastCopy"></span>
+        </div>
+    </main>
+
+    <footer class="gsb-footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-5">
+                    <img class="gla-logo gla-logo-footer" alt="GRIT Lab Africa"
+                        src="https://showroom.gritlabafrica.org/assets/images/logo.png">
+
+                    <p class="footer-intro">
+                        Game Testing - GLA, an interactive AI game platform built by
+                        GRIT Lab Africa for testing learning games with real players.
+                    </p>
+                </div>
+
+                <div class="col-sm-6 col-lg-3">
+                    <h2>Games</h2>
+
+                    <ul>
+                        <li>
+                            <a href="#quiz-centre">
+                                Game 1 &middot; AI Reality Puzzle Challenge
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#quiz-centre">Game 2 &middot; AI Solution Match</a>
+                        </li>
+
+                        <li><a href="register.html">Create an account</a></li>
+                        <li><a href="login.html">Sign in</a></li>
+                        <li><a href="index.html">Session landing page</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4">
+                    <h2>Score monitor</h2>
+
+                    <p class="footer-copy">
+                        Administrators can open the score monitor to see every
+                        registered player, their points per game and each question they
+                        have answered.
+                    </p>
+
+                    <a class="footer-contact-link" href="admin.html">
+                        Open the score monitor
+                        <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 GRIT Lab Africa &middot; Game Testing - GLA</p>
+                <p>175 points available across both games</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/local-db.js"></script>
+    <script src="assets/js/api-client.js"></script>
+
+    <script>
+        // The games only appear once the player is signed in, so every
+        // answer can be stored against the right account.
+        (function () {
+            "use strict";
+
+            window.GameApi.requireUser().then(function (user) {
+                if (!user) {
+                    return;
+                }
+
+                document.getElementById("accountChip").hidden = false;
+                document.getElementById("appMain").hidden = false;
+            });
+        })();
+    </script>
+
+    <script src="assets/js/quiz-games.js"></script>
+</body>
+
+</html>

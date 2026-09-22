@@ -68,6 +68,33 @@ document.addEventListener("DOMContentLoaded", () => {
     let dayOneGame = null;
     let dayTwoGame = null;
 
+    // Sends one answer (or one Game 2 round) to the server so the
+    // points are stored against the signed-in account, and refreshes
+    // the totals shown in the header.
+    async function saveAnswer(payload, messageElement) {
+        if (!window.GameApi) {
+            return null;
+        }
+
+        const result = await window.GameApi.submit(payload);
+
+        if (result.data && result.data.ok) {
+            window.GameApi.renderSession(result.data.user);
+
+            return result.data;
+        }
+
+        if (messageElement) {
+            messageElement.textContent =
+                (result.data && result.data.message) ||
+                "Your points could not be saved to your account.";
+
+            messageElement.className = "game-message error";
+        }
+
+        return null;
+    }
+
     function escapeHtml(value) {
         return String(value ?? "")
             .replaceAll("&", "&amp;")
@@ -741,7 +768,7 @@ document.addEventListener("DOMContentLoaded", () => {
             );
         }
 
-        function submitAnswer() {
+        async function submitAnswer() {
             if (state.submitted) {
                 return;
             }
@@ -794,6 +821,30 @@ document.addEventListener("DOMContentLoaded", () => {
                     level.correct += 1;
                     level.score += awarded;
                 }
+            }
+
+            const saved = await saveAnswer(
+                {
+                    gameId: "day1",
+                    questionId: puzzle.id,
+                    answer: selected.value,
+
+                    // Kept in step with the browser database: the
+                    // server scores the answer again from the game data.
+                    points: awarded,
+
+                    maximum:
+                        Number(puzzle.points || 0),
+
+                    correct,
+                    label: puzzle.title
+                },
+                message
+            );
+
+            if (saved && saved.awarded !== awarded) {
+                state.score += saved.awarded - awarded;
+                awarded = saved.awarded;
             }
 
             dayOneElements.mount
@@ -2100,7 +2151,7 @@ document.addEventListener("DOMContentLoaded", () => {
             return 0;
         }
 
-        function submitRound() {
+        async function submitRound() {
             if (state.submitted) {
                 return;
             }
@@ -2191,6 +2242,40 @@ document.addEventListener("DOMContentLoaded", () => {
                 scenario.game_category
             ].score += roundScore;
 
+            const saved = await saveAnswer(
+                {
+                    gameId: "day2",
+                    questionId: scenario.id,
+                    card: selectedCard.value,
+
+                    data:
+                        dataInputs.map(input => input.value),
+
+                    controls:
+                        controlInputs.map(input => input.value),
+
+                    success: [
+                        successInput.value
+                    ],
+
+                    // Kept in step with the browser database.
+                    points: roundScore,
+                    maximum: maximumPerRound,
+                    correct: cardPoints > 0,
+                    label: scenario.title
+                },
+
+                dayTwoElements.mount
+                    .querySelector("#day2Message")
+            );
+
+            let finalRoundScore = roundScore;
+
+            if (saved && saved.awarded !== roundScore) {
+                state.score += saved.awarded - roundScore;
+                finalRoundScore = saved.awarded;
+            }
+
             lockAndMarkSelections(
                 scenario
             );
@@ -2232,12 +2317,12 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             showToast(
-                `+${roundScore} Points`,
+                `+${finalRoundScore} Points`,
                 `Total: ${state.score}/${maximumScore}`,
-                roundScore >= 8
+                finalRoundScore >= 8
                     ? "correct"
                     : (
-                        roundScore >= 5
+                        finalRoundScore >= 5
                             ? "bonus"
                             : "incorrect"
                     )

@@ -9,14 +9,10 @@
   publish = "."
   functions = "netlify/functions"
 
+# The whole API (accounts, points, admin monitor) is served by
+# netlify/functions/api.mjs, which stores data in Netlify Blobs.
 [[redirects]]
-  from = "/api/simulation/evaluate"
-  to = "/.netlify/functions/deepseek-simulation"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/api/deepseek/chat"
-  to = "/.netlify/functions/deepseek-chat"
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
   status = 200
   force = true

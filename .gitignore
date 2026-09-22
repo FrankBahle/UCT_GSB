@@ -18,21 +18,18 @@ npm-debug.log*
 *.tmp
 *.temp
 
+# Installed packages
+node_modules/
+
 # Local environment variables and API secrets
 .env
 .env.*
 !.env.example
-env
-env*
-.env
-.env.local
-.netlify
-.env
-.env.local
-.netlify
-.env
-.env.local
-.netlify
-.env
-.env.local
-.netlify
+
+# Netlify local build output
+.netlify/
+
+# Database: data/admins.json and data/users.json are the JSON database.
+# Only the runtime files below are ignored.
+data/sessions.json
+data/runtime.json
