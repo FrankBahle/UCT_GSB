@@ -33,3 +33,5 @@ node_modules/
 # Only the runtime files below are ignored.
 data/sessions.json
 data/runtime.json
+.vercel
+.env*

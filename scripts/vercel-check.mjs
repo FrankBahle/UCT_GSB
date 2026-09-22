@@ -138,7 +138,7 @@ fs.mkdirSync(outDir, { recursive: true });
 
 await esbuild.build({
     entryPoints: [
-        path.join(root, "api", "[...route].mjs")
+        path.join(root, "api", "handler.mjs")
     ],
 
     outfile: bundle,
@@ -154,7 +154,17 @@ const { default: handler } = await import(
 
 /* --------------------------- request helper --------------------------- */
 
-function invoke(method, url, options = {}) {
+function invoke(method, path, options = {}) {
+    // vercel.json rewrites /api/:path* to /api/handler?route=:path*
+    const parts = String(path)
+        .replace(/^\/api\//, "")
+        .split("?");
+
+    const url =
+        "/api/handler?route=" +
+        parts[0] +
+        (parts[1] ? "&" + parts[1] : "");
+
     return new Promise((resolve, reject) => {
         const headers = {
             host: "game-testing-gla.vercel.app"

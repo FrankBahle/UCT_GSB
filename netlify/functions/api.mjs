@@ -10,15 +10,16 @@
  * netlify.toml rewrites /api/* to this function.
  */
 
-import dayOne from "../../assets/data/TNM_Malawi_AI_Reality_Puzzle_Challenge.json";
-import dayTwo from "../../assets/data/TNM_Malawi_AI_Solution_Match_Game_10_Scenarios.json";
-
 import { ADMIN_LOGINS } from "../../lib/admin-seed.mjs";
+import { dayOneGame, dayTwoGame } from "../../lib/game-data.mjs";
 import { createApi } from "../../lib/api-core.mjs";
 import { buildCatalog } from "../../lib/game-catalog.mjs";
 import { createBlobsStore } from "../../lib/kv-blobs.mjs";
 
-const catalog = buildCatalog({ dayOne, dayTwo });
+const catalog = buildCatalog({
+    dayOne: dayOneGame,
+    dayTwo: dayTwoGame
+});
 
 let cachedApi = null;
 

@@ -26,6 +26,7 @@ import { fileURLToPath } from "node:url";
 
 import { ADMIN_LOGINS, initialAdmins } from "./lib/admin-seed.mjs";
 import { createApi } from "./lib/api-core.mjs";
+import { dayOneGame, dayTwoGame } from "./lib/game-data.mjs";
 import { buildCatalog } from "./lib/game-catalog.mjs";
 import { createJsonDbStore } from "./lib/kv-jsondb.mjs";
 import { createRestStore, hasRestStore } from "./lib/kv-rest.mjs";
@@ -75,23 +76,9 @@ const BLOCKED = [
     /^\/README\.md$/i
 ];
 
-function readGameFile(name) {
-    return JSON.parse(
-        fs.readFileSync(
-            path.join(ROOT, "assets", "data", name),
-            "utf8"
-        )
-    );
-}
-
 const catalog = buildCatalog({
-    dayOne: readGameFile(
-        "TNM_Malawi_AI_Reality_Puzzle_Challenge.json"
-    ),
-
-    dayTwo: readGameFile(
-        "TNM_Malawi_AI_Solution_Match_Game_10_Scenarios.json"
-    )
+    dayOne: dayOneGame,
+    dayTwo: dayTwoGame
 });
 
 const seedAdmins = initialAdmins({

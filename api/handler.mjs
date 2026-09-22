@@ -3,31 +3,33 @@
  * ---------------------------------------------------------------
  * Vercel serverless function that serves the whole /api surface.
  *
- * The catch-all file name (api/[...route].mjs) makes Vercel send
- * every /api/... request here, so the browser code does not change
- * between local development, Netlify and Vercel.
+ * vercel.json rewrites every /api/... request to this file and passes
+ * the remaining path in the "route" query parameter:
  *
- * Data lives in the Upstash Redis / Vercel KV store when the
- * KV_REST_API_URL and KV_REST_API_TOKEN variables are present,
- * otherwise the reply explains what to configure.
+ *   /api/register          ->  /api/handler?route=register
+ *   /api/admin/users/u1    ->  /api/handler?route=admin/users/u1
+ *
+ * Nothing heavy happens while this module loads: the game catalogue
+ * and the store are created on the first request, so a missing hosted
+ * store is reported as clean JSON instead of crashing the function.
  */
 
-import dayOne from "../assets/data/TNM_Malawi_AI_Reality_Puzzle_Challenge.json";
-import dayTwo from "../assets/data/TNM_Malawi_AI_Solution_Match_Game_10_Scenarios.json";
-
 import { ADMIN_LOGINS } from "../lib/admin-seed.mjs";
+import { dayOneGame, dayTwoGame } from "../lib/game-data.mjs";
 import { createApi } from "../lib/api-core.mjs";
 import { buildCatalog } from "../lib/game-catalog.mjs";
 import { createRestStore } from "../lib/kv-rest.mjs";
-
-const catalog = buildCatalog({ dayOne, dayTwo });
 
 let cachedApi = null;
 
 function getApi() {
     if (!cachedApi) {
         cachedApi = createApi({
-            catalog,
+            catalog: buildCatalog({
+                dayOne: dayOneGame,
+                dayTwo: dayTwoGame
+            }),
+
             kv: createRestStore(),
 
             config: {
@@ -47,26 +49,33 @@ function getApi() {
     return cachedApi;
 }
 
-function requestPath(request, url) {
-    const pathname = String(url.pathname || "");
-
-    if (pathname.startsWith("/api/")) {
-        return pathname;
-    }
-
-    // Vercel may hand over the catch-all segments instead.
-    const route = request.query?.route;
+/** The API path, either from the rewrite parameter or the URL itself. */
+function routeFrom(url) {
+    const route = url.searchParams.get("route");
 
     if (route) {
-        const parts = Array.isArray(route) ? route : [route];
-
-        return "/api/" + parts.join("/");
+        return (
+            "/api/" +
+            route.replace(/^\/+/, "")
+        );
     }
 
-    return pathname;
+    const pathname = String(url.pathname || "");
+
+    return pathname || "/api/health";
 }
 
-function requestBody(request) {
+function queryFrom(url) {
+    const query = Object.fromEntries(
+        url.searchParams.entries()
+    );
+
+    delete query.route;
+
+    return query;
+}
+
+function bodyFrom(request) {
     const body = request.body;
 
     if (!body) {
@@ -95,20 +104,14 @@ export default async function handler(request, response) {
         "https://" + host
     );
 
-    const query = Object.fromEntries(
-        url.searchParams.entries()
-    );
-
     let result = null;
 
     try {
-        const api = getApi();
-
-        result = await api.handle({
+        result = await getApi().handle({
             method: request.method,
-            path: requestPath(request, url),
-            query,
-            body: requestBody(request),
+            path: routeFrom(url),
+            query: queryFrom(url),
+            body: bodyFrom(request),
 
             cookie: request.headers.cookie || "",
 
@@ -127,7 +130,7 @@ export default async function handler(request, response) {
                 ok: false,
 
                 message:
-                    "The API could not start: " +
+                    "The game API could not start: " +
                     (
                         error?.message ||
                         String(error)

@@ -190,11 +190,21 @@ check(
         "<title>Game Testing Session | GRIT Lab Africa</title>"
     ) &&
     home.text.includes("CALLING ALL") &&
-    home.text.includes("forms.gle/51r32BE7cXYsGsSH6") &&
     home.text.includes(
         "showroom.gritlabafrica.org/assets/images/logo.png"
     ),
     home.text.slice(0, 120)
+);
+
+check(
+    "The sign-up form block is gone and the session details sit below the play panel",
+    !home.text.includes("forms.gle/51r32BE7cXYsGsSH6") &&
+    !home.text.includes("qr-wrap") &&
+    home.text.indexOf("Play the games") > 0 &&
+    home.text.indexOf("Play the games") <
+    home.text.indexOf("Certificate of Participation"),
+    "play=" + home.text.indexOf("Play the games") +
+    " details=" + home.text.indexOf("Certificate of Participation")
 );
 
 const gamePage = await send("GET", "/game.html");

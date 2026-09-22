@@ -123,19 +123,37 @@
         const type =
             response.headers.get("content-type") || "";
 
-        const data = type.includes("application/json")
-            ? await response.json()
-            : { ok: response.ok, text: await response.text() };
+        let data = null;
 
-        // A hosted store that is not configured yet (for example a
-        // Vercel preview without Upstash Redis) answers 500 - the
-        // browser database takes over so the session can continue.
+        if (type.includes("application/json")) {
+            data = await response.json();
+        } else {
+            const body = await response.text();
+
+            data = response.ok
+                ? { ok: true, text: body }
+                : {
+                    ok: false,
+
+                    message:
+                        "The game API answered HTTP " +
+                        response.status +
+                        (
+                            body
+                                ? ": " + body.slice(0, 160)
+                                : "."
+                        )
+                };
+        }
+
+        // Any server-side failure - a crash, or a hosted store that is
+        // not configured yet - hands over to the browser database so
+        // registration and signing in keep working.
         if (
             response.status >= 500 &&
-            /key\/value store|could not start/i.test(
-                String(data.message || "")
-            ) &&
-            useLocalMode("hosted store not configured")
+            useLocalMode(
+                "the game API answered " + response.status
+            )
         ) {
             return localCall(path, config);
         }
